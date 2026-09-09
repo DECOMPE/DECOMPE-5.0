@@ -1,0 +1,2 @@
+import { MessageCircle } from 'lucide-react';
+export default function FloatingWhatsAppHelp() { return <a href="https://wa.me/628696767420" target="_blank" rel="noreferrer" aria-label="Chat WhatsApp" className="fixed bottom-5 right-5 z-30 flex items-center gap-2 border-3 border-[#0F172A] bg-[#25D366] px-4 py-3 font-bold shadow-[4px_4px_0px_0px_#0F172A] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-0 active:translate-y-0"><MessageCircle size={20} /> <span className="hidden sm:inline">Butuh bantuan?</span></a>; }

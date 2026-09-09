@@ -1,0 +1,13 @@
+{
+  "name": "DECOMPE X SKILL CLASS 5.0",
+  "short_name": "DECOMPE 5.0",
+  "description": "5 Years Of Impact: Smart Living, Sustainable Future.",
+  "lang": "id-ID",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F9FAFB",
+  "theme_color": "#FF5C00",
+  "icons": [{ "src": "/og-image.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

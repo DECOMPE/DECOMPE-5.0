@@ -1,0 +1,1 @@
+export default function MainLogo() { return <div className="flex items-center gap-2"><span className="grid h-9 w-9 place-items-center border-3 border-[#0F172A] bg-[#FF5C00] text-lg font-black">D</span><span className="text-lg font-black tracking-[-0.08em]">DECOMPE<span className="text-[#E00105]">.</span></span></div>; }

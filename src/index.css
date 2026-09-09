@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme { --font-display: 'Space Grotesk', sans-serif; --font-mono: 'DM Mono', monospace; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #F9FAFB; color: #0F172A; font-family: 'Space Grotesk', sans-serif; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: #FF5C00; color: #0F172A; }
+.grid-paper { background-image: linear-gradient(#0f172a12 1px, transparent 1px), linear-gradient(90deg, #0f172a12 1px, transparent 1px); background-size: 24px 24px; }
+.text-balance { text-wrap: balance; }
