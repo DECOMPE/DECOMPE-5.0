@@ -6,7 +6,7 @@ This project was designed as a polished digital presence for an innovation compe
 
 ## 1. Project Overview
 
-DECOMPE X SKILL CLASS 5.0 is an annual competition and learning platform built around the theme of innovation, digital creativity, and future-ready skills. The website combines event information, registration flows, merchandise sales, FAQ sections, and marketing content into a single streamlined experience.
+DECOMPE X SKILL CLASS 5.0 is an annual competition and learning platform built around innovation, digital creativity, and future-ready skills. The website brings event information, registration, merchandise, FAQs, and marketing content into one site.
 
 The app includes the following core user journeys:
 
@@ -94,11 +94,11 @@ The application is organized around a small but scalable component structure, wi
 
 ### Main Areas
 
-- `src/App.tsx` — app shell, hash-based navigation, metadata updates, and 404 fallback
-- `src/data/eventData.ts` — central event content, pricing, timeline, merch, FAQs, and copies
-- `src/views/` — page-level view components
-- `src/components/` — reusable UI elements and modals
-- `public/` — SEO, social, web manifest, and static fallback assets
+- `src/App.tsx`: app shell, hash-based navigation, metadata updates, and 404 fallback
+- `src/data/eventData.ts`: central event content, pricing, timeline, merch, FAQs, and copies
+- `src/views/`: page-level view components
+- `src/components/`: reusable UI elements and modals
+- `public/`: SEO, social, web manifest, and static fallback assets
 
 ## 5. Content and Data Strategy
 

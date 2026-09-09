@@ -2,7 +2,7 @@ import type { Category, EventInfo, FaqItem, Mentor, MerchItem, PrizePool, Timeli
 
 export const eventInfo: EventInfo = {
 	name: 'DECOMPE X SKILL CLASS 5.0',
-	tagline: '5 Years Of Impact : Smart Living, Sustainable Future',
+	tagline: '5 Years of Impact: Smart Living, Sustainable Future',
 	contactPerson: 'Jane Doe (0869-6767-420)', address: 'Jl. TB Simatupang No. 6',
 	socials: { instagram: '@decompeofficial', tiktok: '@decompe.5.0', youtube: 'DECOMPE' },
 };
@@ -23,14 +23,14 @@ export const timeline: Timeline[] = [
 	{ title: 'Awarding & Webinar', date: '28 Nov', status: 'Upcoming' },
 ];
 export const mentors: Mentor[] = [
-	{ name: 'Mentor 01', role: 'Creative Strategist', specialty: 'Ideasi & storytelling' },
-	{ name: 'Mentor 02', role: 'Sustainability Expert', specialty: 'Smart living' },
-	{ name: 'Mentor 03', role: 'Brand Designer', specialty: 'Visual & portfolio' },
+	{ name: 'Mentor 01', role: 'Creative Strategist', specialty: 'Ideasi dan storytelling' },
+	{ name: 'Mentor 02', role: 'Sustainability Expert', specialty: 'Solusi smart living' },
+	{ name: 'Mentor 03', role: 'Brand Designer', specialty: 'Visual dan portofolio' },
 ];
 export const merchItems: MerchItem[] = [
 	{ id: 'shirt', name: 'DECOMPE T-Shirt', description: 'T-shirt resmi dengan grafis edisi 5.0.', price: 120000, color: '#FF5C00' },
 	{ id: 'lanyard', name: 'Event Lanyard', description: 'Lanyard tebal untuk identitas peserta.', price: 35000, color: '#E00105' },
-	{ id: 'sticker', name: 'Sticker Pack', description: 'Satu pack stiker penuh energi DECOMPE.', price: 25000, color: '#FACC15' },
+	{ id: 'sticker', name: 'Sticker Pack', description: 'Satu pack stiker bertema DECOMPE 5.0.', price: 25000, color: '#FACC15' },
 ];
 export const faqs: FaqItem[] = [
 	{ question: 'Bagaimana cara mendaftarkan tim?', answer: 'Pilih paket Early Bird, isi data ketua dan anggota tim, lalu lanjutkan pembayaran melalui instruksi yang dikirim panitia.' },

@@ -1,4 +1,13 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { faqs } from '@/data/eventData';
-export default function FaqView() { const [active, setActive] = useState<number | null>(0); return <div className="mx-auto max-w-4xl px-5 py-16 lg:px-8"><p className="font-mono text-xs font-bold uppercase text-[#E00105]">FAQ / help desk</p><h1 className="mt-3 text-5xl font-black tracking-[-.06em]">Pertanyaan penting.</h1><p className="mt-5 text-slate-600">Jawaban ringkas untuk hal-hal yang paling sering ditanyakan peserta.</p><div className="mt-10 space-y-4">{faqs.map((faq, index) => <div key={faq.question} className="border-3 border-[#0F172A] bg-white"><button className="flex w-full items-center justify-between gap-4 p-5 text-left font-black" onClick={() => setActive(active === index ? null : index)}>{faq.question}<ChevronDown className={`shrink-0 transition-transform ${active === index ? 'rotate-180' : ''}`} /></button>{active === index && <div className="border-t-2 border-[#0F172A] p-5 text-sm leading-7 text-slate-600">{faq.answer}</div>}</div>)}</div></div>; }
+
+export default function FaqView() {
+	const [active, setActive] = useState<number | null>(0);
+	return <div className="mx-auto max-w-4xl px-5 py-16 lg:px-8">
+		<p className="font-mono text-xs font-bold uppercase text-[#E00105]">FAQ / help desk</p>
+		<h1 className="mt-3 text-5xl font-black tracking-[-.06em]">Pertanyaan pendaftaran.</h1>
+		<p className="mt-5 text-slate-600">Temukan jawaban tentang kategori, pembayaran, dan jadwal Early Bird.</p>
+		<div className="mt-10 space-y-4">{faqs.map((faq, index) => <div key={faq.question} className="border-3 border-[#0F172A] bg-white"><button className="flex w-full items-center justify-between gap-4 p-5 text-left font-black" onClick={() => setActive(active === index ? null : index)}>{faq.question}<ChevronDown className={`shrink-0 transition-transform ${active === index ? 'rotate-180' : ''}`} /></button>{active === index && <div className="border-t-2 border-[#0F172A] p-5 text-sm leading-7 text-slate-600">{faq.answer}</div>}</div>)}</div>
+	</div>;
+}
