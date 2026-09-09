@@ -29,7 +29,7 @@ export default function App() {
 		const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
 		if (description) description.content = current?.description ?? 'Halaman yang kamu cari tidak tersedia di DECOMPE X SKILL CLASS 5.0.';
 		const robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
-		if (robots) robots.content = current ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' : 'noindex, follow';
+		if (robots) robots.content = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 	}, [route]);
 	const view = route === '#event-info' ? <EventInfoView /> : route === '#register' ? <RegistrationView onRegister={() => setRegistrationOpen(true)} /> : route === '#merch' ? <MerchView /> : route === '#faq' ? <FaqView /> : route === '#home' || route === '' ? <HomeView onRegister={() => setRegistrationOpen(true)} /> : <NotFoundView />;
 	return <><UrgencyTopBar /><Navbar onRegister={() => setRegistrationOpen(true)} /><main>{view}</main><Footer /><FloatingWhatsAppHelp />{registrationOpen && <RegistrationModal onClose={() => setRegistrationOpen(false)} />}</>;

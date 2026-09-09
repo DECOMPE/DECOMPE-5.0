@@ -3,7 +3,4 @@
 User-agent: *
 Allow: /
 
-# Keep query-string duplicates out of the index.
-Disallow: /*?*
-
 Sitemap: https://decompe.id/sitemap.xml

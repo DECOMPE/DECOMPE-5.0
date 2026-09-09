@@ -2,10 +2,24 @@
 @import 'tailwindcss';
 
 @theme { --font-display: 'Space Grotesk', sans-serif; --font-mono: 'DM Mono', monospace; }
+
+:root {
+	color-scheme: light;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #F9FAFB; color: #0F172A; font-family: 'Space Grotesk', sans-serif; }
+body {
+	margin: 0;
+	background: linear-gradient(180deg, #f8fafc 0%, #eef4ff 100%);
+	color: #0F172A;
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 ::selection { background: #FF5C00; color: #0F172A; }
 .grid-paper { background-image: linear-gradient(#0f172a12 1px, transparent 1px), linear-gradient(90deg, #0f172a12 1px, transparent 1px); background-size: 24px 24px; }
 .text-balance { text-wrap: balance; }
+main { min-height: 100vh; }
