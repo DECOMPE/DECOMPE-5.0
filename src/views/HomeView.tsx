@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Award, CalendarDays, Download, Lightbulb, Sparkles, Star, Trophy } from 'lucide-react';
 import { challengeTracks, eventInfo, formatRupiah, metrics, prizePools, programHighlights, timeline } from '@/data/eventData';
 import PartnerShowcase from '@/components/PartnerShowcase';
+import mascot from '@/assets/NEW MASCOT 1.png';
 
 const btn = 'inline-flex items-center justify-center gap-2 border-3 border-[#0F172A] px-5 py-3 font-bold transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-0 active:translate-y-0';
 
@@ -33,7 +34,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 						<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.45),transparent_45%)]" />
 						<div className="absolute left-3 top-3 hidden border-2 border-[#0F172A] bg-white px-2 py-1 font-mono text-[10px] font-bold uppercase sm:left-5 sm:top-5 sm:block">IDE / KARYA / PRESENTASI</div>
 						<div className="absolute bottom-3 right-3 hidden border-2 border-[#0F172A] bg-[#E00105] px-2 py-1 text-[10px] font-bold uppercase text-white sm:bottom-5 sm:right-5 sm:block">EST. 2021</div>
-						<div className="absolute left-1/2 top-1/2 grid h-32 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center border-4 border-[#0F172A] bg-white text-5xl font-black shadow-[6px_6px_0px_0px_#0F172A] sm:h-48 sm:w-40 sm:text-7xl">5.0</div>
+						<img src={mascot} alt="Maskot robot DECOMPE 5.0" className="absolute left-1/2 top-1/2 h-[92%] w-[92%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[8px_8px_0px_#0F172A]" fetchPriority="high" />
 						<div className="absolute inset-x-3 bottom-3 rounded-3xl border-4 border-[#0F172A] bg-white/90 p-3 backdrop-blur-sm sm:inset-x-8 sm:bottom-8 sm:p-4">
 							<div className="mb-2 flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.12em] text-slate-600">
 								<span>Challenge focus</span>
