@@ -18,7 +18,7 @@ export default function EventInfoView() {
 		<div className="max-w-3xl">
 			<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Event info / 5.0</p>
 			<h1 className="mt-3 text-4xl font-black leading-tight tracking-[-.06em] sm:text-5xl">Lomba untuk tim yang ingin menguji idenya.</h1>
-			<p className="mt-5 text-lg leading-8 text-slate-600">Di DECOMPE X SKILL CLASS 5.0, tim memilih salah satu track, mengembangkan solusi, mendapat masukan, lalu mempresentasikannya dalam format pitch deck.</p>
+			<p className="mt-5 text-lg leading-8 text-slate-600">Di DECOMPE 5.0 Skill Class, tim memilih salah satu track, mengembangkan solusi, mendapat masukan, lalu mempresentasikannya dalam format pitch deck.</p>
 		</div>
 
 		<div className="mt-12 grid gap-6 md:grid-cols-3">

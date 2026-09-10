@@ -3,6 +3,8 @@ import { ArrowRight, Award, CalendarDays, Download, Lightbulb, Sparkles, Star, T
 import { challengeTracks, eventInfo, formatRupiah, metrics, prizePools, programHighlights, timeline } from '@/data/eventData';
 import PartnerShowcase from '@/components/PartnerShowcase';
 import mascot from '@/assets/NEW MASCOT 1.png';
+import decompeWordmark from '@/assets/Group 12.png';
+import skillClassMark from '@/assets/Group 13.png';
 
 const btn = 'inline-flex items-center justify-center gap-2 border-3 border-[#0F172A] px-5 py-3 font-bold transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-0 active:translate-y-0';
 
@@ -12,7 +14,11 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			<div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[1.08fr_.92fr] lg:px-8 lg:py-24">
 				<motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
 					<p className="mb-5 inline-flex items-center gap-2 border-2 border-[#0F172A] bg-white px-3 py-1 font-mono text-xs font-bold uppercase">Open registration · 5.0</p>
-					<h1 className="max-w-3xl text-4xl font-black leading-[.95] tracking-[-.07em] sm:text-6xl lg:text-7xl">DECOMPE X<br /><span className="text-[#E00105]">SKILL CLASS</span></h1>
+					<h1 className="sr-only">DECOMPE 5.0 Skill Class</h1>
+					<div className="flex w-full max-w-[30rem] items-center gap-2" aria-label="DECOMPE 5.0 Skill Class">
+						<img src={decompeWordmark} alt="DECOMPE 5.0" className="h-auto min-w-0 flex-[1.05] object-contain object-left" />
+						<img src={skillClassMark} alt="Skill Class" className="h-auto min-w-0 flex-[1.2] object-contain object-right" />
+					</div>
 					<p className="mt-6 max-w-xl text-lg font-medium leading-7 text-slate-800">{eventInfo.tagline}</p>
 					<p className="mt-4 max-w-lg text-sm leading-6 text-slate-600">Pilih masalah yang ingin kamu pecahkan, kembangkan solusinya, lalu bawa ke panggung dalam bentuk pitch deck.</p>
 					<div className="mt-8 flex flex-wrap gap-4">

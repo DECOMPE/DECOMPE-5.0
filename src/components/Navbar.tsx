@@ -15,10 +15,10 @@ export default function Navbar({ onRegister }: { onRegister: () => void }) {
 				))}
 				<button onClick={onRegister} className="border-3 border-[#0F172A] bg-[#E00105] px-4 py-2 text-sm font-bold text-white shadow-[4px_4px_0px_0px_#0F172A] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0">Daftar Lomba</button>
 			</nav>
-			<button className="md:hidden" onClick={() => setOpen(!open)} aria-label="Buka menu">{open ? <X /> : <Menu />}</button>
+			<button className="md:hidden" onClick={() => setOpen(!open)} aria-label={open ? 'Tutup menu' : 'Buka menu'} aria-expanded={open} aria-controls="mobile-navigation">{open ? <X /> : <Menu />}</button>
 		</div>
 		{open && (
-			<nav className="border-t-3 border-[#0F172A] bg-[#FF5C00] p-5 md:hidden">
+			<nav id="mobile-navigation" aria-label="Navigasi mobile" className="border-t-3 border-[#0F172A] bg-[#FF5C00] p-5 md:hidden">
 				{links.map(([href, label]) => (
 					<a onClick={() => setOpen(false)} key={href} href={href} className="block border-b-2 border-[#0F172A] py-3 font-bold uppercase">{label}</a>
 				))}

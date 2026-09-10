@@ -6,7 +6,7 @@ import lingkarEventLogo from '@/assets/[MAIN] LOGO LINGKAREVENT 1.png';
 import ukmCodingLogo from '@/assets/Logo UKM Coding vers Hitam (5) 1.svg';
 
 export const eventInfo: EventInfo = {
-	name: 'DECOMPE X SKILL CLASS 5.0',
+	name: 'DECOMPE 5.0 Skill Class',
 	tagline: '5 Years of Impact: Smart Living, Sustainable Future',
 	contactPerson: 'Jane Doe (0869-6767-420)',
 	address: 'Jl. TB Simatupang No. 6',
