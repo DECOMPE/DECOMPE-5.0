@@ -10,7 +10,6 @@ import RegistrationView from '@/views/RegistrationView';
 import MerchView from '@/views/MerchView';
 import FaqView from '@/views/FaqView';
 import NotFoundView from '@/views/NotFoundView';
-import decompeFavicon from '@/assets/Group 12.png';
 
 export default function App() {
 	const [route, setRoute] = useState(window.location.hash || '#home');
@@ -31,7 +30,7 @@ export default function App() {
 		if (description) description.content = current?.description ?? 'Halaman yang kamu cari tidak tersedia di DECOMPE 5.0 Skill Class.';
 		const robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
 		if (robots) robots.content = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
-		document.querySelectorAll<HTMLLinkElement>('link[rel="icon"], link[rel="apple-touch-icon"]').forEach((link) => { link.href = decompeFavicon; });
+		document.querySelectorAll<HTMLLinkElement>('link[rel="icon"], link[rel="apple-touch-icon"]').forEach((link) => { link.href = '/favicon.svg'; });
 	}, [route]);
 	const view = route === '#event-info' ? <EventInfoView /> : route === '#register' ? <RegistrationView onRegister={() => setRegistrationOpen(true)} /> : route === '#merch' ? <MerchView /> : route === '#faq' ? <FaqView /> : route === '#home' || route === '' ? <HomeView onRegister={() => setRegistrationOpen(true)} /> : <NotFoundView />;
 	return <><UrgencyTopBar /><Navbar onRegister={() => setRegistrationOpen(true)} /><main>{view}</main><Footer /><FloatingWhatsAppHelp />{registrationOpen && <RegistrationModal onClose={() => setRegistrationOpen(false)} />}</>;
