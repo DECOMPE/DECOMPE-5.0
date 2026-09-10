@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Award, CalendarDays, Download, Lightbulb, Sparkles, Star, Trophy } from 'lucide-react';
 import { challengeTracks, eventInfo, formatRupiah, metrics, prizePools, programHighlights, timeline } from '@/data/eventData';
+import PartnerShowcase from '@/components/PartnerShowcase';
 
 const btn = 'inline-flex items-center justify-center gap-2 border-3 border-[#0F172A] px-5 py-3 font-bold transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-0 active:translate-y-0';
 
@@ -51,6 +52,8 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 				</motion.div>
 			</div>
 		</section>
+
+		<PartnerShowcase />
 
 		<section className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
 			<div className="mb-8 flex items-end justify-between gap-4">

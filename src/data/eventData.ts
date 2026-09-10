@@ -1,4 +1,4 @@
-import type { Category, EventInfo, FaqItem, Mentor, MerchItem, PrizePool, Timeline } from '@/types';
+import type { Category, EventInfo, FaqItem, Mentor, MerchItem, Partner, PrizePool, Timeline } from '@/types';
 
 export const eventInfo: EventInfo = {
 	name: 'DECOMPE X SKILL CLASS 5.0',
@@ -77,6 +77,13 @@ export const mentors: Mentor[] = [
 	{ name: 'Mentor 01', role: 'Creative Strategist', specialty: 'Ideasi, storytelling, dan positioning brand.' },
 	{ name: 'Mentor 02', role: 'Sustainability Expert', specialty: 'Solusi smart living dan green innovation.' },
 	{ name: 'Mentor 03', role: 'Brand Designer', specialty: 'Visual thinking, prototyping, dan portofolio.' },
+];
+
+export const partners: Partner[] = [
+	{ name: 'Partner pendukung 01', logo: '/image 26.png', type: 'Partner pendukung', alt: 'Logo partner pendukung DECOMPE' },
+	{ name: 'Partner pendukung 02', logo: '/image 25.png', type: 'Partner pendukung', alt: 'Logo partner pendukung DECOMPE' },
+	{ name: 'Ada Event', logo: '/Logo Adaevent 1.png', type: 'Media partner', alt: 'Logo Ada Event' },
+	{ name: 'Katalog Event Indonesia', logo: '/Katalog Event - Logo 2 1.png', type: 'Media partner', alt: 'Logo Katalog Event Indonesia' },
 ];
 
 export const merchItems: MerchItem[] = [

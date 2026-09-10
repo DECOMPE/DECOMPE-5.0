@@ -8,3 +8,4 @@ export interface PrizePool { category: string; prizes: { rank: string; amount: n
 export interface MerchItem { id: string; name: string; description: string; price: number; color: string; }
 export interface FaqItem { question: string; answer: string; }
 export interface Mentor { name: string; role: string; specialty: string; }
+export interface Partner { name: string; logo: string; type: 'Partner pendukung' | 'Media partner'; alt: string; }
