@@ -8,18 +8,22 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; min-width: 320px; }
 body {
 	margin: 0;
+	min-width: 320px;
+	overflow-x: hidden;
 	background: linear-gradient(180deg, #f8fafc 0%, #eef4ff 100%);
 	color: #0F172A;
 	font-family: 'Space Grotesk', sans-serif;
 }
 
+#root { min-width: 0; overflow-x: clip; }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
 ::selection { background: #FF5C00; color: #0F172A; }
 .grid-paper { background-image: linear-gradient(#0f172a12 1px, transparent 1px), linear-gradient(90deg, #0f172a12 1px, transparent 1px); background-size: 24px 24px; }
 .text-balance { text-wrap: balance; }
-main { min-height: 100vh; }
+main { min-height: 100vh; min-width: 0; }

@@ -14,7 +14,7 @@ export default function Footer() {
 		<div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.2fr_.8fr_.9fr]">
 			<div>
 				<p className="mb-3 text-2xl font-black">DECOMPE<span className="text-[#FF5C00]">.</span></p>
-				<p className="max-w-xs text-sm leading-6 text-slate-300">{eventInfo.tagline}. Kompetisi, mentoring, dan presentasi untuk peserta DECOMPE 5.0.</p>
+				<p className="max-w-xs text-sm leading-6 text-slate-300">Kompetisi dan skill class untuk tim yang ingin mengembangkan ide, menerima feedback, dan berlatih pitching.</p>
 			</div>
 
 			<div>

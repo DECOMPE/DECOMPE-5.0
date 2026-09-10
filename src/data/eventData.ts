@@ -1,4 +1,9 @@
 import type { Category, EventInfo, FaqItem, Mentor, MerchItem, Partner, PrizePool, Timeline } from '@/types';
+import cyberUniversityLogo from '@/assets/image 25.png';
+import katalogEventLogo from '@/assets/Katalog Event - Logo 2 1.png';
+import adaEventLogo from '@/assets/Logo Adaevent 1.png';
+import lingkarEventLogo from '@/assets/[MAIN] LOGO LINGKAREVENT 1.png';
+import ukmCodingLogo from '@/assets/Logo UKM Coding vers Hitam (5) 1.svg';
 
 export const eventInfo: EventInfo = {
 	name: 'DECOMPE X SKILL CLASS 5.0',
@@ -9,9 +14,9 @@ export const eventInfo: EventInfo = {
 };
 
 export const metrics = [
-	{ value: '5+', label: 'Years of impact', detail: 'A trusted platform for youth innovation in Indonesia.' },
-	{ value: '300+', label: 'Participants', detail: 'Creative minds from schools, campuses, and communities.' },
-	{ value: '3', label: 'Main themes', detail: 'Smart living, green future, and creative problem solving.' },
+	{ value: '5+', label: 'Years running', detail: 'A competition built around ideas for everyday life.' },
+	{ value: '300+', label: 'Participants', detail: 'Teams from schools, campuses, and local communities.' },
+	{ value: '3', label: 'Challenge tracks', detail: 'Smart living, sustainability, and creative business.' },
 ];
 
 export const challengeTracks = [
@@ -34,24 +39,24 @@ export const challengeTracks = [
 
 export const programHighlights = [
 	{
-		title: 'Mentoring & feedback',
-		description: 'Peserta mendapat arahan dari mentor dan juri untuk mengasah ide, struktur pitch, dan presentation skills.',
+		title: 'Bimbingan yang bisa dipakai',
+		description: 'Mentor membantu tim merapikan masalah, alur cerita, dan cara menyampaikan ide di depan juri.',
 	},
 	{
-		title: 'Career-ready exposure',
-		description: 'Kegiatan ini mendorong peserta berpikir seperti founder, problem-solver, dan creator dengan orientasi nyata.',
+		title: 'Proses yang masuk portofolio',
+		description: 'Riset, konsep, pitch deck, dan presentasi memberi tim bahan kerja yang bisa mereka tunjukkan setelah lomba.',
 	},
 	{
-		title: 'National-level recognition',
-		description: 'Kompetisi ini memberi ruang untuk membangun portofolio, kepercayaan diri, dan perhatian dari komunitas industri.',
+		title: 'Panggung untuk karya',
+		description: 'Tim mempresentasikan solusi mereka dan menerima penilaian dari juri dengan latar belakang yang relevan.',
 	},
 ];
 
 export const registrationSteps = [
 	{ step: '01', title: 'Pilih kategori', description: 'Tentukan kategori Umum atau SMA/SMK sesuai kebutuhan tim kamu.' },
-	{ step: '02', title: 'Isi form pendaftaran', description: 'Lengkapi data Ketua Tim, anggota, serta kebutuhan submission yang dibutuhkan.' },
+	{ step: '02', title: 'Isi form pendaftaran', description: 'Lengkapi data ketua tim dan anggota sebelum melanjutkan ke pembayaran.' },
 	{ step: '03', title: 'Lakukan pembayaran', description: 'Ikuti instruksi pembayaran dan simpan bukti transfer untuk konfirmasi panitia.' },
-	{ step: '04', title: 'Siapkan ide terbaik', description: 'Mulai tren, riset, dan pitching hingga ready mengikuti technical meeting.' },
+	{ step: '04', title: 'Siapkan ide', description: 'Amati masalah, susun solusi, dan siapkan pitch deck sebelum technical meeting.' },
 ];
 
 export const categories: Category[] = [
@@ -80,10 +85,11 @@ export const mentors: Mentor[] = [
 ];
 
 export const partners: Partner[] = [
-	{ name: 'Partner pendukung 01', logo: '/image 26.png', type: 'Partner pendukung', alt: 'Logo partner pendukung DECOMPE' },
-	{ name: 'Partner pendukung 02', logo: '/image 25.png', type: 'Partner pendukung', alt: 'Logo partner pendukung DECOMPE' },
-	{ name: 'Ada Event', logo: '/Logo Adaevent 1.png', type: 'Media partner', alt: 'Logo Ada Event' },
-	{ name: 'Katalog Event Indonesia', logo: '/Katalog Event - Logo 2 1.png', type: 'Media partner', alt: 'Logo Katalog Event Indonesia' },
+	{ name: 'Cyber University', logo: cyberUniversityLogo, type: 'Partner pendukung', alt: 'Logo Cyber University' },
+	{ name: 'UKM Coding', logo: ukmCodingLogo, type: 'Partner pendukung', alt: 'Logo UKM Coding' },
+	{ name: 'Ada Event', logo: adaEventLogo, type: 'Media partner', alt: 'Logo Ada Event' },
+	{ name: 'Katalog Event Indonesia', logo: katalogEventLogo, type: 'Media partner', alt: 'Logo Katalog Event Indonesia' },
+	{ name: 'Lingkar Event', logo: lingkarEventLogo, type: 'Media partner', alt: 'Logo Lingkar Event' },
 ];
 
 export const merchItems: MerchItem[] = [

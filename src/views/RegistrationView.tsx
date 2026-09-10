@@ -5,8 +5,8 @@ export default function RegistrationView({ onRegister }: { onRegister: () => voi
 	return <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
 		<div className="max-w-3xl">
 			<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Registration / early bird</p>
-			<h1 className="mt-3 text-5xl font-black tracking-[-.06em]">Pilih kategori pendaftaran yang paling tepat.</h1>
-			<p className="mt-5 leading-7 text-slate-600">Pendaftaran Early Bird terbuka untuk semua kategori. Harga yang tercantum berlaku selama periode tertentu dan sudah mencakup akses kompetisi, mentoring, serta dokumentasi kegiatan.</p>
+			<h1 className="mt-3 text-4xl font-black leading-tight tracking-[-.06em] sm:text-5xl">Pilih kategori timmu.</h1>
+			<p className="mt-5 leading-7 text-slate-600">Early Bird tersedia untuk kategori Umum dan SMA/SMK. Pilih satu paket untuk melihat fasilitas dan biaya pendaftaran per tim.</p>
 		</div>
 
 		<div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -45,7 +45,7 @@ export default function RegistrationView({ onRegister }: { onRegister: () => voi
 			<div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
 				<div>
 					<p className="font-mono text-xs font-bold uppercase text-[#FF5C00]">Need help?</p>
-					<h3 className="mt-2 text-2xl font-black">Butuh bantuan konfirmasi pembayaran atau kategori?</h3>
+					<h3 className="mt-2 text-2xl font-black">Ada yang perlu dikonfirmasi?</h3>
 				</div>
 				<div className="inline-flex items-center gap-2 border-2 border-white/20 bg-white/5 px-4 py-3 text-sm font-bold uppercase"><Wallet size={16} /> Chat panitia</div>
 			</div>

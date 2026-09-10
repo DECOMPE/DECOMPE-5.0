@@ -11,9 +11,9 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			<div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[1.08fr_.92fr] lg:px-8 lg:py-24">
 				<motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
 					<p className="mb-5 inline-flex items-center gap-2 border-2 border-[#0F172A] bg-white px-3 py-1 font-mono text-xs font-bold uppercase">Open registration · 5.0</p>
-					<h1 className="max-w-3xl text-5xl font-black leading-[.95] tracking-[-.07em] sm:text-7xl">DECOMPE X<br /><span className="text-[#E00105]">SKILL CLASS</span></h1>
+					<h1 className="max-w-3xl text-4xl font-black leading-[.95] tracking-[-.07em] sm:text-6xl lg:text-7xl">DECOMPE X<br /><span className="text-[#E00105]">SKILL CLASS</span></h1>
 					<p className="mt-6 max-w-xl text-lg font-medium leading-7 text-slate-800">{eventInfo.tagline}</p>
-					<p className="mt-4 max-w-lg text-sm leading-6 text-slate-600">Susun ide, bangun solusi, lalu presentasikan pitch deck yang membuktikan kontribusi nyata untuk smart living dan sustainable future.</p>
+					<p className="mt-4 max-w-lg text-sm leading-6 text-slate-600">Pilih masalah yang ingin kamu pecahkan, kembangkan solusinya, lalu bawa ke panggung dalam bentuk pitch deck.</p>
 					<div className="mt-8 flex flex-wrap gap-4">
 						<button onClick={onRegister} className={`${btn} bg-[#E00105] text-white shadow-[4px_4px_0px_0px_#0F172A]`}>Daftar Tim (Early Bird) <ArrowRight size={18} /></button>
 						<a href="#event-info" className={`${btn} bg-white shadow-[4px_4px_0px_0px_#0F172A]`}>Lihat format lomba <Download size={18} /></a>
@@ -30,11 +30,11 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 				</motion.div>
 				<motion.div initial={{ opacity: 0, scale: .9 }} animate={{ opacity: 1, scale: 1 }} className="relative mx-auto w-full max-w-xl">
 					<div className="relative aspect-[1.02] overflow-hidden border-4 border-[#0F172A] bg-[#FF5C00] shadow-[12px_12px_0px_0px_#0F172A]">
-						<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.45),_transparent_45%)]" />
-						<div className="absolute left-5 top-5 border-2 border-[#0F172A] bg-white px-2 py-1 font-mono text-[10px] font-bold uppercase">IDE / KARYA / PRESENTASI</div>
-						<div className="absolute bottom-5 right-5 border-2 border-[#0F172A] bg-[#E00105] px-2 py-1 text-[10px] font-bold uppercase text-white">EST. 2021</div>
-						<div className="absolute left-1/2 top-1/2 grid h-48 w-40 -translate-x-1/2 -translate-y-1/2 place-items-center border-4 border-[#0F172A] bg-white text-7xl font-black shadow-[6px_6px_0px_0px_#0F172A]">5.0</div>
-						<div className="absolute inset-x-8 bottom-8 rounded-[1.5rem] border-4 border-[#0F172A] bg-white/90 p-4 backdrop-blur-sm">
+						<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.45),transparent_45%)]" />
+						<div className="absolute left-3 top-3 hidden border-2 border-[#0F172A] bg-white px-2 py-1 font-mono text-[10px] font-bold uppercase sm:left-5 sm:top-5 sm:block">IDE / KARYA / PRESENTASI</div>
+						<div className="absolute bottom-3 right-3 hidden border-2 border-[#0F172A] bg-[#E00105] px-2 py-1 text-[10px] font-bold uppercase text-white sm:bottom-5 sm:right-5 sm:block">EST. 2021</div>
+						<div className="absolute left-1/2 top-1/2 grid h-32 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center border-4 border-[#0F172A] bg-white text-5xl font-black shadow-[6px_6px_0px_0px_#0F172A] sm:h-48 sm:w-40 sm:text-7xl">5.0</div>
+						<div className="absolute inset-x-3 bottom-3 rounded-3xl border-4 border-[#0F172A] bg-white/90 p-3 backdrop-blur-sm sm:inset-x-8 sm:bottom-8 sm:p-4">
 							<div className="mb-2 flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.12em] text-slate-600">
 								<span>Challenge focus</span>
 								<span className="flex items-center gap-1 text-[#E00105]"><Star size={12} fill="currentColor" /> Featured</span>
@@ -59,7 +59,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			<div className="mb-8 flex items-end justify-between gap-4">
 				<div>
 					<p className="font-mono text-xs font-bold uppercase text-[#E00105]">01 / Challenge tracks</p>
-					<h2 className="mt-2 text-4xl font-black tracking-[-0.05em]">Jelajahi fokus yang relevan dengan masa depan.</h2>
+					<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Pilih masalah yang ingin kamu kerjakan.</h2>
 				</div>
 				<Lightbulb className="hidden h-12 w-12 text-[#FF5C00] sm:block" />
 			</div>
@@ -82,7 +82,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 		<section className="border-y-4 border-[#0F172A] bg-[#0F172A] px-5 py-16 text-white lg:px-8">
 			<div className="mx-auto max-w-7xl">
 				<p className="font-mono text-xs font-bold uppercase text-[#FF5C00]">02 / Why join</p>
-				<h2 className="mt-2 text-4xl font-black tracking-[-0.05em]">Belajar, bertumbuh, dan tampil dengan ide yang lebih kuat.</h2>
+				<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Bawa ide dari catatan ke pitch.</h2>
 				<div className="mt-8 grid gap-6 md:grid-cols-3">
 					{programHighlights.map((item) => (
 						<div key={item.title} className="border-3 border-white/15 bg-white/5 p-6 backdrop-blur-sm">
@@ -99,7 +99,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			<div className="mb-8 flex items-end justify-between gap-4">
 				<div>
 					<p className="font-mono text-xs font-bold uppercase text-[#E00105]">03 / Prize pool</p>
-					<h2 className="mt-2 text-4xl font-black tracking-[-0.05em]">Buat ide. Bawa pulang hadiah.</h2>
+					<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Kerjakan idenya. Kejar hadiahnya.</h2>
 				</div>
 				<Trophy className="hidden h-12 w-12 text-[#FF5C00] sm:block" />
 			</div>
@@ -127,7 +127,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 		<section className="border-y-4 border-[#0F172A] bg-[#FF5C00] px-5 py-16 lg:px-8">
 			<div className="mx-auto max-w-7xl">
 				<p className="font-mono text-xs font-bold uppercase">04 / Roadmap</p>
-				<h2 className="mt-2 text-4xl font-black tracking-[-0.05em]">Enam langkah menuju impact yang nyata.</h2>
+				<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Enam langkah dari daftar sampai awarding.</h2>
 				<div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
 					{timeline.map((item, i) => (
 						<div key={item.title} className="border-3 border-[#0F172A] bg-white p-5 shadow-[4px_4px_0px_0px_#0F172A]">
@@ -148,7 +148,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 				<div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
 					<div>
 						<p className="font-mono text-xs font-bold uppercase text-[#FF5C00]">Pendaftaran dibuka</p>
-						<h2 className="mt-2 text-3xl font-black">Daftarkan tim dan siapkan ide yang mengguncang pasar.</h2>
+						<h2 className="mt-2 text-3xl font-black">Daftarkan tim, lalu mulai dari masalah yang kamu kenal.</h2>
 					</div>
 					<button onClick={onRegister} className={`${btn} bg-[#FF5C00] text-[#0F172A] shadow-[4px_4px_0px_0px_#FFFFFF]`}>Daftar sekarang <ArrowRight size={18} /></button>
 				</div>

@@ -5,20 +5,20 @@ export default function EventInfoView() {
 	const highlights = [
 		{ icon: BookOpen, title: 'Teknis lomba', text: 'Tim berisi 1 sampai 3 orang menyusun ide dan mempresentasikan pitch deck sesuai arahan panitia.' },
 		{ icon: Users, title: 'Juri dan mentor', text: 'Peserta mendapat masukan tentang ide, alur cerita, dan presentasi dari praktisi lintas bidang.' },
-		{ icon: Handshake, title: 'Partner kegiatan', text: 'Sponsor dan media partner mendukung pelaksanaan kompetisi, mentoring, dan sesi presentasi.' },
+		{ icon: Handshake, title: 'Partner kegiatan', text: 'Partner membantu acara berjalan dan membuat informasi lomba sampai ke peserta.' },
 	];
 
 	const formatFlow = [
 		{ title: '01 / Briefing challenge', description: 'Peserta memahami tema, kriteria penilaian, dan mekanisme presentasi.' },
-		{ title: '02 / Ideation sprint', description: 'Tim menyusun solusi, riset kebutuhan, dan merancang konsep yang kuat secara logis.' },
-		{ title: '03 / Pitch deck', description: 'Peserta menjelaskan visi, strategi, dan dampak sosial maupun bisnis dari solusi yang dibuat.' },
+		{ title: '02 / Ideation sprint', description: 'Tim meriset kebutuhan, memilih arah solusi, dan menguji apakah idenya masuk akal.' },
+		{ title: '03 / Pitch deck', description: 'Peserta menyusun masalah, solusi, rencana, dan dampak yang ingin dicapai.' },
 	];
 
 	return <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
 		<div className="max-w-3xl">
 			<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Event info / 5.0</p>
-			<h1 className="mt-3 text-5xl font-black tracking-[-.06em]">Kompetisi dan skill class yang lebih dari sekadar lomba.</h1>
-			<p className="mt-5 text-lg leading-8 text-slate-600">DECOMPE X SKILL CLASS 5.0 mengajak peserta mengembangkan gagasan tentang smart living dan sustainable future. Peserta menyusun solusi, menerima arahan mentor, lalu mempresentasikan ide dalam format pitch deck yang siap dibawa ke ekosistem nyata.</p>
+			<h1 className="mt-3 text-4xl font-black leading-tight tracking-[-.06em] sm:text-5xl">Lomba untuk tim yang ingin menguji idenya.</h1>
+			<p className="mt-5 text-lg leading-8 text-slate-600">Di DECOMPE X SKILL CLASS 5.0, tim memilih salah satu track, mengembangkan solusi, mendapat masukan, lalu mempresentasikannya dalam format pitch deck.</p>
 		</div>
 
 		<div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -33,7 +33,7 @@ export default function EventInfoView() {
 
 		<section className="mt-16">
 			<div className="mb-6 flex items-center justify-between gap-4">
-				<h2 className="text-3xl font-black tracking-[-0.05em]">Pilar pengalaman peserta</h2>
+				<h2 className="text-3xl font-black tracking-tighter">Pilar pengalaman peserta</h2>
 				<BriefcaseBusiness className="text-[#FF5C00]" />
 			</div>
 			<div className="grid gap-5 md:grid-cols-3">
@@ -48,7 +48,7 @@ export default function EventInfoView() {
 
 		<section className="mt-16 border-3 border-[#0F172A] bg-[#FF5C00] p-6 shadow-[8px_8px_0px_0px_#0F172A] md:p-8">
 			<p className="font-mono text-xs font-bold uppercase">Format kompetisi</p>
-			<h2 className="mt-2 text-3xl font-black tracking-[-0.05em]">Dari ide awal hingga pitch final yang siap dipresentasikan.</h2>
+				<h2 className="mt-2 text-2xl font-black tracking-tighter sm:text-3xl">Alur lombanya jelas dari awal.</h2>
 			<div className="mt-8 grid gap-4 md:grid-cols-3">
 				{formatFlow.map((item) => (
 					<div key={item.title} className="border-2 border-[#0F172A] bg-white p-5">
@@ -61,7 +61,7 @@ export default function EventInfoView() {
 
 		<section className="mt-16">
 			<div className="mb-6 flex items-center justify-between gap-4">
-				<h2 className="text-3xl font-black tracking-[-0.05em]">Focus challenge yang dibahas</h2>
+				<h2 className="text-3xl font-black tracking-tighter">Focus challenge yang dibahas</h2>
 				<Sparkles className="text-[#E00105]" />
 			</div>
 			<div className="grid gap-5 md:grid-cols-3">

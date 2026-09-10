@@ -7,8 +7,8 @@ export default function FaqView() {
 	return <div className="mx-auto max-w-4xl px-5 py-16 lg:px-8">
 		<div className="max-w-3xl">
 			<p className="font-mono text-xs font-bold uppercase text-[#E00105]">FAQ / help desk</p>
-			<h1 className="mt-3 text-5xl font-black tracking-[-.06em]">Pertanyaan pendaftaran dan persiapan acara.</h1>
-			<p className="mt-5 leading-7 text-slate-600">Temukan jawaban tentang kategori, mekanisme pendaftaran, pembayaran, mentoring, dan merchandise agar kamu lebih siap mengikuti DECOMPE X SKILL CLASS 5.0.</p>
+			<h1 className="mt-3 text-4xl font-black leading-tight tracking-[-.06em] sm:text-5xl">Jawaban sebelum kamu mendaftar.</h1>
+			<p className="mt-5 leading-7 text-slate-600">Cek kategori, pembayaran, mentoring, jadwal, dan cara memesan merchandise di sini.</p>
 		</div>
 
 		<div className="mt-10 space-y-4">
