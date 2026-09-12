@@ -11,6 +11,7 @@ import generationGirlLogo from '@/assets/media partenrer.png';
 export const eventInfo: EventInfo = {
 	name: 'DECOMPE 5.0 Skill Class',
 	tagline: '5 Years Of Impact: Smart Living, Sustainable Future',
+	theme: 'Smart Living & Sustainable Future',
 	contactPerson: 'Jane Doe (0869-6767-420)',
 	address: 'Jl. TB Simatupang No. 6',
 	socials: { instagram: '@decompeofficial', tiktok: '@decompe', youtube: 'DECOMPE', linkedin: 'decompe' },
@@ -19,7 +20,7 @@ export const eventInfo: EventInfo = {
 export const metrics = [
 	{ value: '5+', label: 'Years running', detail: 'A competition built around ideas for everyday life.' },
 	{ value: '300+', label: 'Participants', detail: 'Teams from schools, campuses, and local communities.' },
-	{ value: '4', label: 'SDG subthemes', detail: 'Empat subtema untuk mengarahkan ide dan solusi peserta.' },
+	{ value: '3', label: 'SDG subthemes', detail: 'Tiga subtema SDG untuk mengarahkan ide dan solusi peserta.' },
 ];
 
 export const challengeTracks = [
@@ -37,11 +38,6 @@ export const challengeTracks = [
 		title: 'SDG 8',
 		description: 'Pekerjaan Layak dan Pertumbuhan Ekonomi. Susun ide yang membuka peluang kerja, mendukung usaha, dan mendorong pertumbuhan yang inklusif.',
 		outcomes: ['Kewirausahaan', 'Peluang kerja layak', 'Pertumbuhan ekonomi inklusif'],
-	},
-	{
-		title: 'Smart Living & Sustainable Future',
-		description: 'Gabungkan teknologi, kebutuhan manusia, dan prinsip keberlanjutan untuk menciptakan kehidupan sehari-hari yang lebih baik.',
-		outcomes: ['Teknologi yang bermanfaat', 'Kota dan komunitas berkelanjutan', 'Dampak yang terukur'],
 	},
 ];
 

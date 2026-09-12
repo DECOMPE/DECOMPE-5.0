@@ -1,5 +1,5 @@
 export interface EventInfo {
-	name: string; tagline: string; contactPerson: string; address: string;
+	name: string; tagline: string; theme: string; contactPerson: string; address: string;
 	socials: { instagram: string; tiktok: string; youtube: string; linkedin: string };
 }
 export interface Category { id: string; name: string; label: string; price: number; features: string[]; }

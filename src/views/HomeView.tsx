@@ -18,8 +18,10 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 						<img src={decompeWordmark} alt="DECOMPE 5.0" className="h-auto min-w-0 flex-[1.05] object-contain object-left" />
 						<img src={skillClassMark} alt="Skill Class" className="h-auto min-w-0 flex-[1.2] object-contain object-right" />
 					</div>
+					<p className="mt-8 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#E00105]">Tema utama</p>
+					<h2 className="mx-auto mt-2 max-w-2xl text-3xl font-black leading-tight tracking-tighter sm:text-5xl">{eventInfo.theme}</h2>
 					<p className="mx-auto mt-6 max-w-xl text-lg font-medium leading-7 text-slate-800">{eventInfo.tagline}</p>
-					<p className="mx-auto mt-4 max-w-lg text-sm leading-6 text-slate-600">Kembangkan solusi untuk tantangan nyata melalui empat subtema SDG, lalu sampaikan idemu dalam pitch deck yang terarah.</p>
+					<p className="mx-auto mt-4 max-w-lg text-sm leading-6 text-slate-600">Kembangkan solusi untuk tantangan nyata melalui tiga subtema SDG, lalu sampaikan idemu dalam pitch deck yang terarah.</p>
 					<div className="mt-8 flex flex-wrap justify-center gap-4">
 						<button onClick={onRegister} className={`${btn} bg-[#E00105] text-white shadow-[4px_4px_0px_0px_#0F172A]`}>Daftar Batch 1 <ArrowRight size={18} /></button>
 						<a href="#event-info" className={`${btn} bg-white shadow-[4px_4px_0px_0px_#0F172A]`}>Lihat format lomba <Download size={18} /></a>
@@ -43,7 +45,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			<div className="mb-8 flex items-end justify-between gap-4">
 				<div>
 					<p className="font-mono text-xs font-bold uppercase text-[#E00105]">01 / Tema dan subtema</p>
-					<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Satu tema besar, empat arah solusi.</h2>
+					<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Tiga subtema untuk mengembangkan solusi.</h2>
 				</div>
 				<Lightbulb className="hidden h-12 w-12 text-[#FF5C00] sm:block" />
 			</div>
