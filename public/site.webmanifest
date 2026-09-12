@@ -9,5 +9,5 @@
   "display": "standalone",
   "background_color": "#F9FAFB",
   "theme_color": "#FF5C00",
-  "icons": [{ "src": "/decompe-logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
 }
