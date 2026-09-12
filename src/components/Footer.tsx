@@ -17,7 +17,7 @@ export default function Footer() {
 	return <footer className="border-t-4 border-[#0F172A] bg-[#0F172A] px-5 py-12 text-white lg:px-8">
 		<div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.2fr_.8fr_.9fr]">
 			<div>
-				<div className="mb-4 flex w-full max-w-60 items-center gap-1" aria-label="DECOMPE 5.0 Skill Class"><img src={decompeWordmark} alt="DECOMPE 5.0" className="h-auto min-w-0 flex-[1.05] object-contain" /><img src={skillClassMark} alt="Skill Class" className="h-auto min-w-0 flex-[1.2] object-contain" /></div>
+				<div className="mb-4 inline-flex items-center gap-0 border-2 border-white/40 bg-slate-100 px-3 py-2 shadow-[4px_4px_0px_0px_#FF5C00]" aria-label="DECOMPE 5.0 Skill Class"><img src={decompeWordmark} alt="DECOMPE 5.0" className="h-14 w-24 object-contain sm:h-16 sm:w-28" /><img src={skillClassMark} alt="Skill Class" className="-ml-1 h-14 w-28 object-contain sm:h-16 sm:w-32" /></div>
 				<p className="max-w-xs text-sm leading-6 text-slate-300">Kompetisi dan skill class untuk mengembangkan solusi bagi smart living dan sustainable future.</p>
 			</div>
 

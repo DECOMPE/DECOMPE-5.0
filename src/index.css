@@ -27,3 +27,12 @@ button { font: inherit; }
 .grid-paper { background-image: linear-gradient(#0f172a12 1px, transparent 1px), linear-gradient(90deg, #0f172a12 1px, transparent 1px); background-size: 24px 24px; }
 .text-balance { text-wrap: balance; }
 main { min-height: 100vh; min-width: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
