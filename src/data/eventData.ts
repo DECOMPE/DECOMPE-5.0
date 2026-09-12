@@ -13,7 +13,7 @@ export const eventInfo: EventInfo = {
 	tagline: '5 Years Of Impact: Smart Living, Sustainable Future',
 	contactPerson: 'Jane Doe (0869-6767-420)',
 	address: 'Jl. TB Simatupang No. 6',
-	socials: { instagram: '@decompeofficial', tiktok: '@decompe.5.0', youtube: 'DECOMPE' },
+	socials: { instagram: '@decompeofficial', tiktok: '@decompe', youtube: 'DECOMPE', linkedin: 'decompe' },
 };
 
 export const metrics = [

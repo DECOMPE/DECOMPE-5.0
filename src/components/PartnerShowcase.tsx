@@ -32,7 +32,7 @@ export default function PartnerShowcase() {
 							<span className="font-mono text-xs font-bold text-slate-400">0{group.length}</span>
 						</div>
 						<div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-							{group.map((partner) => <figure key={partner.name} className="group relative grid min-h-28 place-items-center overflow-hidden border-2 border-slate-200 bg-white p-4 text-center transition-transform hover:-translate-y-1">
+							{group.map((partner) => <figure key={partner.name} className="group relative grid min-h-28 place-items-center overflow-hidden border-2 border-slate-200 bg-transparent p-4 text-center transition-transform hover:-translate-y-1">
 								{partner.logo ? <img src={partner.logo} alt={partner.alt} loading="lazy" decoding="async" className="max-h-20 w-full object-contain transition duration-300 group-hover:scale-105" /> : <span className="text-2xl font-black tracking-tight text-[#0F172A]">{partner.name}</span>}
 								<figcaption className="sr-only">{partner.name}</figcaption>
 							</figure>)}
