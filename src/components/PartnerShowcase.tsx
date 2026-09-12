@@ -11,9 +11,9 @@ export default function PartnerShowcase() {
 		<div className="mx-auto max-w-7xl">
 			<div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
 				<div>
-					<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Partners / 05</p>
+					<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Partners / {String(partners.length).padStart(2, '0')}</p>
 					<h2 id="partner-title" className="mt-2 max-w-lg text-4xl font-black leading-[.98] tracking-tighter">DECOMPE 5.0 didukung oleh sponsor dan media partner.</h2>
-					<p className="mt-4 max-w-md text-sm leading-6 text-slate-600">Sponsor mendukung pelaksanaan acara, sementara media partner membantu informasi DECOMPE menjangkau lebih banyak peserta.</p>
+					<p className="mt-4 max-w-md text-sm leading-6 text-slate-600">Sponsor mendukung pelaksanaan acara, sementara media partner membantu informasi DECOMPE menjangkau lebih banyak peserta dan komunitas.</p>
 				</div>
 				<div className="border-l-4 border-[#FF5C00] pl-5 text-sm font-medium leading-6 text-slate-700">Logo ditampilkan sesuai perannya dalam acara. Informasi kanal dan publikasi akan dibagikan melalui kanal resmi DECOMPE.</div>
 			</div>

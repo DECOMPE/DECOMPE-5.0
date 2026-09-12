@@ -4,6 +4,9 @@ import katalogEventLogo from '@/assets/Katalog Event - Logo 2 1.png';
 import adaEventLogo from '@/assets/Logo Adaevent 1.png';
 import lingkarEventLogo from '@/assets/[MAIN] LOGO LINGKAREVENT 1.png';
 import ukmCodingLogo from '@/assets/Logo UKM Coding vers Hitam (5) 1.svg';
+import bemSmaLogo from '@/assets/image 26.png';
+import sponsorLogo from '@/assets/spnsor.png';
+import generationGirlLogo from '@/assets/media partenrer.png';
 
 export const eventInfo: EventInfo = {
 	name: 'DECOMPE 5.0 Skill Class',
@@ -90,10 +93,12 @@ export const speakers: Speaker[] = [
 export const partners: Partner[] = [
 	{ name: 'Cyber University', logo: cyberUniversityLogo, type: 'Sponsor', alt: 'Logo Cyber University' },
 	{ name: 'UKM Coding', logo: ukmCodingLogo, type: 'Sponsor', alt: 'Logo UKM Coding' },
-	{ name: 'BEM', type: 'Sponsor', alt: 'BEM' },
+	{ name: 'BEM SMA', logo: bemSmaLogo, type: 'Sponsor', alt: 'Logo BEM SMA' },
+	{ name: 'S Pay', logo: sponsorLogo, type: 'Sponsor', alt: 'Logo S Pay' },
 	{ name: 'Ada Event', logo: adaEventLogo, type: 'Media partner', alt: 'Logo Ada Event' },
 	{ name: 'Katalog Event Indonesia', logo: katalogEventLogo, type: 'Media partner', alt: 'Logo Katalog Event Indonesia' },
 	{ name: 'Lingkar Event', logo: lingkarEventLogo, type: 'Media partner', alt: 'Logo Lingkar Event' },
+	{ name: 'Generation Girl Bogor', logo: generationGirlLogo, type: 'Media partner', alt: 'Logo Generation Girl Bogor' },
 ];
 
 export const merchItems: MerchItem[] = [
