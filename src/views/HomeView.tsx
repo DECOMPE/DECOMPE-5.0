@@ -13,7 +13,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			<div className="mx-auto flex max-w-4xl items-center justify-center px-5 py-16 lg:px-8 lg:py-24">
 				<motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="w-full text-center">
 					<h1 className="sr-only">DECOMPE 5.0 Skill Class</h1>
-					<div className="mx-auto flex w-full max-w-120 items-center gap-2" aria-label="DECOMPE 5.0 Skill Class">
+					<div className="mx-auto flex w-full max-w-120 items-center gap-0" aria-label="DECOMPE 5.0 Skill Class">
 						<img src={decompeWordmark} alt="DECOMPE 5.0" className="h-auto min-w-0 flex-[1.05] object-contain object-left" />
 						<img src={skillClassMark} alt="Skill Class" className="h-auto min-w-0 flex-[1.2] object-contain object-right" />
 					</div>
