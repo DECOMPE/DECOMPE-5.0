@@ -1,4 +1,4 @@
-import type { Category, ContactPerson, EventInfo, FaqItem, MerchItem, Partner, RegistrationBatch, Speaker, Timeline } from '@/types';
+import type { Category, ContactPerson, EventInfo, FaqItem, MerchItem, Partner, RegistrationBatch, SkillClassSession, Speaker, Timeline } from '@/types';
 import cyberUniversityLogo from '@/assets/image 25.png';
 import katalogEventLogo from '@/assets/Katalog Event - Logo 2 1.png';
 import adaEventLogo from '@/assets/Logo Adaevent 1.png';
@@ -76,19 +76,33 @@ export const categories: Category[] = [
 export const totalPrize = 5000000;
 
 export const timeline: Timeline[] = [
-	{ title: 'Pendaftaran', date: '20 Sept - 01 Nov', status: 'Active' },
+	{ title: 'Pendaftaran Tahap 1', date: '20 Sept - 02 Okt', status: 'Active' },
+	{ title: 'Pendaftaran Tahap 2', date: '03 Okt - 18 Okt', status: 'Upcoming' },
+	{ title: 'Pendaftaran Tahap 3', date: '19 Okt - 01 Nov', status: 'Upcoming' },
+	{ title: 'Penutupan Pendaftaran', date: '01 Nov', status: 'Upcoming' },
 	{ title: 'Bootcamp', date: '02 Nov - 15 Nov', status: 'Upcoming' },
+	{ title: 'Pengumpulan Karya', date: '02 Nov - 16 Nov', status: 'Upcoming' },
+	{ title: 'Batas Pengumpulan Karya', date: '16 Nov', status: 'Upcoming' },
+	{ title: 'Penjurian Tahap 1', date: '17 Nov - 21 Nov', status: 'Upcoming' },
+	{ title: 'Pengumuman 5 Besar', date: '21 Nov', status: 'Upcoming' },
 	{ title: 'Pengumpulan Pitch Deck', date: '22 Nov - 26 Nov', status: 'Upcoming' },
-	{ title: 'Penjurian', date: '02 Nov - 26 Nov', status: 'Upcoming' },
 	{ title: 'Technical Meeting', date: '26 Nov', status: 'Upcoming' },
 	{ title: 'Pelaksanaan Pitch Deck', date: '27 Nov', status: 'Upcoming' },
-	{ title: 'Awarding & Webinar', date: '27 Nov', status: 'Upcoming' },
+	{ title: 'Awarding & Webinar', date: '28 Nov', status: 'Upcoming' },
 ];
 
 export const registrationBatches: RegistrationBatch[] = [
-	{ name: 'Batch 1', date: '20 Sept - 01 Nov', status: 'Open' },
-	{ name: 'Batch 2', date: 'Jadwal menyusul', status: 'Upcoming' },
-	{ name: 'Batch 3', date: 'Jadwal menyusul', status: 'Upcoming' },
+	{ name: 'Batch 1', date: '20 Sept - 02 Okt', status: 'Open' },
+	{ name: 'Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming' },
+	{ name: 'Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming' },
+];
+
+export const skillClassSessions: SkillClassSession[] = [
+	{ name: 'Pertemuan 1', date: 'Sabtu, 07 November 2026' },
+	{ name: 'Pertemuan 2', date: 'Minggu, 08 November 2026' },
+	{ name: 'Pertemuan 3', date: 'Jumat, 13 November 2026' },
+	{ name: 'Pertemuan 4', date: 'Sabtu, 14 November 2026' },
+	{ name: 'Pertemuan 5', date: 'Minggu, 15 November 2026' },
 ];
 
 export const speakers: Speaker[] = [
@@ -119,7 +133,7 @@ export const faqs: FaqItem[] = [
 	{ question: 'Bagaimana cara mendaftarkan tim?', answer: 'Pilih kategori dan batch yang sedang dibuka, isi form pendaftaran dengan data ketua dan anggota tim, lalu ikuti prosedur pembayaran sesuai instruksi yang dikirim panitia.' },
 	{ question: 'Apa perbedaan kategori SMA/SMK dan Umum?', answer: 'Kategori SMA/SMK ditujukan bagi pelajar aktif sekolah menengah. Kategori Umum terbuka untuk mahasiswa, alumni, pelaku usaha, dan peserta umum yang memenuhi syarat lomba.' },
 	{ question: 'Apakah pembayaran bisa dilakukan oleh satu orang untuk satu tim?', answer: 'Bisa. Pembayaran dilaksanakan satu kali oleh ketua tim sesuai kategori yang dipilih, kemudian panitia akan mendata tim secara resmi.' },
-	{ question: 'Sampai kapan Batch 1 dibuka?', answer: 'Pendaftaran Batch 1 berlangsung dari 20 September sampai 01 November. Setelah periode tersebut berakhir, pendaftaran akan mengikuti jadwal dan harga batch berikutnya sesuai ketentuan panitia.' },
+	{ question: 'Kapan periode setiap batch pendaftaran?', answer: 'Batch 1 berlangsung pada 20 September sampai 2 Oktober, Batch 2 pada 3 sampai 18 Oktober, dan Batch 3 pada 19 Oktober sampai 1 November 2026.' },
 	{ question: 'Apakah peserta menerima mentoring sebelum final?', answer: 'Ya. Selain jadwal utama, peserta akan mendapatkan arahan serta feedback dari mentor yang relevan dengan ide dan presentasi masing-masing tim.' },
 	{ question: 'Bagaimana jika saya ingin memesan merchandise?', answer: 'Peserta dan supporter dapat memesan melalui halaman Merch atau menghubungi panitia di WhatsApp untuk konfirmasi stok, harga, dan pengiriman.' },
 ];

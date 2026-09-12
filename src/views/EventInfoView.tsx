@@ -1,5 +1,5 @@
 import { ArrowRight, BookOpen, BriefcaseBusiness, Handshake, Sparkles, Users } from 'lucide-react';
-import { challengeTracks, programHighlights, registrationBatches, speakers, timeline } from '@/data/eventData';
+import { challengeTracks, programHighlights, registrationBatches, skillClassSessions, speakers, timeline } from '@/data/eventData';
 
 export default function EventInfoView() {
 	const highlights = [
@@ -94,12 +94,18 @@ export default function EventInfoView() {
 		</section>
 
 		<section className="mt-16">
-			<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Milestone acara</p>
-			<h2 className="mt-2 text-3xl font-black">Timeline inti kegiatan</h2>
+			<p className="text-center font-mono text-xs font-bold uppercase text-[#E00105]">Milestone acara</p>
+			<h2 className="mt-2 text-center text-3xl font-black">Timeline inti kegiatan</h2>
 			<div className="mt-6 grid gap-4 md:grid-cols-3">
 				{registrationBatches.map((batch) => <div key={batch.name} className={`border-3 border-[#0F172A] p-5 ${batch.status === 'Open' ? 'bg-[#FF5C00]' : 'bg-white'}`}><div className="flex items-center justify-between gap-3"><h3 className="text-xl font-black">{batch.name}</h3><span className="border-2 border-[#0F172A] px-2 py-1 text-[10px] font-bold uppercase">{batch.status === 'Open' ? 'Dibuka' : 'Segera'}</span></div><p className="mt-3 text-sm font-medium text-slate-700">{batch.date}</p></div>)}
 			</div>
-			<div className="relative mt-8 max-w-3xl">
+			<div className="mt-8 border-3 border-[#0F172A] bg-[#FF5C00] p-6 shadow-[6px_6px_0px_0px_#0F172A]">
+				<div className="flex flex-wrap items-end justify-between gap-4"><div><p className="font-mono text-xs font-bold uppercase">Jadwal Skill Class</p><h3 className="mt-2 text-2xl font-black">Lima pertemuan untuk mengembangkan ide.</h3></div><p className="text-sm font-bold">November 2026</p></div>
+				<div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+					{skillClassSessions.map((session, index) => <div key={session.name} className="border-2 border-[#0F172A] bg-white p-4"><p className="font-mono text-xs font-bold text-[#E00105]">0{index + 1}</p><h4 className="mt-3 font-black">{session.name}</h4><p className="mt-2 text-xs leading-5 text-slate-600">{session.date}</p></div>)}
+				</div>
+			</div>
+			<div className="relative mx-auto mt-8 max-w-3xl">
 				<div className="absolute bottom-5 left-6 top-5 w-1 bg-[#FF5C00] md:hidden" aria-hidden="true" />
 				<div className="space-y-5">
 					{timeline.map((event, index) => (
