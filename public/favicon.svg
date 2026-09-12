@@ -1,36 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="DECOMPE 5.0 favicon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="DECOMPE favicon">
   <defs>
     <style>
-      .shield { fill: #101010; }
-      .inner { fill: #f9f9f9; }
+      .shield { fill: #111111; }
+      .inner { fill: #f8f8f8; }
       .star { fill: #e11d2a; }
-      .ink { fill: #101010; }
       .brand { font-family: Arial, Helvetica, sans-serif; font-weight: 900; }
-      .outline { fill: none; stroke: #101010; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .bolt { fill: none; stroke: #111111; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
     </style>
   </defs>
 
-  <path class="shield" d="M128 10 202 30v76c0 45-23 82-74 110-51-28-74-65-74-110V30l74-20Z"/>
-  <path class="inner" d="M128 28 188 42v61c0 35-18 65-60 92-42-27-60-57-60-92V42l60-14Z"/>
+  <path class="shield" d="M128 12 198 30v72c0 52-28 88-70 112-42-24-70-60-70-112V30l70-18Z"/>
+  <path class="inner" d="M128 30 184 43v57c0 35-18 61-56 84-38-23-56-49-56-84V43l56-13Z"/>
 
   <g class="star">
-    <path d="M62 56 67 69 81 72 70 82 73 96 62 88 51 96 54 82 43 72 57 69Z"/>
-    <path d="M128 42 133 56 147 59 136 69 139 83 128 75 117 83 120 69 109 59 123 56Z"/>
-    <path d="M194 56 199 69 213 72 202 82 205 96 194 88 183 96 186 82 175 72 189 69Z"/>
+    <path d="M57 54 62 68 76 71 67 81 70 95 57 87 44 95 47 81 38 71 52 68Z"/>
+    <path d="M128 36 134 51 149 54 138 64 142 79 128 71 114 79 118 64 107 54 122 51Z"/>
+    <path d="M199 54 204 68 218 71 209 81 212 95 199 87 186 95 189 81 180 71 194 68Z"/>
   </g>
 
-  <g class="brand ink" font-size="76" letter-spacing="-8">
-    <text x="51" y="144">U</text>
-    <text x="95" y="144">I</text>
-    <text x="130" y="144">X</text>
+  <g class="brand" fill="#111111" font-size="74" letter-spacing="-8">
+    <text x="51" y="143">U</text>
+    <text x="95" y="143">I</text>
+    <text x="129" y="143">X</text>
   </g>
 
-  <g class="outline">
-    <path d="M128 148v28"/>
-    <path d="M117 176h22"/>
-    <path d="M96 188h64"/>
-    <path d="M104 92c0-18 10-28 24-28 14 0 24 10 24 28v18H104V92Z"/>
-    <path d="M96 110h64"/>
-    <path d="M102 112c3 19 17 31 26 31s23-12 26-31"/>
+  <g class="bolt">
+    <path d="M128 150v28"/>
+    <path d="M118 179h20"/>
+    <path d="M104 186h48"/>
+    <path d="M104 102c0-12 8-20 24-20 16 0 24 8 24 20v18H104v-18Z"/>
+    <path d="M103 118h50"/>
+    <path d="M102 118c3 20 18 32 26 32s23-12 26-32"/>
   </g>
 </svg>
