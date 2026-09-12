@@ -10,7 +10,7 @@ import RegistrationView from '@/views/RegistrationView';
 import MerchView from '@/views/MerchView';
 import FaqView from '@/views/FaqView';
 import NotFoundView from '@/views/NotFoundView';
-import faviconLogo from '/favicon.svg';
+import faviconLogo from '/favicon.png';
 
 export default function App() {
 	const [route, setRoute] = useState(window.location.hash || '#home');
