@@ -1,4 +1,4 @@
-import type { Category, EventInfo, FaqItem, MerchItem, Partner, PrizePool, Speaker, Timeline } from '@/types';
+import type { Category, EventInfo, FaqItem, MerchItem, Partner, Speaker, Timeline } from '@/types';
 import cyberUniversityLogo from '@/assets/image 25.png';
 import katalogEventLogo from '@/assets/Katalog Event - Logo 2 1.png';
 import adaEventLogo from '@/assets/Logo Adaevent 1.png';
@@ -69,10 +69,6 @@ export const categories: Category[] = [
 	{ id: 'sma', name: 'SMA/SMK Sederajat', label: 'SMA/SMK Sederajat (Early Bird)', price: 60000, features: ['Tim 1-3 Orang', 'Sertifikat Tingkat Nasional', 'Mentoring Eksklusif', 'Akses Webinar'] },
 ];
 
-export const prizePools: PrizePool[] = [
-	{ category: 'Umum', prizes: [{ rank: 'Juara I', amount: 1200000 }, { rank: 'Juara II', amount: 1000000 }, { rank: 'Juara III', amount: 800000 }] },
-	{ category: 'SMA/SMK', prizes: [{ rank: 'Juara I', amount: 750000 }, { rank: 'Juara II', amount: 550000 }, { rank: 'Juara III', amount: 400000 }, { rank: 'Juara Favorit', amount: 200000 }] },
-];
 export const totalPrize = 5000000;
 
 export const timeline: Timeline[] = [
