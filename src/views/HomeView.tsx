@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Award, CalendarDays, Download, Lightbulb, Trophy } from 'lucide-react';
-import { challengeTracks, eventInfo, formatRupiah, metrics, programHighlights, timeline, totalPrize } from '@/data/eventData';
+import { challengeTracks, eventInfo, formatRupiah, metrics, programHighlights, registrationBatches, timeline, totalPrize } from '@/data/eventData';
 import PartnerShowcase from '@/components/PartnerShowcase';
 import decompeWordmark from '@/assets/Group 12.png';
 import skillClassMark from '@/assets/Group 13.png';
@@ -99,19 +99,22 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 
 		<section className="border-y-4 border-[#0F172A] bg-[#FF5C00] px-5 py-16 lg:px-8">
 			<div className="mx-auto max-w-7xl">
-				<p className="font-mono text-xs font-bold uppercase">04 / Roadmap</p>
-				<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Enam langkah dari daftar sampai awarding.</h2>
-				<div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-					{timeline.map((item, i) => (
-						<div key={item.title} className="border-3 border-[#0F172A] bg-white p-5 shadow-[4px_4px_0px_0px_#0F172A]">
-							<div className="mb-8 flex justify-between">
-								<span className="font-mono text-xs font-bold">0{i + 1}</span>
-								<span className={`border-2 border-[#0F172A] px-2 py-1 text-[10px] font-bold uppercase ${item.status === 'Active' ? 'bg-[#E00105] text-white' : 'bg-slate-100'}`}>{item.status}</span>
-							</div>
-							<h3 className="text-lg font-black">{item.title}</h3>
-							<p className="mt-2 flex items-center gap-2 font-mono text-sm"><CalendarDays size={16} />{item.date}</p>
-						</div>
-					))}
+				<p className="font-mono text-xs font-bold uppercase">04 / Milestone</p>
+				<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Milestone acara dari pendaftaran sampai awarding.</h2>
+				<p className="mt-3 max-w-2xl text-sm leading-6 text-[#0F172A]/75">Ikuti setiap tahap utama DECOMPE 5.0 dan siapkan kebutuhan tim sesuai jadwal yang tercantum.</p>
+
+				<div className="mt-8 border-3 border-[#0F172A] bg-white p-5 shadow-[5px_5px_0px_0px_#0F172A] sm:p-7">
+					<div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between"><div><p className="font-mono text-xs font-bold uppercase text-[#E00105]">Pendaftaran per batch</p><h3 className="mt-1 text-2xl font-black">Pilih batch yang sedang dibuka.</h3></div><p className="text-sm text-slate-600">Harga mengikuti batch yang dipilih.</p></div>
+					<div className="mt-6 grid gap-3 md:grid-cols-3">
+						{registrationBatches.map((batch, index) => <div key={batch.name} className={`border-2 border-[#0F172A] p-4 ${batch.status === 'Open' ? 'bg-[#E00105] text-white' : 'bg-slate-50 text-[#0F172A]'}`}><div className="flex items-center justify-between gap-2"><span className="font-black">{batch.name}</span><span className="font-mono text-[10px] font-bold uppercase">{batch.status === 'Open' ? 'Dibuka' : 'Segera'}</span></div><p className="mt-3 flex items-center gap-2 font-mono text-sm"><CalendarDays size={15} />{batch.date}</p></div>)}
+					</div>
+				</div>
+
+				<div className="relative mt-10 max-w-3xl">
+					<div className="absolute bottom-6 left-6 top-6 w-1 bg-[#0F172A]" aria-hidden="true" />
+					<div className="space-y-6">
+						{timeline.map((item, i) => <div key={item.title} className="relative flex gap-5"><div className={`relative z-10 grid h-12 w-12 shrink-0 place-items-center border-3 border-[#0F172A] font-mono text-sm font-black shadow-[3px_3px_0px_0px_#0F172A] ${item.status === 'Active' ? 'bg-[#E00105] text-white' : 'bg-white text-[#0F172A]'}`}>0{i + 1}</div><div className="min-w-0 flex-1 border-3 border-[#0F172A] bg-white p-5 shadow-[4px_4px_0px_0px_#0F172A]"><div className="flex flex-wrap items-start justify-between gap-3"><h3 className="text-lg font-black">{item.title}</h3><span className={`border-2 border-[#0F172A] px-2 py-1 text-[10px] font-bold uppercase ${item.status === 'Active' ? 'bg-[#E00105] text-white' : 'bg-slate-100'}`}>{item.status}</span></div><p className="mt-3 flex items-center gap-2 font-mono text-sm"><CalendarDays size={16} />{item.date}</p></div></div>)}
+					</div>
 				</div>
 			</div>
 		</section>

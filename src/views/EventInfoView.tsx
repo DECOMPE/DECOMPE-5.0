@@ -1,5 +1,5 @@
 import { ArrowRight, BookOpen, BriefcaseBusiness, Handshake, Sparkles, Users } from 'lucide-react';
-import { challengeTracks, programHighlights, speakers, timeline } from '@/data/eventData';
+import { challengeTracks, programHighlights, registrationBatches, speakers, timeline } from '@/data/eventData';
 
 export default function EventInfoView() {
 	const highlights = [
@@ -94,15 +94,24 @@ export default function EventInfoView() {
 		</section>
 
 		<section className="mt-16">
-			<h2 className="text-3xl font-black">Timeline inti kegiatan</h2>
-			<div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-				{timeline.map((event) => (
-					<div key={event.title} className="border-3 border-[#0F172A] bg-white p-5">
-						<p className="font-mono text-[10px] font-bold uppercase text-[#E00105]">{event.status}</p>
-						<h3 className="mt-2 text-lg font-black">{event.title}</h3>
-						<p className="mt-2 text-sm font-medium text-slate-600">{event.date}</p>
-					</div>
-				))}
+			<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Milestone acara</p>
+			<h2 className="mt-2 text-3xl font-black">Timeline inti kegiatan</h2>
+			<div className="mt-6 grid gap-4 md:grid-cols-3">
+				{registrationBatches.map((batch) => <div key={batch.name} className={`border-3 border-[#0F172A] p-5 ${batch.status === 'Open' ? 'bg-[#FF5C00]' : 'bg-white'}`}><div className="flex items-center justify-between gap-3"><h3 className="text-xl font-black">{batch.name}</h3><span className="border-2 border-[#0F172A] px-2 py-1 text-[10px] font-bold uppercase">{batch.status === 'Open' ? 'Dibuka' : 'Segera'}</span></div><p className="mt-3 text-sm font-medium text-slate-700">{batch.date}</p></div>)}
+			</div>
+			<div className="relative mt-8 max-w-3xl">
+				<div className="absolute bottom-5 left-6 top-5 w-1 bg-[#FF5C00] md:hidden" aria-hidden="true" />
+				<div className="space-y-5">
+					{timeline.map((event, index) => (
+						<div key={event.title} className="relative flex gap-4 md:block">
+							<div className="relative z-10 grid h-12 w-12 shrink-0 place-items-center border-3 border-[#0F172A] bg-[#FF5C00] font-mono text-sm font-black shadow-[3px_3px_0px_0px_#0F172A]">0{index + 1}</div>
+							<div className="flex-1 border-3 border-[#0F172A] bg-white p-5 md:mt-4">
+								<div className="flex items-start justify-between gap-3"><h3 className="text-lg font-black">{event.title}</h3><span className={`shrink-0 border-2 border-[#0F172A] px-2 py-1 text-[10px] font-bold uppercase ${event.status === 'Active' ? 'bg-[#E00105] text-white' : 'bg-slate-100'}`}>{event.status}</span></div>
+								<p className="mt-3 font-mono text-sm font-medium text-slate-600">{event.date}</p>
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
 		</section>
 	</div>;

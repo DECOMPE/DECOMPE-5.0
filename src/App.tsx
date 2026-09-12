@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import UrgencyTopBar from '@/components/UrgencyTopBar';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import FloatingWhatsAppHelp from '@/components/FloatingWhatsAppHelp';
+import FloatingWhatsAppHelp from './components/FloatingWhatsAppHelp';
 import RegistrationModal from '@/components/RegistrationModal';
 import HomeView from '@/views/HomeView';
 import EventInfoView from '@/views/EventInfoView';

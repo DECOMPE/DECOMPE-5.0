@@ -1,4 +1,4 @@
-import type { Category, ContactPerson, EventInfo, FaqItem, MerchItem, Partner, Speaker, Timeline } from '@/types';
+import type { Category, ContactPerson, EventInfo, FaqItem, MerchItem, Partner, RegistrationBatch, Speaker, Timeline } from '@/types';
 import cyberUniversityLogo from '@/assets/image 25.png';
 import katalogEventLogo from '@/assets/Katalog Event - Logo 2 1.png';
 import adaEventLogo from '@/assets/Logo Adaevent 1.png';
@@ -76,12 +76,19 @@ export const categories: Category[] = [
 export const totalPrize = 5000000;
 
 export const timeline: Timeline[] = [
-	{ title: 'Pendaftaran Batch 1', date: '20 Sept - 01 Nov', status: 'Active' },
-	{ title: 'Pengumpulan Karya', date: '02 Nov - 18 Nov', status: 'Upcoming' },
-	{ title: 'Penjurian Karya', date: '02 Nov - 25 Nov', status: 'Upcoming' },
+	{ title: 'Pendaftaran', date: '20 Sept - 01 Nov', status: 'Active' },
+	{ title: 'Bootcamp', date: '02 Nov - 15 Nov', status: 'Upcoming' },
+	{ title: 'Pengumpulan Pitch Deck', date: '22 Nov - 26 Nov', status: 'Upcoming' },
+	{ title: 'Penjurian', date: '02 Nov - 26 Nov', status: 'Upcoming' },
 	{ title: 'Technical Meeting', date: '26 Nov', status: 'Upcoming' },
 	{ title: 'Pelaksanaan Pitch Deck', date: '27 Nov', status: 'Upcoming' },
-	{ title: 'Awarding & Webinar', date: '28 Nov', status: 'Upcoming' },
+	{ title: 'Awarding & Webinar', date: '27 Nov', status: 'Upcoming' },
+];
+
+export const registrationBatches: RegistrationBatch[] = [
+	{ name: 'Batch 1', date: '20 Sept - 01 Nov', status: 'Open' },
+	{ name: 'Batch 2', date: 'Jadwal menyusul', status: 'Upcoming' },
+	{ name: 'Batch 3', date: 'Jadwal menyusul', status: 'Upcoming' },
 ];
 
 export const speakers: Speaker[] = [
