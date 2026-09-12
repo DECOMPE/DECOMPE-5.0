@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Award, CalendarDays, Download, Lightbulb, Sparkles, Trophy } from 'lucide-react';
+import { ArrowRight, Award, CalendarDays, Download, Lightbulb, Trophy } from 'lucide-react';
 import { challengeTracks, eventInfo, formatRupiah, metrics, programHighlights, timeline, totalPrize } from '@/data/eventData';
 import PartnerShowcase from '@/components/PartnerShowcase';
 import decompeWordmark from '@/assets/Group 12.png';
@@ -12,7 +12,6 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 		<section className="grid-paper overflow-hidden border-b-4 border-[#0F172A]">
 			<div className="mx-auto flex max-w-4xl items-center justify-center px-5 py-16 lg:px-8 lg:py-24">
 				<motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="w-full text-center">
-					<p className="mb-5 inline-flex items-center gap-2 border-2 border-[#0F172A] bg-white px-3 py-1 font-mono text-xs font-bold uppercase">Open registration · 5.0</p>
 					<h1 className="sr-only">DECOMPE 5.0 Skill Class</h1>
 					<div className="mx-auto flex w-full max-w-120 items-center gap-2" aria-label="DECOMPE 5.0 Skill Class">
 						<img src={decompeWordmark} alt="DECOMPE 5.0" className="h-auto min-w-0 flex-[1.05] object-contain object-left" />
@@ -57,7 +56,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 						<p className="mt-3 text-sm leading-6 text-slate-600">{track.description}</p>
 						<ul className="mt-5 space-y-2">
 							{track.outcomes.map((item) => (
-								<li key={item} className="flex items-center gap-2 text-sm font-medium text-slate-700"><Sparkles size={14} className="text-[#E00105]" />{item}</li>
+								<li key={item} className="text-sm font-medium text-slate-700">{item}</li>
 							))}
 						</ul>
 					</div>
