@@ -16,7 +16,7 @@ export default function Footer() {
 		<div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.2fr_.8fr_.9fr]">
 			<div>
 				<div className="mb-4 flex w-full max-w-60 items-center gap-1 bg-white p-2" aria-label="DECOMPE 5.0 Skill Class"><img src={decompeWordmark} alt="DECOMPE 5.0" className="h-auto min-w-0 flex-[1.05] object-contain" /><img src={skillClassMark} alt="Skill Class" className="h-auto min-w-0 flex-[1.2] object-contain" /></div>
-				<p className="max-w-xs text-sm leading-6 text-slate-300">Kompetisi dan skill class untuk tim yang ingin mengembangkan ide, menerima feedback, dan berlatih pitching.</p>
+				<p className="max-w-xs text-sm leading-6 text-slate-300">Kompetisi dan skill class untuk mengembangkan solusi bagi smart living dan sustainable future.</p>
 			</div>
 
 			<div>

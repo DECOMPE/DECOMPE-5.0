@@ -2,7 +2,7 @@ import { Handshake, Newspaper } from 'lucide-react';
 import { partners } from '@/data/eventData';
 
 const partnerGroups = [
-	{ type: 'Partner pendukung' as const, label: 'Partner pendukung', icon: Handshake, description: 'Partner yang membantu acara berjalan dari persiapan sampai pelaksanaan.' },
+	{ type: 'Sponsor' as const, label: 'Sponsor', icon: Handshake, description: 'Sponsor yang mendukung penyelenggaraan DECOMPE 5.0 dan pengalaman peserta.' },
 	{ type: 'Media partner' as const, label: 'Media partner', icon: Newspaper, description: 'Media yang membantu memperluas jangkauan informasi dan cerita acara.' },
 ];
 
@@ -12,8 +12,8 @@ export default function PartnerShowcase() {
 			<div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
 				<div>
 					<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Partners / 05</p>
-					<h2 id="partner-title" className="mt-2 max-w-lg text-4xl font-black leading-[.98] tracking-tighter">Acara ini berjalan bersama partner.</h2>
-					<p className="mt-4 max-w-md text-sm leading-6 text-slate-600">Partner pendukung membantu pelaksanaan acara. Media partner membantu peserta menemukan informasinya.</p>
+					<h2 id="partner-title" className="mt-2 max-w-lg text-4xl font-black leading-[.98] tracking-tighter">DECOMPE 5.0 didukung oleh sponsor dan media partner.</h2>
+					<p className="mt-4 max-w-md text-sm leading-6 text-slate-600">Sponsor mendukung pelaksanaan acara, sementara media partner membantu informasi DECOMPE menjangkau lebih banyak peserta.</p>
 				</div>
 				<div className="border-l-4 border-[#FF5C00] pl-5 text-sm font-medium leading-6 text-slate-700">Logo ditampilkan sesuai perannya dalam acara. Informasi kanal dan publikasi akan dibagikan melalui kanal resmi DECOMPE.</div>
 			</div>
@@ -30,8 +30,8 @@ export default function PartnerShowcase() {
 							<span className="font-mono text-xs font-bold text-slate-400">0{group.length}</span>
 						</div>
 						<div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-							{group.map((partner) => <figure key={partner.name} className="group relative grid min-h-28 place-items-center overflow-hidden border-2 border-slate-200 bg-white p-4 transition-transform hover:-translate-y-1">
-								<img src={partner.logo} alt={partner.alt} loading="lazy" decoding="async" className="max-h-20 w-full object-contain transition duration-300 group-hover:scale-105" />
+							{group.map((partner) => <figure key={partner.name} className="group relative grid min-h-28 place-items-center overflow-hidden border-2 border-slate-200 bg-white p-4 text-center transition-transform hover:-translate-y-1">
+								{partner.logo ? <img src={partner.logo} alt={partner.alt} loading="lazy" decoding="async" className="max-h-20 w-full object-contain transition duration-300 group-hover:scale-105" /> : <span className="text-2xl font-black tracking-tight text-[#0F172A]">{partner.name}</span>}
 								<figcaption className="sr-only">{partner.name}</figcaption>
 							</figure>)}
 						</div>

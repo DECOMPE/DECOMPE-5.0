@@ -1,4 +1,4 @@
-import type { Category, EventInfo, FaqItem, Mentor, MerchItem, Partner, PrizePool, Timeline } from '@/types';
+import type { Category, EventInfo, FaqItem, MerchItem, Partner, PrizePool, Speaker, Timeline } from '@/types';
 import cyberUniversityLogo from '@/assets/image 25.png';
 import katalogEventLogo from '@/assets/Katalog Event - Logo 2 1.png';
 import adaEventLogo from '@/assets/Logo Adaevent 1.png';
@@ -7,7 +7,7 @@ import ukmCodingLogo from '@/assets/Logo UKM Coding vers Hitam (5) 1.svg';
 
 export const eventInfo: EventInfo = {
 	name: 'DECOMPE 5.0 Skill Class',
-	tagline: '5 Years of Impact: Smart Living, Sustainable Future',
+	tagline: '5 Years Of Impact: Smart Living, Sustainable Future',
 	contactPerson: 'Jane Doe (0869-6767-420)',
 	address: 'Jl. TB Simatupang No. 6',
 	socials: { instagram: '@decompeofficial', tiktok: '@decompe.5.0', youtube: 'DECOMPE' },
@@ -16,24 +16,29 @@ export const eventInfo: EventInfo = {
 export const metrics = [
 	{ value: '5+', label: 'Years running', detail: 'A competition built around ideas for everyday life.' },
 	{ value: '300+', label: 'Participants', detail: 'Teams from schools, campuses, and local communities.' },
-	{ value: '3', label: 'Challenge tracks', detail: 'Smart living, sustainability, and creative business.' },
+	{ value: '4', label: 'SDG subthemes', detail: 'Empat subtema untuk mengarahkan ide dan solusi peserta.' },
 ];
 
 export const challengeTracks = [
 	{
-		title: 'Smart Living',
-		description: 'Bangun solusi yang membuat rumah, kota, dan aktivitas sehari-hari lebih efisien, sehat, dan nyaman.',
-		outcomes: ['Smart home systems', 'Urban wellness', 'Citizen-friendly technology'],
+		title: 'SDG 7',
+	description: 'Energi Bersih dan Terjangkau. Kembangkan solusi yang membuat energi bersih lebih mudah diakses dan digunakan secara efisien.',
+		outcomes: ['Energi terbarukan', 'Efisiensi energi', 'Akses energi yang terjangkau'],
 	},
 	{
-		title: 'Sustainable Future',
-		description: 'Tawarkan ide berbasis keberlanjutan untuk mengurangi limbah, menjaga lingkungan, dan mendorong perubahan sosial.',
-		outcomes: ['Circular economy', 'Clean energy', 'Inclusive green innovation'],
+		title: 'SDG 12',
+		description: 'Konsumsi dan Produksi yang Bertanggung Jawab. Rancang cara baru untuk menggunakan sumber daya dengan lebih bijak dan mengurangi limbah.',
+		outcomes: ['Ekonomi sirkular', 'Pengurangan limbah', 'Produksi berkelanjutan'],
 	},
 	{
-		title: 'Creative Business',
-		description: 'Kembangkan ide bisnis atau produk yang kuat secara strategi, visual, dan kebutuhan pasar modern.',
-		outcomes: ['Brand storytelling', 'Pitch strategy', 'Prototype thinking'],
+		title: 'SDG 8',
+		description: 'Pekerjaan Layak dan Pertumbuhan Ekonomi. Susun ide yang membuka peluang kerja, mendukung usaha, dan mendorong pertumbuhan yang inklusif.',
+		outcomes: ['Kewirausahaan', 'Peluang kerja layak', 'Pertumbuhan ekonomi inklusif'],
+	},
+	{
+		title: 'Smart Living & Sustainable Future',
+		description: 'Gabungkan teknologi, kebutuhan manusia, dan prinsip keberlanjutan untuk menciptakan kehidupan sehari-hari yang lebih baik.',
+		outcomes: ['Teknologi yang bermanfaat', 'Kota dan komunitas berkelanjutan', 'Dampak yang terukur'],
 	},
 ];
 
@@ -68,6 +73,7 @@ export const prizePools: PrizePool[] = [
 	{ category: 'Umum', prizes: [{ rank: 'Juara I', amount: 1200000 }, { rank: 'Juara II', amount: 1000000 }, { rank: 'Juara III', amount: 800000 }] },
 	{ category: 'SMA/SMK', prizes: [{ rank: 'Juara I', amount: 750000 }, { rank: 'Juara II', amount: 550000 }, { rank: 'Juara III', amount: 400000 }, { rank: 'Juara Favorit', amount: 200000 }] },
 ];
+export const totalPrize = 5000000;
 
 export const timeline: Timeline[] = [
 	{ title: 'Pendaftaran (Early Bird)', date: '20 Sept - 01 Nov', status: 'Active' },
@@ -78,15 +84,17 @@ export const timeline: Timeline[] = [
 	{ title: 'Awarding & Webinar', date: '28 Nov', status: 'Upcoming' },
 ];
 
-export const mentors: Mentor[] = [
-	{ name: 'Mentor 01', role: 'Creative Strategist', specialty: 'Ideasi, storytelling, dan positioning brand.' },
-	{ name: 'Mentor 02', role: 'Sustainability Expert', specialty: 'Solusi smart living dan green innovation.' },
-	{ name: 'Mentor 03', role: 'Brand Designer', specialty: 'Visual thinking, prototyping, dan portofolio.' },
+export const speakers: Speaker[] = [
+	{ name: 'Pemateri Skill Class', category: 'Skill Class', specialty: 'Membantu peserta mengembangkan ide, menyusun alur cerita, dan mempersiapkan pitch deck.' },
+	{ name: 'Pemateri Webinar', category: 'Webinar', specialty: 'Membahas perspektif praktis tentang smart living dan sustainable future.' },
+	{ name: 'Juri 01', category: 'Juri', specialty: 'Menilai ketajaman masalah, relevansi solusi, dan potensi dampak ide.' },
+	{ name: 'Juri 02', category: 'Juri', specialty: 'Menilai kekuatan strategi, kelayakan implementasi, dan kualitas presentasi.' },
 ];
 
 export const partners: Partner[] = [
-	{ name: 'Cyber University', logo: cyberUniversityLogo, type: 'Partner pendukung', alt: 'Logo Cyber University' },
-	{ name: 'UKM Coding', logo: ukmCodingLogo, type: 'Partner pendukung', alt: 'Logo UKM Coding' },
+	{ name: 'Cyber University', logo: cyberUniversityLogo, type: 'Sponsor', alt: 'Logo Cyber University' },
+	{ name: 'UKM Coding', logo: ukmCodingLogo, type: 'Sponsor', alt: 'Logo UKM Coding' },
+	{ name: 'BEM', type: 'Sponsor', alt: 'BEM' },
 	{ name: 'Ada Event', logo: adaEventLogo, type: 'Media partner', alt: 'Logo Ada Event' },
 	{ name: 'Katalog Event Indonesia', logo: katalogEventLogo, type: 'Media partner', alt: 'Logo Katalog Event Indonesia' },
 	{ name: 'Lingkar Event', logo: lingkarEventLogo, type: 'Media partner', alt: 'Logo Lingkar Event' },

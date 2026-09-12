@@ -56,7 +56,7 @@ The application is organized around a small but scalable component structure, wi
 ├── vite.config.ts
 ├── public/
 │   ├── 404.html
-│   ├── favicon.svg
+│   ├── decompe-logo.svg
 │   ├── og-image.svg
 │   ├── robots.txt
 │   ├── sitemap.xml
@@ -183,7 +183,7 @@ The project includes a full SEO setup intended for real-world marketing usage.
 - `public/sitemap.xml`
 - `public/site.webmanifest`
 - `public/og-image.svg`
-- `public/favicon.svg`
+- `public/decompe-logo.svg`
 - `public/404.html`
 
 ### Important note

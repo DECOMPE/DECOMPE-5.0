@@ -1,11 +1,11 @@
 import { ArrowRight, BookOpen, BriefcaseBusiness, Handshake, Sparkles, Users } from 'lucide-react';
-import { challengeTracks, mentors, programHighlights, timeline } from '@/data/eventData';
+import { challengeTracks, programHighlights, speakers, timeline } from '@/data/eventData';
 
 export default function EventInfoView() {
 	const highlights = [
 		{ icon: BookOpen, title: 'Teknis lomba', text: 'Tim berisi 1 sampai 3 orang menyusun ide dan mempresentasikan pitch deck sesuai arahan panitia.' },
-		{ icon: Users, title: 'Juri dan mentor', text: 'Peserta mendapat masukan tentang ide, alur cerita, dan presentasi dari praktisi lintas bidang.' },
-		{ icon: Handshake, title: 'Partner kegiatan', text: 'Partner membantu acara berjalan dan membuat informasi lomba sampai ke peserta.' },
+		{ icon: Users, title: 'Pemateri dan juri', text: 'Satu pemateri Skill Class, satu pemateri Webinar, dan dua juri mendampingi serta menilai proses peserta.' },
+		{ icon: Handshake, title: 'Sponsor dan media partner', text: 'Sponsor mendukung acara, sementara media partner membantu menyebarkan informasi kepada peserta.' },
 	];
 
 	const formatFlow = [
@@ -18,7 +18,7 @@ export default function EventInfoView() {
 		<div className="max-w-3xl">
 			<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Event info / 5.0</p>
 			<h1 className="mt-3 text-4xl font-black leading-tight tracking-[-.06em] sm:text-5xl">Lomba untuk tim yang ingin menguji idenya.</h1>
-			<p className="mt-5 text-lg leading-8 text-slate-600">Di DECOMPE 5.0 Skill Class, tim memilih salah satu track, mengembangkan solusi, mendapat masukan, lalu mempresentasikannya dalam format pitch deck.</p>
+			<p className="mt-5 text-lg leading-8 text-slate-600">DECOMPE 5.0 mengajak tim mengembangkan solusi berdasarkan tema dan subtema SDG, menerima masukan, lalu mempresentasikan idenya dalam format pitch deck.</p>
 		</div>
 
 		<div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -61,7 +61,7 @@ export default function EventInfoView() {
 
 		<section className="mt-16">
 			<div className="mb-6 flex items-center justify-between gap-4">
-				<h2 className="text-3xl font-black tracking-tighter">Focus challenge yang dibahas</h2>
+					<h2 className="text-3xl font-black tracking-tighter">Tema dan subtema SDG</h2>
 				<Sparkles className="text-[#E00105]" />
 			</div>
 			<div className="grid gap-5 md:grid-cols-3">
@@ -80,14 +80,14 @@ export default function EventInfoView() {
 		</section>
 
 		<section className="mt-16">
-			<h2 className="text-3xl font-black">Juri dan mentor</h2>
-			<div className="mt-6 grid gap-4 md:grid-cols-3">
-				{mentors.map((mentor, index) => (
-					<div key={mentor.name} className="border-3 border-[#0F172A] bg-[#FACC15] p-5 shadow-[5px_5px_0px_0px_#0F172A]">
+			<h2 className="text-3xl font-black">Pemateri dan juri</h2>
+			<div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+				{speakers.map((speaker, index) => (
+					<div key={speaker.name} className="border-3 border-[#0F172A] bg-[#FACC15] p-5 shadow-[5px_5px_0px_0px_#0F172A]">
 						<div className="mb-8 grid h-20 w-20 place-items-center border-3 border-[#0F172A] bg-white text-3xl font-black">0{index + 1}</div>
-						<p className="font-mono text-xs uppercase text-slate-700">{mentor.role}</p>
-						<h3 className="mt-1 text-xl font-black">{mentor.name}</h3>
-						<p className="mt-2 text-sm leading-6 text-slate-700">{mentor.specialty}</p>
+						<p className="font-mono text-xs uppercase text-slate-700">{speaker.category}</p>
+						<h3 className="mt-1 text-xl font-black">{speaker.name}</h3>
+						<p className="mt-2 text-sm leading-6 text-slate-700">{speaker.specialty}</p>
 					</div>
 				))}
 			</div>
