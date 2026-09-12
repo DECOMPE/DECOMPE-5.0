@@ -1,5 +1,5 @@
 import { ArrowRight, BookOpen, BriefcaseBusiness, Handshake, Sparkles, Users } from 'lucide-react';
-import { challengeTracks, programHighlights, registrationBatches, skillClassSessions, speakers, timeline } from '@/data/eventData';
+import { challengeTracks, formatRupiah, programHighlights, registrationBatches, skillClassSessions, speakers, timeline } from '@/data/eventData';
 
 export default function EventInfoView() {
 	const highlights = [
@@ -97,7 +97,7 @@ export default function EventInfoView() {
 			<p className="text-center font-mono text-xs font-bold uppercase text-[#E00105]">Milestone acara</p>
 			<h2 className="mt-2 text-center text-3xl font-black">Timeline inti kegiatan</h2>
 			<div className="mt-6 grid gap-4 md:grid-cols-3">
-				{registrationBatches.map((batch) => <div key={batch.name} className={`border-3 border-[#0F172A] p-5 ${batch.status === 'Open' ? 'bg-[#FF5C00] shadow-[5px_5px_0px_0px_#0F172A] ring-2 ring-[#E00105]' : 'bg-white'}`}><div className="flex items-center justify-between gap-3"><h3 className="text-xl font-black">{batch.name}</h3><span className="border-2 border-[#0F172A] bg-white px-2 py-1 text-[10px] font-bold uppercase">{batch.status === 'Open' ? 'Sedang dibuka' : 'Segera'}</span></div><p className="mt-3 text-sm font-medium text-slate-700">{batch.date}</p></div>)}
+				{registrationBatches.map((batch) => <div key={batch.name} className={`border-3 border-[#0F172A] p-5 ${batch.status === 'Open' ? 'bg-[#FF5C00] shadow-[5px_5px_0px_0px_#0F172A] ring-2 ring-[#E00105]' : 'bg-white'}`}><div className="flex items-center justify-between gap-3"><h3 className="text-xl font-black">{batch.name}</h3><span className="border-2 border-[#0F172A] bg-white px-2 py-1 text-[10px] font-bold uppercase">{batch.status === 'Open' ? 'Sedang dibuka' : 'Segera'}</span></div><p className="mt-3 text-sm font-medium text-slate-700">{batch.date}</p><div className="mt-4 space-y-1 border-t border-[#0F172A]/20 pt-3 text-sm"><p>Umum: <strong>{formatRupiah(batch.prices.umum)}</strong></p><p>SMA/SMK: <strong>{formatRupiah(batch.prices.sma)}</strong></p></div></div>)}
 			</div>
 			<div className="mt-8 border-3 border-[#0F172A] bg-[#FF5C00] p-6 shadow-[6px_6px_0px_0px_#0F172A]">
 				<div className="flex flex-wrap items-end justify-between gap-4"><div><p className="font-mono text-xs font-bold uppercase">Jadwal Skill Class</p><h3 className="mt-2 text-2xl font-black">Lima pertemuan untuk mengembangkan ide.</h3></div><p className="text-sm font-bold">November 2026</p></div>

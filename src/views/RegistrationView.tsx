@@ -1,5 +1,5 @@
 import { ArrowRight, Check, ClipboardList, Wallet } from 'lucide-react';
-import { categories, formatRupiah, registrationSteps } from '@/data/eventData';
+import { categories, formatRupiah, registrationBatches, registrationSteps } from '@/data/eventData';
 
 export default function RegistrationView({ onRegister }: { onRegister: () => void }) {
 	return <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
@@ -8,6 +8,13 @@ export default function RegistrationView({ onRegister }: { onRegister: () => voi
 			<h1 className="mt-3 text-4xl font-black leading-tight tracking-[-.06em] sm:text-5xl">Pilih kategori timmu.</h1>
 			<p className="mt-5 leading-7 text-slate-600">Batch 1 tersedia untuk kategori Umum dan SMA/SMK. Pilih kategori untuk melihat fasilitas dan biaya pendaftaran per tim.</p>
 		</div>
+
+		<section className="mt-10 border-3 border-[#0F172A] bg-[#F8FAFC] p-5 shadow-[5px_5px_0px_0px_#FF5C00] sm:p-7">
+			<div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"><div><p className="font-mono text-xs font-bold uppercase text-[#E00105]">Rincian biaya pendaftaran</p><h2 className="mt-1 text-2xl font-black">Harga berbeda sesuai batch dan kategori.</h2></div><p className="text-sm text-slate-600">Biaya berlaku per tim.</p></div>
+			<div className="mt-6 grid gap-4 md:grid-cols-3">
+				{registrationBatches.map((batch) => <article key={batch.name} className={`border-2 border-[#0F172A] p-4 ${batch.status === 'Open' ? 'bg-[#FF5C00]' : 'bg-white'}`}><div className="flex items-center justify-between gap-2"><h3 className="font-black">{batch.name}</h3><span className="font-mono text-[10px] font-bold uppercase">{batch.status === 'Open' ? 'Dibuka' : 'Segera'}</span></div><p className="mt-2 text-xs text-slate-700">{batch.date}</p><div className="mt-4 space-y-2 border-t border-[#0F172A]/20 pt-3 text-sm"><div className="flex justify-between gap-3"><span>Umum</span><strong>{formatRupiah(batch.prices.umum)}</strong></div><div className="flex justify-between gap-3"><span>SMA/SMK</span><strong>{formatRupiah(batch.prices.sma)}</strong></div></div></article>)}
+			</div>
+		</section>
 
 		<div className="mt-12 grid gap-6 lg:grid-cols-2">
 			{categories.map((category, index) => (

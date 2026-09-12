@@ -92,9 +92,9 @@ export const timeline: Timeline[] = [
 ];
 
 export const registrationBatches: RegistrationBatch[] = [
-	{ name: 'Batch 1', date: '20 Sept - 02 Okt', status: 'Open' },
-	{ name: 'Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming' },
-	{ name: 'Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming' },
+	{ name: 'Batch 1', date: '20 Sept - 02 Okt', status: 'Open', prices: { umum: 100000, sma: 60000 } },
+	{ name: 'Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming', prices: { umum: 120000, sma: 75000 } },
+	{ name: 'Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming', prices: { umum: 150000, sma: 100000 } },
 ];
 
 export const skillClassSessions: SkillClassSession[] = [
