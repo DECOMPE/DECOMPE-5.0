@@ -12,7 +12,7 @@ The app includes the following core user journeys:
 
 - landing page with event positioning and value proposition
 - detailed event information section
-- registration section with early bird package comparison
+- registration section with batch-based package comparison
 - official merch showcase and purchase CTA
 - FAQ and support information
 - direct WhatsApp communication access

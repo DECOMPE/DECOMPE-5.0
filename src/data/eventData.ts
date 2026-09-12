@@ -58,21 +58,21 @@ export const programHighlights = [
 ];
 
 export const registrationSteps = [
-	{ step: '01', title: 'Pilih kategori', description: 'Tentukan kategori Umum atau SMA/SMK sesuai kebutuhan tim kamu.' },
+	{ step: '01', title: 'Pilih kategori dan batch', description: 'Tentukan kategori Umum atau SMA/SMK, lalu pastikan kamu mendaftar pada batch yang sedang dibuka.' },
 	{ step: '02', title: 'Isi form pendaftaran', description: 'Lengkapi data ketua tim dan anggota sebelum melanjutkan ke pembayaran.' },
 	{ step: '03', title: 'Lakukan pembayaran', description: 'Ikuti instruksi pembayaran dan simpan bukti transfer untuk konfirmasi panitia.' },
 	{ step: '04', title: 'Siapkan ide', description: 'Amati masalah, susun solusi, dan siapkan pitch deck sebelum technical meeting.' },
 ];
 
 export const categories: Category[] = [
-	{ id: 'umum', name: 'Umum', label: 'Umum (Early Bird)', price: 100000, features: ['Tim 1-3 Orang', 'Sertifikat Tingkat Nasional', 'Akses Bootcamp & Mentoring', 'Review Portofolio'] },
-	{ id: 'sma', name: 'SMA/SMK Sederajat', label: 'SMA/SMK Sederajat (Early Bird)', price: 60000, features: ['Tim 1-3 Orang', 'Sertifikat Tingkat Nasional', 'Mentoring Eksklusif', 'Akses Webinar'] },
+	{ id: 'umum', name: 'Umum', label: 'Umum · Batch 1', price: 100000, features: ['Tim 1-3 Orang', 'Sertifikat Tingkat Nasional', 'Akses Bootcamp & Mentoring', 'Review Portofolio'] },
+	{ id: 'sma', name: 'SMA/SMK Sederajat', label: 'SMA/SMK Sederajat · Batch 1', price: 60000, features: ['Tim 1-3 Orang', 'Sertifikat Tingkat Nasional', 'Mentoring Eksklusif', 'Akses Webinar'] },
 ];
 
 export const totalPrize = 5000000;
 
 export const timeline: Timeline[] = [
-	{ title: 'Pendaftaran (Early Bird)', date: '20 Sept - 01 Nov', status: 'Active' },
+	{ title: 'Pendaftaran Batch 1', date: '20 Sept - 01 Nov', status: 'Active' },
 	{ title: 'Pengumpulan Karya', date: '02 Nov - 18 Nov', status: 'Upcoming' },
 	{ title: 'Penjurian Karya', date: '02 Nov - 25 Nov', status: 'Upcoming' },
 	{ title: 'Technical Meeting', date: '26 Nov', status: 'Upcoming' },
@@ -103,10 +103,10 @@ export const merchItems: MerchItem[] = [
 ];
 
 export const faqs: FaqItem[] = [
-	{ question: 'Bagaimana cara mendaftarkan tim?', answer: 'Pilih paket Early Bird, isi form pendaftaran dengan data ketua dan anggota tim, lalu ikuti prosedur pembayaran sesuai instruksi yang dikirim panitia.' },
+	{ question: 'Bagaimana cara mendaftarkan tim?', answer: 'Pilih kategori dan batch yang sedang dibuka, isi form pendaftaran dengan data ketua dan anggota tim, lalu ikuti prosedur pembayaran sesuai instruksi yang dikirim panitia.' },
 	{ question: 'Apa perbedaan kategori SMA/SMK dan Umum?', answer: 'Kategori SMA/SMK ditujukan bagi pelajar aktif sekolah menengah. Kategori Umum terbuka untuk mahasiswa, alumni, pelaku usaha, dan peserta umum yang memenuhi syarat lomba.' },
 	{ question: 'Apakah pembayaran bisa dilakukan oleh satu orang untuk satu tim?', answer: 'Bisa. Pembayaran dilaksanakan satu kali oleh ketua tim sesuai kategori yang dipilih, kemudian panitia akan mendata tim secara resmi.' },
-	{ question: 'Apakah early bird masih tersedia?', answer: 'Ya, harga Early Bird berlaku selama periode 20 September sampai 01 November. Setelah itu, harga bisa berubah sesuai ketentuan panitia.' },
+	{ question: 'Sampai kapan Batch 1 dibuka?', answer: 'Pendaftaran Batch 1 berlangsung dari 20 September sampai 01 November. Setelah periode tersebut berakhir, pendaftaran akan mengikuti jadwal dan harga batch berikutnya sesuai ketentuan panitia.' },
 	{ question: 'Apakah peserta menerima mentoring sebelum final?', answer: 'Ya. Selain jadwal utama, peserta akan mendapatkan arahan serta feedback dari mentor yang relevan dengan ide dan presentasi masing-masing tim.' },
 	{ question: 'Bagaimana jika saya ingin memesan merchandise?', answer: 'Peserta dan supporter dapat memesan melalui halaman Merch atau menghubungi panitia di WhatsApp untuk konfirmasi stok, harga, dan pengiriman.' },
 ];

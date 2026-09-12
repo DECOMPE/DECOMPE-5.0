@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Award, CalendarDays, Download, Lightbulb, Sparkles, Star, Trophy } from 'lucide-react';
+import { ArrowRight, Award, CalendarDays, Download, Lightbulb, Sparkles, Trophy } from 'lucide-react';
 import { challengeTracks, eventInfo, formatRupiah, metrics, programHighlights, timeline, totalPrize } from '@/data/eventData';
 import PartnerShowcase from '@/components/PartnerShowcase';
-import mascot from '@/assets/NEW MASCOT 1.png';
 import decompeWordmark from '@/assets/Group 12.png';
 import skillClassMark from '@/assets/Group 13.png';
 
@@ -11,21 +10,21 @@ const btn = 'inline-flex items-center justify-center gap-2 border-3 border-[#0F1
 export default function HomeView({ onRegister }: { onRegister: () => void }) {
 	return <div className="bg-slate-50">
 		<section className="grid-paper overflow-hidden border-b-4 border-[#0F172A]">
-			<div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[1.08fr_.92fr] lg:px-8 lg:py-24">
-				<motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
+			<div className="mx-auto flex max-w-4xl items-center justify-center px-5 py-16 lg:px-8 lg:py-24">
+				<motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="w-full text-center">
 					<p className="mb-5 inline-flex items-center gap-2 border-2 border-[#0F172A] bg-white px-3 py-1 font-mono text-xs font-bold uppercase">Open registration · 5.0</p>
 					<h1 className="sr-only">DECOMPE 5.0 Skill Class</h1>
-					<div className="flex w-full max-w-120 items-center gap-2" aria-label="DECOMPE 5.0 Skill Class">
+					<div className="mx-auto flex w-full max-w-120 items-center gap-2" aria-label="DECOMPE 5.0 Skill Class">
 						<img src={decompeWordmark} alt="DECOMPE 5.0" className="h-auto min-w-0 flex-[1.05] object-contain object-left" />
 						<img src={skillClassMark} alt="Skill Class" className="h-auto min-w-0 flex-[1.2] object-contain object-right" />
 					</div>
-					<p className="mt-6 max-w-xl text-lg font-medium leading-7 text-slate-800">{eventInfo.tagline}</p>
-					<p className="mt-4 max-w-lg text-sm leading-6 text-slate-600">Kembangkan solusi untuk tantangan nyata melalui empat subtema SDG, lalu sampaikan idemu dalam pitch deck yang terarah.</p>
-					<div className="mt-8 flex flex-wrap gap-4">
-						<button onClick={onRegister} className={`${btn} bg-[#E00105] text-white shadow-[4px_4px_0px_0px_#0F172A]`}>Daftar Tim (Early Bird) <ArrowRight size={18} /></button>
+					<p className="mx-auto mt-6 max-w-xl text-lg font-medium leading-7 text-slate-800">{eventInfo.tagline}</p>
+					<p className="mx-auto mt-4 max-w-lg text-sm leading-6 text-slate-600">Kembangkan solusi untuk tantangan nyata melalui empat subtema SDG, lalu sampaikan idemu dalam pitch deck yang terarah.</p>
+					<div className="mt-8 flex flex-wrap justify-center gap-4">
+						<button onClick={onRegister} className={`${btn} bg-[#E00105] text-white shadow-[4px_4px_0px_0px_#0F172A]`}>Daftar Batch 1 <ArrowRight size={18} /></button>
 						<a href="#event-info" className={`${btn} bg-white shadow-[4px_4px_0px_0px_#0F172A]`}>Lihat format lomba <Download size={18} /></a>
 					</div>
-					<div className="mt-10 grid max-w-xl gap-4 sm:grid-cols-3">
+					<div className="mx-auto mt-10 grid max-w-xl gap-4 text-left sm:grid-cols-3">
 						{metrics.map((item) => (
 							<div key={item.label} className="border-2 border-[#0F172A] bg-white p-4 shadow-[4px_4px_0px_0px_#FF5C00]">
 								<div className="font-black text-[#E00105] text-2xl leading-none">{item.value}</div>
@@ -33,28 +32,6 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 								<div className="mt-2 text-xs leading-5 text-slate-600">{item.detail}</div>
 							</div>
 						))}
-					</div>
-				</motion.div>
-				<motion.div initial={{ opacity: 0, scale: .9 }} animate={{ opacity: 1, scale: 1 }} className="relative mx-auto w-full max-w-xl">
-					<div className="relative aspect-[1.02] overflow-hidden border-4 border-[#0F172A] bg-[#FF5C00] shadow-[12px_12px_0px_0px_#0F172A]">
-						<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.45),transparent_45%)]" />
-						<div className="absolute left-3 top-3 hidden border-2 border-[#0F172A] bg-white px-2 py-1 font-mono text-[10px] font-bold uppercase sm:left-5 sm:top-5 sm:block">IDE / KARYA / PRESENTASI</div>
-						<div className="absolute bottom-3 right-3 hidden border-2 border-[#0F172A] bg-[#E00105] px-2 py-1 text-[10px] font-bold uppercase text-white sm:bottom-5 sm:right-5 sm:block">EST. 2021</div>
-						<img src={mascot} alt="Maskot robot DECOMPE 5.0" className="absolute left-1/2 top-1/2 h-[92%] w-[92%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[8px_8px_0px_#0F172A]" fetchPriority="high" />
-						<div className="absolute inset-x-3 bottom-3 rounded-3xl border-4 border-[#0F172A] bg-white/90 p-3 backdrop-blur-sm sm:inset-x-8 sm:bottom-8 sm:p-4">
-							<div className="mb-2 flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.12em] text-slate-600">
-								<span>Subtema utama</span>
-								<span className="flex items-center gap-1 text-[#E00105]"><Star size={12} fill="currentColor" /> 4 SDG</span>
-							</div>
-							<div className="grid gap-3 sm:grid-cols-2">
-								{challengeTracks.slice(0, 2).map((track) => (
-									<div key={track.title} className="rounded-xl border-2 border-[#0F172A] bg-[#F8FAFC] p-3">
-										<p className="font-black text-sm">{track.title}</p>
-										<p className="mt-1 text-[11px] leading-5 text-slate-600">{track.description.split('. ')[1] ?? track.outcomes[0]}</p>
-									</div>
-								))}
-							</div>
-						</div>
 					</div>
 				</motion.div>
 			</div>

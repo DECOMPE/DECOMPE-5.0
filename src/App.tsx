@@ -21,7 +21,7 @@ export default function App() {
 		const metadata: Record<string, { title: string; description: string }> = {
 			'#home': { title: 'DECOMPE 5.0 | 5 Years Of Impact', description: 'DECOMPE 5.0 mengajak peserta mengembangkan solusi untuk Smart Living dan Sustainable Future melalui empat subtema SDG.' },
 			'#event-info': { title: 'Informasi Acara | DECOMPE 5.0', description: 'Lihat tema, subtema SDG, alur lomba, pemateri, juri, sponsor, dan jadwal DECOMPE 5.0.' },
-			'#register': { title: 'Daftar Early Bird | DECOMPE 5.0 Skill Class', description: 'Pilih kategori Umum atau SMA/SMK untuk mendaftar DECOMPE 5.0 Skill Class.' },
+			'#register': { title: 'Pendaftaran Batch 1 | DECOMPE 5.0', description: 'Pilih kategori Umum atau SMA/SMK untuk mendaftar pada Batch 1 DECOMPE 5.0.' },
 			'#merch': { title: 'Official Merch | DECOMPE 5.0 Skill Class', description: 'Pesan merchandise resmi DECOMPE 5.0 melalui WhatsApp panitia.' },
 			'#faq': { title: 'FAQ | DECOMPE 5.0 Skill Class', description: 'Jawaban pendaftaran, kategori, pembayaran, mentoring, jadwal, dan merchandise DECOMPE 5.0.' },
 		};
