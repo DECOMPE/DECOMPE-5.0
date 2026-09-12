@@ -1,4 +1,4 @@
-import type { Category, EventInfo, FaqItem, MerchItem, Partner, Speaker, Timeline } from '@/types';
+import type { Category, ContactPerson, EventInfo, FaqItem, MerchItem, Partner, Speaker, Timeline } from '@/types';
 import cyberUniversityLogo from '@/assets/image 25.png';
 import katalogEventLogo from '@/assets/Katalog Event - Logo 2 1.png';
 import adaEventLogo from '@/assets/Logo Adaevent 1.png';
@@ -12,10 +12,15 @@ export const eventInfo: EventInfo = {
 	name: 'DECOMPE 5.0 Skill Class',
 	tagline: '5 Years Of Impact: Smart Living, Sustainable Future',
 	theme: 'Smart Living & Sustainable Future',
-	contactPerson: 'Jane Doe (0869-6767-420)',
+	contactPerson: 'Aldino (0895-3868-91729) · Nayla (0877-7369-8839)',
 	address: 'Jl. TB Simatupang No. 6',
 	socials: { instagram: '@decompeofficial', tiktok: '@decompe', youtube: 'DECOMPE', linkedin: 'decompe' },
 };
+
+export const contactPersons: ContactPerson[] = [
+	{ name: 'Aldino', phone: '0895-3868-91729', whatsapp: '62895386891729' },
+	{ name: 'Nayla', phone: '0877-7369-8839', whatsapp: '6287773698839' },
+];
 
 export const metrics = [
 	{ value: '5+', label: 'Years running', detail: 'A competition built around ideas for everyday life.' },

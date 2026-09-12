@@ -1,5 +1,5 @@
 import { AtSign, Link2, MapPin, Phone, PlaySquare, Video } from 'lucide-react';
-import { eventInfo, partners } from '@/data/eventData';
+import { contactPersons, eventInfo, partners } from '@/data/eventData';
 import decompeWordmark from '@/assets/Group 12.png';
 import skillClassMark from '@/assets/Group 13.png';
 
@@ -23,7 +23,9 @@ export default function Footer() {
 
 			<div>
 				<p className="mb-4 font-bold uppercase text-[#FF5C00]">Kontak</p>
-				<p className="mb-2 flex gap-2 text-sm"><Phone size={17} /> {eventInfo.contactPerson}</p>
+				<div className="space-y-2 text-sm">
+					{contactPersons.map((contact) => <a key={contact.name} href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer" className="flex gap-2 hover:text-[#FF5C00]"><Phone size={17} /> {contact.name} · {contact.phone}</a>)}
+				</div>
 				<p className="flex gap-2 text-sm"><MapPin size={17} /> {eventInfo.address}</p>
 			</div>
 

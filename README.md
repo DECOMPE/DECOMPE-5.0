@@ -258,7 +258,7 @@ Project contact and marketing information is expected to be updated in the UI an
 
 Representative contact details used in the project include:
 
-- WhatsApp: 0869-6767-420
+- WhatsApp: Aldino (0895-3868-91729) dan Nayla (0877-7369-8839)
 - Instagram: @decompeofficial
 - TikTok: @decompe.5.0
 - YouTube: DECOMPE

@@ -1,5 +1,5 @@
 import { ShoppingBag, Sparkles } from 'lucide-react';
-import { formatRupiah, merchItems } from '@/data/eventData';
+import { contactPersons, formatRupiah, merchItems } from '@/data/eventData';
 
 export default function MerchView() {
 	return <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
@@ -20,7 +20,7 @@ export default function MerchView() {
 						<p className="mt-2 min-h-12 text-sm text-slate-600">{item.description}</p>
 						<div className="mt-5 flex flex-wrap items-center justify-between gap-3">
 							<span className="font-mono font-bold">{formatRupiah(item.price)}</span>
-							<a href={`https://wa.me/628696767420?text=${encodeURIComponent(`Halo DECOMPE, saya ingin memesan ${item.name}.`)}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border-3 border-[#0F172A] bg-[#E00105] px-3 py-2 text-sm font-bold text-white"><ShoppingBag size={16} /> Pesan</a>
+							<a href={`https://wa.me/${contactPersons[0].whatsapp}?text=${encodeURIComponent(`Halo ${contactPersons[0].name}, saya ingin memesan ${item.name}.`)}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border-3 border-[#0F172A] bg-[#E00105] px-3 py-2 text-sm font-bold text-white"><ShoppingBag size={16} /> Pesan</a>
 						</div>
 					</div>
 				</article>

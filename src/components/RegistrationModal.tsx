@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Check, X } from 'lucide-react';
-import { categories, formatRupiah } from '@/data/eventData';
+import { categories, contactPersons, formatRupiah } from '@/data/eventData';
 
 export default function RegistrationModal({ onClose }: { onClose: () => void }) {
 	const [selected, setSelected] = useState(categories[0].id);
@@ -20,7 +20,7 @@ export default function RegistrationModal({ onClose }: { onClose: () => void }) 
 				</button>)}
 			</div>
 			<div className="mt-6 border-3 border-[#0F172A] bg-[#F9FAFB] p-4"><p className="font-bold">Yang kamu dapat</p><ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2">{category.features.map((feature) => <li key={feature} className="flex gap-2"><Check className="shrink-0 text-[#E00105]" size={17} />{feature}</li>)}</ul></div>
-			<a href={`https://wa.me/628696767420?text=${encodeURIComponent(`Halo DECOMPE, saya ingin mendaftar kategori ${category.name} Batch 1.`)}`} target="_blank" rel="noreferrer" className="mt-6 block border-3 border-[#0F172A] bg-[#E00105] px-5 py-3 text-center font-black text-white shadow-[4px_4px_0px_0px_#0F172A]">Lanjut ke WhatsApp</a>
+			<a href={`https://wa.me/${contactPersons[0].whatsapp}?text=${encodeURIComponent(`Halo ${contactPersons[0].name}, saya ingin mendaftar kategori ${category.name} Batch 1.`)}`} target="_blank" rel="noreferrer" className="mt-6 block border-3 border-[#0F172A] bg-[#E00105] px-5 py-3 text-center font-black text-white shadow-[4px_4px_0px_0px_#0F172A]">Lanjut ke WhatsApp {contactPersons[0].name}</a>
 		</div>
 	</div>;
 }

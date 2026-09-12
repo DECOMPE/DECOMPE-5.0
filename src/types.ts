@@ -2,6 +2,7 @@ export interface EventInfo {
 	name: string; tagline: string; theme: string; contactPerson: string; address: string;
 	socials: { instagram: string; tiktok: string; youtube: string; linkedin: string };
 }
+export interface ContactPerson { name: string; phone: string; whatsapp: string; }
 export interface Category { id: string; name: string; label: string; price: number; features: string[]; }
 export interface Timeline { title: string; date: string; status: 'Active' | 'Upcoming'; }
 export interface Speaker { name: string; category: 'Skill Class' | 'Webinar' | 'Juri'; specialty: string; }
