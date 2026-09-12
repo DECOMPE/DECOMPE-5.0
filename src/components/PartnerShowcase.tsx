@@ -7,11 +7,13 @@ const partnerGroups = [
 ];
 
 export default function PartnerShowcase() {
+	const showcasePartnerCount = partners.filter((partner) => partner.type === 'Media partner').length + 1;
+
 	return <section aria-labelledby="partner-title" className="border-y-4 border-[#0F172A] bg-white px-5 py-14 lg:px-8">
 		<div className="mx-auto max-w-7xl">
 			<div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
 				<div>
-					<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Partners / {String(partners.length).padStart(2, '0')}</p>
+					<p className="font-mono text-xs font-bold uppercase text-[#E00105]">Partners / {String(showcasePartnerCount).padStart(2, '0')}</p>
 					<h2 id="partner-title" className="mt-2 max-w-lg text-4xl font-black leading-[.98] tracking-tighter">DECOMPE 5.0 didukung oleh sponsor dan media partner.</h2>
 					<p className="mt-4 max-w-md text-sm leading-6 text-slate-600">Sponsor mendukung pelaksanaan acara, sementara media partner membantu informasi DECOMPE menjangkau lebih banyak peserta dan komunitas.</p>
 				</div>
@@ -20,7 +22,7 @@ export default function PartnerShowcase() {
 
 			<div className="mt-10 grid gap-8 md:grid-cols-2">
 				{partnerGroups.map(({ type, label, icon: Icon, description }) => {
-					const group = partners.filter((partner) => partner.type === type);
+					const group = partners.filter((partner) => partner.type === type && (type !== 'Sponsor' || partner.name === 'S Pay'));
 					return <div key={type} className="border-3 border-[#0F172A] bg-[#F8FAFC] p-5 shadow-[5px_5px_0px_0px_#FF5C00]">
 						<div className="flex items-start justify-between gap-4">
 							<div>

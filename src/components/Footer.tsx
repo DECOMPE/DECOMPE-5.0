@@ -1,5 +1,5 @@
 import { AtSign, MapPin, Phone, PlaySquare, Video } from 'lucide-react';
-import { eventInfo } from '@/data/eventData';
+import { eventInfo, partners } from '@/data/eventData';
 import decompeWordmark from '@/assets/Group 12.png';
 import skillClassMark from '@/assets/Group 13.png';
 
@@ -12,6 +12,8 @@ const navLinks = [
 ];
 
 export default function Footer() {
+	const footerSponsors = partners.filter((partner) => partner.type === 'Sponsor' && partner.name !== 'S Pay');
+
 	return <footer className="border-t-4 border-[#0F172A] bg-[#0F172A] px-5 py-12 text-white lg:px-8">
 		<div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.2fr_.8fr_.9fr]">
 			<div>
@@ -35,6 +37,19 @@ export default function Footer() {
 				<nav className="flex flex-wrap gap-3 text-xs font-bold uppercase text-slate-300">
 					{navLinks.map(([href, label]) => <a key={href} href={href} className="hover:text-[#FF5C00]">{label}</a>)}
 				</nav>
+			</div>
+		</div>
+		<div className="mx-auto mt-10 max-w-7xl border-t border-slate-700 pt-8">
+			<div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+				<div>
+					<p className="font-bold uppercase text-[#FF5C00]">Sponsor pendukung</p>
+					<p className="mt-2 max-w-md text-sm leading-6 text-slate-300">Terima kasih kepada sponsor yang mendukung penyelenggaraan DECOMPE 5.0.</p>
+				</div>
+				<div className="grid grid-cols-3 gap-3">
+					{footerSponsors.map((sponsor) => <figure key={sponsor.name} className="grid h-20 w-28 place-items-center bg-white p-3">
+						{sponsor.logo && <img src={sponsor.logo} alt={sponsor.alt} loading="lazy" decoding="async" className="max-h-14 w-full object-contain" />}
+					</figure>)}
+				</div>
 			</div>
 		</div>
 		<div className="mx-auto mt-10 max-w-7xl border-t border-slate-700 pt-5 text-xs text-slate-400">© 2026 DECOMPE. All rights reserved.</div>
