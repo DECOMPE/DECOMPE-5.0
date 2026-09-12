@@ -7,8 +7,8 @@ export default function Navbar({ onRegister }: { onRegister: () => void }) {
 	const links = [['#home', 'Home'], ['#event-info', 'Event Info'], ['#register', 'Register'], ['#merch', 'Merch'], ['#faq', 'FAQ']];
 
 	return <header className="sticky top-0 z-40 border-b-3 border-[#0F172A] bg-white/90 backdrop-blur-sm">
-		<div className="relative mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-5 sm:py-4 lg:px-8">
-			<a href="#home" aria-label="DECOMPE home" className="md:absolute md:left-1/2 md:-translate-x-1/2"><MainLogo /></a>
+		<div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-5 sm:py-4 lg:px-8">
+			<a href="#home" aria-label="DECOMPE home"><MainLogo /></a>
 			<nav className="hidden items-center gap-4 md:flex lg:gap-6">
 				{links.map(([href, label]) => (
 					<a key={href} href={href} className="text-sm font-bold uppercase transition-colors hover:text-[#E00105]">{label}</a>
