@@ -97,7 +97,7 @@ export default function EventInfoView() {
 			<p className="text-center font-mono text-xs font-bold uppercase text-[#E00105]">Milestone acara</p>
 			<h2 className="mt-2 text-center text-3xl font-black">Timeline inti kegiatan</h2>
 			<div className="mt-6 grid gap-4 md:grid-cols-3">
-				{registrationBatches.map((batch) => <div key={batch.name} className={`border-3 border-[#0F172A] p-5 ${batch.status === 'Open' ? 'bg-[#FF5C00]' : 'bg-white'}`}><div className="flex items-center justify-between gap-3"><h3 className="text-xl font-black">{batch.name}</h3><span className="border-2 border-[#0F172A] px-2 py-1 text-[10px] font-bold uppercase">{batch.status === 'Open' ? 'Dibuka' : 'Segera'}</span></div><p className="mt-3 text-sm font-medium text-slate-700">{batch.date}</p></div>)}
+				{registrationBatches.map((batch) => <div key={batch.name} className={`border-3 border-[#0F172A] p-5 ${batch.status === 'Open' ? 'bg-[#FF5C00] shadow-[5px_5px_0px_0px_#0F172A] ring-2 ring-[#E00105]' : 'bg-white'}`}><div className="flex items-center justify-between gap-3"><h3 className="text-xl font-black">{batch.name}</h3><span className="border-2 border-[#0F172A] bg-white px-2 py-1 text-[10px] font-bold uppercase">{batch.status === 'Open' ? 'Sedang dibuka' : 'Segera'}</span></div><p className="mt-3 text-sm font-medium text-slate-700">{batch.date}</p></div>)}
 			</div>
 			<div className="mt-8 border-3 border-[#0F172A] bg-[#FF5C00] p-6 shadow-[6px_6px_0px_0px_#0F172A]">
 				<div className="flex flex-wrap items-end justify-between gap-4"><div><p className="font-mono text-xs font-bold uppercase">Jadwal Skill Class</p><h3 className="mt-2 text-2xl font-black">Lima pertemuan untuk mengembangkan ide.</h3></div><p className="text-sm font-bold">November 2026</p></div>
@@ -111,9 +111,9 @@ export default function EventInfoView() {
 					{timeline.map((event, index) => (
 						<div key={event.title} className="relative flex gap-4 md:block">
 							<div className="relative z-10 grid h-12 w-12 shrink-0 place-items-center border-3 border-[#0F172A] bg-[#FF5C00] font-mono text-sm font-black shadow-[3px_3px_0px_0px_#0F172A]">0{index + 1}</div>
-							<div className="flex-1 border-3 border-[#0F172A] bg-white p-5 md:mt-4">
-								<div className="flex items-start justify-between gap-3"><h3 className="text-lg font-black">{event.title}</h3><span className={`shrink-0 border-2 border-[#0F172A] px-2 py-1 text-[10px] font-bold uppercase ${event.status === 'Active' ? 'bg-[#E00105] text-white' : 'bg-slate-100'}`}>{event.status}</span></div>
-								<p className="mt-3 font-mono text-sm font-medium text-slate-600">{event.date}</p>
+							<div className={`flex-1 border-3 border-[#0F172A] p-5 md:mt-4 ${event.status === 'Active' ? 'bg-[#E00105] text-white shadow-[5px_5px_0px_0px_#0F172A]' : 'bg-white'}`}>
+								<div className="flex items-start justify-between gap-3"><div><h3 className="text-lg font-black">{event.title}</h3>{event.status === 'Active' && <p className="mt-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-white/80">Sedang berjalan</p>}</div><span className={`shrink-0 border-2 border-[#0F172A] px-2 py-1 text-[10px] font-bold uppercase ${event.status === 'Active' ? 'bg-white text-[#E00105]' : 'bg-slate-100'}`}>{event.status === 'Active' ? 'Aktif' : 'Akan datang'}</span></div>
+								<p className={`mt-3 font-mono text-sm font-medium ${event.status === 'Active' ? 'text-white/90' : 'text-slate-600'}`}>{event.date}</p>
 							</div>
 						</div>
 					))}
