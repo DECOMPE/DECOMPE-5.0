@@ -8,7 +8,6 @@ import HomeView from '@/views/HomeView';
 import EventInfoView from '@/views/EventInfoView';
 import RegistrationView from '@/views/RegistrationView';
 import MerchView from '@/views/MerchView';
-import FaqView from '@/views/FaqView';
 import NotFoundView from '@/views/NotFoundView';
 import faviconLogo from '/favicon.png';
 
@@ -16,7 +15,15 @@ export default function App() {
 	const [route, setRoute] = useState(window.location.hash || '#home');
 	const [registrationOpen, setRegistrationOpen] = useState(false);
 	useEffect(() => { const onHash = () => setRoute(window.location.hash || '#home'); window.addEventListener('hashchange', onHash); return () => window.removeEventListener('hashchange', onHash); }, []);
-	useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [route]);
+	useEffect(() => {
+		if (route === '#faq') {
+			requestAnimationFrame(() => {
+				document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			});
+			return;
+		}
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, [route]);
 	useEffect(() => {
 		const metadata: Record<string, { title: string; description: string }> = {
 			'#home': { title: 'DECOMPE 5.0 | 5 Years Of Impact', description: 'DECOMPE 5.0 mengajak peserta mengembangkan solusi untuk Smart Living dan Sustainable Future melalui tiga subtema SDG.' },
@@ -33,6 +40,6 @@ export default function App() {
 		if (robots) robots.content = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 		document.querySelectorAll<HTMLLinkElement>('link[rel="icon"], link[rel="apple-touch-icon"]').forEach((link) => { link.href = faviconLogo; });
 	}, [route]);
-	const view = route === '#event-info' ? <EventInfoView /> : route === '#register' ? <RegistrationView onRegister={() => setRegistrationOpen(true)} /> : route === '#merch' ? <MerchView /> : route === '#faq' ? <FaqView /> : route === '#home' || route === '' ? <HomeView onRegister={() => setRegistrationOpen(true)} /> : <NotFoundView />;
+	const view = route === '#event-info' ? <EventInfoView /> : route === '#register' ? <RegistrationView onRegister={() => setRegistrationOpen(true)} /> : route === '#merch' ? <MerchView /> : route === '#home' || route === '#faq' || route === '' ? <HomeView onRegister={() => setRegistrationOpen(true)} /> : <NotFoundView />;
 	return <><UrgencyTopBar /><Navbar onRegister={() => setRegistrationOpen(true)} /><main>{view}</main><Footer /><FloatingWhatsAppHelp />{registrationOpen && <RegistrationModal onClose={() => setRegistrationOpen(false)} />}</>;
 }
