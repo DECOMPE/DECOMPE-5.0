@@ -1,10 +1,7 @@
-import type { Category, ContactPerson, EventInfo, FaqItem, MerchItem, Partner, RegistrationBatch, SkillClassSession, Speaker, Timeline } from '@/types';
-import cyberUniversityLogo from '@/assets/image 25.png';
+import type { Category, ContactPerson, EventInfo, FaqItem, Partner, RegistrationBatch, SkillClassSession, Speaker, Timeline } from '@/types';
 import katalogEventLogo from '@/assets/Katalog Event - Logo 2 1.png';
 import adaEventLogo from '@/assets/Logo Adaevent 1.png';
 import lingkarEventLogo from '@/assets/MediaPartner.png';
-import ukmCodingLogo from '@/assets/Logo UKM Coding vers Hitam (5) 1.svg';
-import bemSmaLogo from '@/assets/BEM.png';
 import sponsorLogo from '@/assets/spnsor.png';
 import generationGirlLogo from '@/assets/media partenrer.png';
 import bfastLogo from '@/assets/LOGO BFAST (1).png';
@@ -24,8 +21,8 @@ export const contactPersons: ContactPerson[] = [
 ];
 
 export const metrics = [
-	{ value: '5+', label: 'Years running', detail: 'A competition built around ideas for everyday life.' },
-	{ value: '300+', label: 'Participants', detail: 'Teams from schools, campuses, and local communities.' },
+	{ value: '5+', label: 'Years running', detail: 'Lima tahun menghadirkan ruang untuk menguji dan menyampaikan ide.' },
+	{ value: '300+', label: 'Participants', detail: 'Peserta dari sekolah, kampus, dan komunitas.' },
 	{ value: '3', label: 'SDG subthemes', detail: 'Tiga subtema SDG untuk mengarahkan ide dan solusi peserta.' },
 ];
 
@@ -49,16 +46,16 @@ export const challengeTracks = [
 
 export const programHighlights = [
 	{
-		title: 'Bimbingan yang bisa dipakai',
-		description: 'Mentor membantu tim merapikan masalah, alur cerita, dan cara menyampaikan ide di depan juri.',
+		title: 'E-Sertifikat',
+		description: 'Dapatkan e-sertifikat sebagai bukti partisipasi dan pengalaman mengikuti rangkaian DECOMPE 5.0.',
 	},
 	{
-		title: 'Proses yang masuk portofolio',
-		description: 'Riset, konsep, pitch deck, dan presentasi memberi tim bahan kerja yang bisa mereka tunjukkan setelah lomba.',
+		title: 'Mentoring UI/UX',
+		description: 'Pelajari cara menyusun pengalaman pengguna dan menyampaikan solusi dengan pendekatan UI/UX yang lebih terarah.',
 	},
 	{
-		title: 'Panggung untuk karya',
-		description: 'Tim mempresentasikan solusi mereka dan menerima penilaian dari juri dengan latar belakang yang relevan.',
+		title: 'Peluang Beasiswa Kuliah',
+		description: 'Peserta SMA/SMK sederajat berkesempatan mendapatkan beasiswa kuliah di Cyber University sesuai ketentuan yang berlaku.',
 	},
 ];
 
@@ -71,7 +68,7 @@ export const registrationSteps = [
 
 export const categories: Category[] = [
 	{ id: 'umum', name: 'Umum', label: 'Umum · Batch 1', price: 100000, features: ['Tim 1-3 Orang', 'Sertifikat Tingkat Nasional', 'Akses Bootcamp & Mentoring', 'Review Portofolio'] },
-	{ id: 'sma', name: 'SMA/SMK Sederajat', label: 'SMA/SMK Sederajat · Batch 1', price: 60000, features: ['Tim 1-3 Orang', 'Sertifikat Tingkat Nasional', 'Mentoring Eksklusif', 'Akses Webinar'] },
+	{ id: 'sma', name: 'SMA/SMK Sederajat', label: 'SMA/SMK Sederajat · Batch 1', price: 60000, features: ['Tim 1-3 Orang', 'Sertifikat Tingkat Nasional', 'Mentoring Eksklusif', 'Akses Webinar', 'Peluang beasiswa kuliah di Cyber University sesuai ketentuan'] },
 ];
 
 export const totalPrize = 5000000;
@@ -92,11 +89,55 @@ export const timeline: Timeline[] = [
 	{ title: 'Awarding & Webinar', date: '28 Nov', status: 'Upcoming' },
 ];
 
+const timelineWindows = [
+	['2026-09-20', '2026-10-02'],
+	['2026-10-03', '2026-10-18'],
+	['2026-10-19', '2026-11-01'],
+	['2026-11-01', '2026-11-01'],
+	['2026-11-02', '2026-11-15'],
+	['2026-11-02', '2026-11-16'],
+	['2026-11-16', '2026-11-16'],
+	['2026-11-17', '2026-11-21'],
+	['2026-11-21', '2026-11-21'],
+	['2026-11-22', '2026-11-26'],
+	['2026-11-26', '2026-11-26'],
+	['2026-11-27', '2026-11-27'],
+	['2026-11-28', '2026-11-28'],
+] as const;
+
+export const getTimeline = (now = new Date()): Timeline[] => {
+	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+	return timeline.map((item, index) => {
+		const [startDate, endDate] = timelineWindows[index];
+		const start = new Date(`${startDate}T00:00:00`).getTime();
+		const end = new Date(`${endDate}T23:59:59`).getTime();
+		const status = today < start ? 'Upcoming' : today > end ? 'Past' : 'Active';
+		return { ...item, status };
+	});
+};
+
 export const registrationBatches: RegistrationBatch[] = [
 	{ name: 'Batch 1', date: '20 Sept - 02 Okt', status: 'Open', prices: { umum: 100000, sma: 60000 } },
 	{ name: 'Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming', prices: { umum: 120000, sma: 75000 } },
 	{ name: 'Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming', prices: { umum: 150000, sma: 100000 } },
 ];
+
+const registrationBatchWindows = [
+	['2026-09-20', '2026-10-02'],
+	['2026-10-03', '2026-10-18'],
+	['2026-10-19', '2026-11-01'],
+] as const;
+
+export const getRegistrationBatches = (now = new Date()): RegistrationBatch[] => {
+	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+	return registrationBatches.map((batch, index) => {
+		const [startDate, endDate] = registrationBatchWindows[index];
+		const start = new Date(`${startDate}T00:00:00`).getTime();
+		const end = new Date(`${endDate}T23:59:59`).getTime();
+		const status = today < start ? 'Upcoming' : today > end ? 'Closed' : 'Open';
+		return { ...batch, status };
+	});
+};
 
 export const skillClassSessions: SkillClassSession[] = [
 	{ name: 'Pertemuan 1', date: 'Sabtu, 07 November 2026' },
@@ -114,9 +155,6 @@ export const speakers: Speaker[] = [
 ];
 
 export const partners: Partner[] = [
-	{ name: 'Cyber University', logo: cyberUniversityLogo, type: 'Sponsor', alt: 'Logo Cyber University' },
-	{ name: 'UKM Coding', logo: ukmCodingLogo, type: 'Sponsor', alt: 'Logo UKM Coding' },
-	{ name: 'BEM SMA', logo: bemSmaLogo, type: 'Sponsor', alt: 'Logo BEM SMA' },
 	{ name: 'S Pay', logo: sponsorLogo, type: 'Sponsor', alt: 'Logo S Pay' },
 	{ name: 'Ada Event', logo: adaEventLogo, type: 'Media partner', alt: 'Logo Ada Event' },
 	{ name: 'Katalog Event Indonesia', logo: katalogEventLogo, type: 'Media partner', alt: 'Logo Katalog Event Indonesia' },
@@ -125,19 +163,13 @@ export const partners: Partner[] = [
 	{ name: 'BFAST', logo: bfastLogo, type: 'Media partner', alt: 'Logo BFAST Media Partner' },
 ];
 
-export const merchItems: MerchItem[] = [
-	{ id: 'shirt', name: 'DECOMPE T-Shirt', description: 'T-shirt resmi dengan grafis edisi 5.0 untuk peserta dan supporter.', price: 120000, color: '#FF5C00' },
-	{ id: 'lanyard', name: 'Event Lanyard', description: 'Lanyard tebal untuk identitas peserta selama event berlangsung.', price: 35000, color: '#E00105' },
-	{ id: 'sticker', name: 'Sticker Pack', description: 'Satu pack stiker bertema DECOMPE 5.0 untuk komunitas dan koleksi.', price: 25000, color: '#FACC15' },
-];
-
 export const faqs: FaqItem[] = [
 	{ question: 'Bagaimana cara mendaftarkan tim?', answer: 'Pilih kategori dan batch yang sedang dibuka, isi form pendaftaran dengan data ketua dan anggota tim, lalu ikuti prosedur pembayaran sesuai instruksi yang dikirim panitia.' },
 	{ question: 'Apa perbedaan kategori SMA/SMK dan Umum?', answer: 'Kategori SMA/SMK ditujukan bagi pelajar aktif sekolah menengah. Kategori Umum terbuka untuk mahasiswa, alumni, pelaku usaha, dan peserta umum yang memenuhi syarat lomba.' },
 	{ question: 'Apakah pembayaran bisa dilakukan oleh satu orang untuk satu tim?', answer: 'Bisa. Pembayaran dilaksanakan satu kali oleh ketua tim sesuai kategori yang dipilih, kemudian panitia akan mendata tim secara resmi.' },
 	{ question: 'Kapan periode setiap batch pendaftaran?', answer: 'Batch 1 berlangsung pada 20 September sampai 2 Oktober, Batch 2 pada 3 sampai 18 Oktober, dan Batch 3 pada 19 Oktober sampai 1 November 2026.' },
 	{ question: 'Apakah peserta menerima mentoring sebelum final?', answer: 'Ya. Selain jadwal utama, peserta akan mendapatkan arahan serta feedback dari mentor yang relevan dengan ide dan presentasi masing-masing tim.' },
-	{ question: 'Bagaimana jika saya ingin memesan merchandise?', answer: 'Peserta dan supporter dapat memesan melalui halaman Merch atau menghubungi panitia di WhatsApp untuk konfirmasi stok, harga, dan pengiriman.' },
+	{ question: 'Kapan merchandise DECOMPE tersedia?', answer: 'Merchandise resmi DECOMPE 5.0 sedang disiapkan. Detail produk, harga, dan cara pemesanan akan diumumkan melalui kanal resmi DECOMPE.' },
 ];
 
 export const formatRupiah = (amount: number) => `Rp ${amount.toLocaleString('id-ID')}`;

@@ -13,7 +13,7 @@ body {
 	margin: 0;
 	min-width: 320px;
 	overflow-x: hidden;
-	background: linear-gradient(180deg, #f8fafc 0%, #eef4ff 100%);
+	background: #ffffff;
 	color: #0F172A;
 	font-family: 'Space Grotesk', sans-serif;
 }
