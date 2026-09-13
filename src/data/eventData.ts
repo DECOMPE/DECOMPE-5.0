@@ -7,6 +7,7 @@ import ukmCodingLogo from '@/assets/Logo UKM Coding vers Hitam (5) 1.svg';
 import bemSmaLogo from '@/assets/image 26.png';
 import sponsorLogo from '@/assets/spnsor.png';
 import generationGirlLogo from '@/assets/media partenrer.png';
+import bfastLogo from '@/assets/LOGO BFAST (1).png';
 
 export const eventInfo: EventInfo = {
 	name: 'DECOMPE 5.0 Skill Class',
@@ -121,6 +122,7 @@ export const partners: Partner[] = [
 	{ name: 'Katalog Event Indonesia', logo: katalogEventLogo, type: 'Media partner', alt: 'Logo Katalog Event Indonesia' },
 	{ name: 'Lingkar Event', logo: lingkarEventLogo, type: 'Media partner', alt: 'Logo Lingkar Event' },
 	{ name: 'Generation Girl Bogor', logo: generationGirlLogo, type: 'Media partner', alt: 'Logo Generation Girl Bogor' },
+	{ name: 'BFAST', logo: bfastLogo, type: 'Media partner', alt: 'Logo BFAST Media Partner' },
 ];
 
 export const merchItems: MerchItem[] = [

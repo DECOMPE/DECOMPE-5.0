@@ -7,7 +7,8 @@ const partnerGroups = [
 ];
 
 export default function PartnerShowcase() {
-	const showcasePartnerCount = partners.filter((partner) => partner.type === 'Media partner').length + 1;
+	const displayedPartners = partnerGroups.flatMap(({ type }) => partners.filter((partner) => partner.type === type && (type !== 'Sponsor' || partner.name === 'S Pay')));
+	const showcasePartnerCount = displayedPartners.length;
 
 	return <section aria-labelledby="partner-title" className="border-y-4 border-[#0F172A] bg-white px-5 py-14 lg:px-8">
 		<div className="mx-auto max-w-7xl">
@@ -31,7 +32,7 @@ export default function PartnerShowcase() {
 							</div>
 							<span className="font-mono text-xs font-bold text-slate-400">0{group.length}</span>
 						</div>
-						<div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+						<div className={`mt-5 grid grid-cols-1 gap-3 ${type === 'Media partner' ? 'sm:grid-cols-2 lg:grid-cols-3' : 'sm:grid-cols-2'}`}>
 							{group.map((partner) => <figure key={partner.name} className="group relative grid min-h-28 place-items-center overflow-hidden border-2 border-slate-200 bg-transparent p-4 text-center transition-transform hover:-translate-y-1">
 								{partner.logo ? <img src={partner.logo} alt={partner.alt} loading="lazy" decoding="async" className="max-h-20 w-full object-contain transition duration-300 group-hover:scale-105" /> : <span className="text-2xl font-black tracking-tight text-[#0F172A]">{partner.name}</span>}
 								<figcaption className="sr-only">{partner.name}</figcaption>
