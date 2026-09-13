@@ -1,7 +1,7 @@
 import { AtSign, Link2, MapPin, Phone, PlaySquare, Video } from 'lucide-react';
 import { contactPersons, eventInfo, partners } from '@/data/eventData';
 import decompeWordmark from '@/assets/Group 12.png';
-import skillClassMark from '@/assets/Group 13.png';
+import skillClassMark from '@/assets/SKILLCLASS.png';
 
 const navLinks = [
 	['#home', 'Home'],

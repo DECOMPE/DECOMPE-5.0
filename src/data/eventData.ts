@@ -2,9 +2,9 @@ import type { Category, ContactPerson, EventInfo, FaqItem, MerchItem, Partner, R
 import cyberUniversityLogo from '@/assets/image 25.png';
 import katalogEventLogo from '@/assets/Katalog Event - Logo 2 1.png';
 import adaEventLogo from '@/assets/Logo Adaevent 1.png';
-import lingkarEventLogo from '@/assets/[MAIN] LOGO LINGKAREVENT 1.png';
+import lingkarEventLogo from '@/assets/MediaPartner.png';
 import ukmCodingLogo from '@/assets/Logo UKM Coding vers Hitam (5) 1.svg';
-import bemSmaLogo from '@/assets/image 26.png';
+import bemSmaLogo from '@/assets/BEM.png';
 import sponsorLogo from '@/assets/spnsor.png';
 import generationGirlLogo from '@/assets/media partenrer.png';
 import bfastLogo from '@/assets/LOGO BFAST (1).png';

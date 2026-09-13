@@ -1,5 +1,5 @@
 import decompeWordmark from '@/assets/Group 12.png';
-import skillClassMark from '@/assets/Group 13.png';
+import skillClassMark from '@/assets/SKILLCLASS.png';
 
 export default function MainLogo() {
 	return <span className="flex h-14 w-auto shrink-0 items-center gap-0 sm:h-16" role="img" aria-label="DECOMPE 5.0 Skill Class">

@@ -3,7 +3,7 @@ import { ArrowRight, CalendarDays, Download, Lightbulb, Trophy } from 'lucide-re
 import { challengeTracks, eventInfo, formatRupiah, metrics, programHighlights, registrationBatches, timeline, totalPrize } from '@/data/eventData';
 import PartnerShowcase from '@/components/PartnerShowcase';
 import decompeWordmark from '@/assets/Group 12.png';
-import skillClassMark from '@/assets/Group 13.png';
+import skillClassMark from '@/assets/SKILLCLASS.png';
 
 const btn = 'inline-flex items-center justify-center gap-2 border-3 border-[#0F172A] px-5 py-3 font-bold transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-0 active:translate-y-0';
 
