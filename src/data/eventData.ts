@@ -74,9 +74,9 @@ export const categories: Category[] = [
 export const totalPrize = 5000000;
 
 export const timeline: Timeline[] = [
-	{ title: 'Pendaftaran Tahap 1', date: '20 Sept - 02 Okt', status: 'Active' },
-	{ title: 'Pendaftaran Tahap 2', date: '03 Okt - 18 Okt', status: 'Upcoming' },
-	{ title: 'Pendaftaran Tahap 3', date: '19 Okt - 01 Nov', status: 'Upcoming' },
+	{ title: 'Batch 1', date: '20 Sept - 02 Okt', status: 'Active' },
+	{ title: 'Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming' },
+	{ title: 'Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming' },
 	{ title: 'Penutupan Pendaftaran', date: '01 Nov', status: 'Upcoming' },
 	{ title: 'Bootcamp', date: '02 Nov - 15 Nov', status: 'Upcoming' },
 	{ title: 'Pengumpulan Karya', date: '02 Nov - 16 Nov', status: 'Upcoming' },
