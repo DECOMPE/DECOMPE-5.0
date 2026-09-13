@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Award, CalendarDays, Download, Lightbulb, Trophy } from 'lucide-react';
+import { ArrowRight, CalendarDays, Download, Lightbulb, Trophy } from 'lucide-react';
 import { challengeTracks, eventInfo, formatRupiah, metrics, programHighlights, registrationBatches, timeline, totalPrize } from '@/data/eventData';
 import PartnerShowcase from '@/components/PartnerShowcase';
 import decompeWordmark from '@/assets/Group 12.png';
@@ -91,7 +91,6 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			<div className="border-3 border-[#0F172A] bg-white p-8 shadow-[8px_8px_0px_0px_#FF5C00] sm:p-10">
 				<div className="flex flex-wrap items-center justify-between gap-6">
 					<div><p className="font-mono text-xs font-bold uppercase text-slate-500">Prize pool mulai dari</p><p className="mt-2 text-5xl font-black tracking-tighter text-[#E00105] sm:text-7xl">{formatRupiah(totalPrize)}+</p></div>
-					<Award className="h-14 w-14 text-[#FF5C00]" />
 				</div>
 				<p className="mt-6 max-w-2xl text-sm leading-6 text-slate-600">Prize pool dimulai dari Rp5.000.000 dan dapat bertambah mengikuti dukungan serta ketentuan akhir panitia. Rincian pembagian hadiah akan diumumkan melalui kanal resmi DECOMPE.</p>
 			</div>
