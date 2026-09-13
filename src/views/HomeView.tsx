@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, CalendarDays, Download, Lightbulb, Trophy } from 'lucide-react';
-import { challengeTracks, eventInfo, formatRupiah, metrics, programHighlights, registrationBatches, timeline, totalPrize } from '@/data/eventData';
+import { ArrowRight, CalendarDays, ChevronDown, Download, HelpCircle, Lightbulb, Trophy } from 'lucide-react';
+import { challengeTracks, eventInfo, faqs, formatRupiah, metrics, programHighlights, registrationBatches, timeline, totalPrize } from '@/data/eventData';
 import PartnerShowcase from '@/components/PartnerShowcase';
 import decompeWordmark from '@/assets/Group 12.png';
 import skillClassMark from '@/assets/SKILLCLASS.png';
+import { useState } from 'react';
 
 const btn = 'inline-flex items-center justify-center gap-2 border-3 border-[#0F172A] px-5 py-3 font-bold transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-0 active:translate-y-0';
 
 export default function HomeView({ onRegister }: { onRegister: () => void }) {
+	const [active, setActive] = useState<number | null>(0);
 	return <div className="bg-slate-50">
 		<section className="grid-paper overflow-hidden border-b-4 border-[#0F172A]">
 			<div className="mx-auto flex max-w-4xl items-center justify-center px-5 py-16 lg:px-8 lg:py-24">
@@ -127,6 +129,26 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 					</div>
 					<button onClick={onRegister} className={`${btn} bg-[#FF5C00] text-[#0F172A] shadow-[4px_4px_0px_0px_#FFFFFF]`}>Daftar sekarang <ArrowRight size={18} /></button>
 				</div>
+			</div>
+		</section>
+
+		<section id="faq" className="mx-auto max-w-4xl px-5 py-16 lg:px-8">
+			<div className="max-w-3xl">
+				<p className="font-mono text-xs font-bold uppercase text-[#E00105]">FAQ / help desk</p>
+				<h2 className="mt-3 text-4xl font-black leading-tight tracking-[-.06em] sm:text-5xl">Jawaban sebelum kamu mendaftar.</h2>
+				<p className="mt-5 leading-7 text-slate-600">Cek kategori, pembayaran, mentoring, jadwal, dan cara memesan merchandise di sini.</p>
+			</div>
+
+			<div className="mt-10 space-y-4">
+				{faqs.map((faq, index) => (
+					<div key={faq.question} className="border-3 border-[#0F172A] bg-white shadow-[4px_4px_0px_0px_#FF5C00]">
+						<button className="flex w-full items-center justify-between gap-4 p-5 text-left font-black" onClick={() => setActive(active === index ? null : index)}>
+							<span className="flex items-center gap-3"><HelpCircle size={18} className="text-[#E00105]" />{faq.question}</span>
+							<ChevronDown className={`shrink-0 transition-transform ${active === index ? 'rotate-180' : ''}`} />
+						</button>
+						{active === index && <div className="border-t-2 border-[#0F172A] p-5 text-sm leading-7 text-slate-600">{faq.answer}</div>}
+					</div>
+				))}
 			</div>
 		</section>
 	</div>;
