@@ -20,7 +20,7 @@ export default function App() {
 		const metadata: Record<string, { title: string; description: string }> = {
 			'#home': { title: 'DECOMPE 5.0 | 5 Years Of Impact', description: 'DECOMPE 5.0 mengajak peserta mengembangkan solusi untuk Smart Living dan Sustainable Future melalui tiga subtema SDG.' },
 			'#register': { title: 'Pendaftaran Batch 1 | DECOMPE 5.0', description: 'Pilih paket Skill Class Only atau Skill Class + DECOMPE untuk mendaftar pada Batch 1 DECOMPE 5.0.' },
-			'#merch': { title: 'Merchandise | DECOMPE 5.0 Skill Class', description: 'Lihat preview merchandise DECOMPE 5.0 dan hubungi CP untuk informasi rilisan serta pemesanan.' },
+			'#merch': { title: 'Merchandise | DECOMPE 5.0 Skill Class', description: 'Merchandise resmi DECOMPE 5.0 segera hadir.' },
 			'#faq': { title: 'FAQ | DECOMPE 5.0 Skill Class', description: 'Jawaban pendaftaran, kategori, pembayaran, mentoring, jadwal, dan merchandise DECOMPE 5.0.' },
 		};
 		const current = metadata[route];
