@@ -64,14 +64,14 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			</div>
 		</section>
 
-		<section className="border-y-4 border-[#0F172A] bg-[#0F172A] px-5 py-16 text-white lg:px-8">
+		<section className="border-y-4 border-black bg-black px-5 py-16 text-white lg:px-8">
 			<div className="mx-auto max-w-7xl">
 				<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Benefit yang kamu dapatkan di DECOMPE 5.0.</h2>
 				<div className="mt-8 grid gap-6 md:grid-cols-3">
 					{programHighlights.map((item) => (
-						<div key={item.title} className="border-3 border-white/15 bg-white/5 p-6 backdrop-blur-sm">
+						<div key={item.title} className="border-3 border-white/30 bg-[#111111] p-6">
 							<h3 className="text-xl font-black">{item.title}</h3>
-							<p className="mt-3 text-sm leading-6 text-slate-300">{item.description}</p>
+							<p className="mt-3 text-sm leading-6 text-white/75">{item.description}</p>
 						</div>
 					))}
 				</div>

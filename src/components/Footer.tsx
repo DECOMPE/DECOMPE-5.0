@@ -7,9 +7,8 @@ import bemSmaLogo from '@/assets/BEM.png';
 
 const navLinks = [
 	['#home', 'Home'],
-	['#register', 'Register'],
+	['#register', 'Kategori Lomba'],
 	['#merch', 'Merch'],
-	['#faq', 'FAQ'],
 ];
 
 const footerLogos = [
