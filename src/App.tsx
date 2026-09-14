@@ -9,6 +9,7 @@ import FaqView from '@/views/FaqView';
 import NotFoundView from '@/views/NotFoundView';
 import PartnerShowcase from '@/components/PartnerShowcase';
 import { registrationFormUrl } from '@/data/eventData';
+import vectorAccent from '@/assets/Vector.png';
 import faviconLogo from '/favicon.png';
 
 export default function App() {
@@ -33,5 +34,6 @@ export default function App() {
 	}, [route]);
 	const isHome = route === '#home' || route === '';
 	const view = route === '#register' ? <RegistrationView onRegister={openRegistrationForm} /> : route === '#merch' ? <MerchView /> : route === '#faq' ? <FaqView /> : isHome ? <HomeView onRegister={openRegistrationForm} /> : <NotFoundView />;
-	return <><UrgencyTopBar /><Navbar onRegister={openRegistrationForm} /><main>{view}</main>{isHome && <PartnerShowcase />}<Footer /></>;
+	const pageAccentClass = route.slice(1) || 'page';
+	return <><UrgencyTopBar /><Navbar onRegister={openRegistrationForm} /><main>{isHome ? view : <div className={`page-accent-shell page-accent-${pageAccentClass}`}><img src={vectorAccent} alt="" aria-hidden="true" className="page-accent-vector" /><div className="relative z-10">{view}</div></div>}</main>{isHome && <PartnerShowcase />}<Footer /></>;
 }

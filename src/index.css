@@ -28,6 +28,31 @@ button { font: inherit; }
 .text-balance { text-wrap: balance; }
 main { min-height: 100vh; min-width: 0; }
 
+@keyframes neo-star-pulse {
+	0%, 100% { transform: rotate(-8deg) scale(1); }
+	50% { transform: rotate(8deg) scale(1.06); }
+}
+.neo-dots { background-image: radial-gradient(#0F172A 1.5px, transparent 1.5px); background-size: 16px 16px; }
+.neo-dots-light { background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px); background-size: 16px 16px; }
+.neo-star { clip-path: polygon(50% 0%, 58% 34%, 100% 50%, 61% 58%, 50% 100%, 40% 61%, 0% 50%, 38% 39%); filter: drop-shadow(8px 8px 0 #0F172A); }
+.neo-poster-star-back { position: absolute; inset: 0; background: #0F172A; clip-path: polygon(50% 0%, 58% 37%, 100% 50%, 61% 60%, 50% 100%, 39% 62%, 0% 50%, 37% 39%); transform: translate(11px, 11px); }
+.neo-poster-star-face { position: absolute; inset: 0; background: #FF5C00; clip-path: polygon(50% 0%, 58% 37%, 100% 50%, 61% 60%, 50% 100%, 39% 62%, 0% 50%, 37% 39%); }
+.neo-poster-star-outline { clip-path: polygon(50% 0%, 58% 37%, 100% 50%, 61% 60%, 50% 100%, 39% 62%, 0% 50%, 37% 39%); background: #0F172A; padding: 4px; }
+.page-accent-shell { position: relative; isolation: isolate; overflow: hidden; background: #ffffff; }
+.page-accent-vector { pointer-events: none; position: absolute; z-index: 0; right: 0; top: 50%; width: 22%; height: 80%; object-fit: contain; object-position: right center; opacity: .32; mix-blend-mode: multiply; transform: translateY(-50%); }
+.page-accent-merch::before, .page-accent-merch::after, .page-accent-register::before, .page-accent-register::after { content: ''; pointer-events: none; position: absolute; z-index: 1; width: 6.5rem; height: 6.5rem; background: #FF5C00; clip-path: polygon(50% 0%, 58% 37%, 100% 50%, 61% 60%, 50% 100%, 39% 62%, 0% 50%, 37% 39%); filter: drop-shadow(11px 11px 0 #0F172A); }
+.page-accent-register::before { left: -2rem; top: 12%; transform: rotate(-12deg); }
+.page-accent-register::after { right: -2rem; bottom: 10%; transform: rotate(15deg) scale(1.2); }
+.page-accent-merch::before { left: 8%; top: 14%; transform: rotate(18deg) scale(.8); }
+.page-accent-merch::after { right: -2rem; bottom: 18%; transform: rotate(-16deg) scale(1.25); }
+.neo-star-small { width: 1.25rem; height: 1.25rem; background: #FF5C00; filter: drop-shadow(3px 3px 0 #0F172A); }
+.neo-star-medium { width: 2rem; height: 2rem; background: #FF5C00; filter: drop-shadow(4px 4px 0 #0F172A); }
+.neo-star-pulse { animation: neo-star-pulse 3.5s ease-in-out infinite; }
+.neo-corner { position: relative; }
+.neo-corner::after { content: ''; position: absolute; right: 12px; top: 12px; width: 10px; height: 10px; background: #FF5C00; border: 2px solid #0F172A; }
+.neo-lift { transition: transform 180ms ease, box-shadow 180ms ease; }
+.neo-lift:hover { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 #0F172A; }
+
 @media (prefers-reduced-motion: reduce) {
 	*, *::before, *::after {
 		animation-duration: 0.01ms !important;
@@ -35,4 +60,10 @@ main { min-height: 100vh; min-width: 0; }
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}
+	.neo-lift:hover { transform: none; }
+	.neo-star-pulse { animation: none; }
+}
+
+@media (max-width: 767px) {
+	.page-accent-vector { width: 34%; opacity: .2; }
 }

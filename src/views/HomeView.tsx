@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, CalendarDays, ChevronDown, Download, HelpCircle, Lightbulb } from 'lucide-react';
+import { ArrowRight, CalendarDays, ChevronDown, Download, HelpCircle } from 'lucide-react';
 import { challengeTracks, eventInfo, faqs, formatRupiah, getTimeline, metrics, programHighlights, totalPrize } from '@/data/eventData';
 import combinedLogo from '@/assets/logo/decompe x skill class transparent cropped.png';
+import vectorAccent from '@/assets/Vector.png';
 import { useState } from 'react';
 
 const btn = 'inline-flex items-center justify-center gap-2 border-3 border-[#0F172A] px-5 py-3 font-bold transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-0 active:translate-y-0';
@@ -10,17 +11,20 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 	const [activeFaq, setActiveFaq] = useState<number | null>(0);
 	const timeline = getTimeline();
 	return <div className="bg-white">
-		<section className="overflow-hidden border-b-4 border-[#0F172A]">
+		<section className="relative overflow-hidden border-b-4 border-[#0F172A]">
+			<img src={vectorAccent} alt="" aria-hidden="true" className="pointer-events-none absolute -right-2 top-1/2 hidden h-[78%] w-[34%] -translate-y-1/2 object-contain object-right opacity-35 mix-blend-multiply lg:block" />
+			<div className="pointer-events-none absolute -left-12 top-12 hidden h-40 w-40 neo-poster-star neo-star-pulse lg:block" aria-hidden="true"><span className="neo-poster-star-back" /><span className="neo-poster-star-face" /></div>
+			<div className="pointer-events-none absolute -right-10 top-44 hidden h-44 w-44 neo-poster-star neo-star-pulse lg:block" aria-hidden="true"><span className="neo-poster-star-back" /><span className="neo-poster-star-face" /></div>
+			<div className="pointer-events-none absolute bottom-24 right-[18%] hidden h-10 w-10 bg-[#0F172A] neo-poster-star-outline lg:block" aria-hidden="true"><span className="block h-full w-full neo-poster-star-face" /></div>
 			<div className="mx-auto flex max-w-4xl items-center justify-center px-5 py-16 lg:px-8 lg:py-24">
 				<motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="w-full text-center">
 					<h1 className="sr-only">DECOMPE 5.0 Skill Class</h1>
 					<div className="mx-auto w-full max-w-2xl" aria-label="DECOMPE 5.0 Skill Class">
 						<img src={combinedLogo} alt="DECOMPE 5.0 Skill Class" className="h-auto w-full object-contain" />
 					</div>
-					<p className="mt-4 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#FF5C00]">Tema utama</p>
 					<h2 className="mx-auto mt-2 max-w-3xl text-3xl font-black leading-tight tracking-tighter sm:text-5xl"><span className="block">{eventInfo.tagline}</span><span className="mt-2 block">{eventInfo.theme}</span></h2>
 					<p className="mx-auto mt-4 max-w-lg text-sm leading-6 text-slate-600">Pilih masalah nyata, kembangkan solusinya melalui tiga subtema SDG, lalu susun pitch deck yang meyakinkan.</p>
-					<div className="mx-auto mt-8 max-w-md border-4 border-[#0F172A] bg-[#FF5C00] p-5 text-left shadow-[7px_7px_0px_0px_#0F172A] sm:p-6">
+					<div className="neo-corner neo-lift mx-auto mt-8 max-w-md border-4 border-[#0F172A] bg-[#FF5C00] p-5 text-left shadow-[7px_7px_0px_0px_#0F172A] sm:p-6">
 						<p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-[#0F172A]/75">Total hadiah</p>
 						<p className="mt-2 text-5xl font-black leading-none tracking-[-.07em] text-[#0F172A] sm:text-6xl">{formatRupiah(totalPrize)}</p>
 						<p className="mt-3 max-w-xs text-sm font-medium leading-5 text-[#0F172A]/75">Hadiah awal untuk ide yang paling kuat, relevan, dan siap dikembangkan.</p>
@@ -31,7 +35,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 					</div>
 					<div className="mx-auto mt-10 grid max-w-xl gap-4 text-left sm:grid-cols-3">
 						{metrics.map((item) => (
-							<div key={item.label} className="border-2 border-[#0F172A] bg-white p-4 shadow-[4px_4px_0px_0px_#FF5C00]">
+							<div key={item.label} className="neo-lift border-2 border-[#0F172A] bg-white p-4 shadow-[4px_4px_0px_0px_#FF5C00]">
 								<div className="font-black text-[#FF5C00] text-2xl leading-none">{item.value}</div>
 								<div className="mt-2 text-xs font-bold uppercase tracking-[0.12em] text-slate-700">{item.label}</div>
 								<div className="mt-2 text-xs leading-5 text-slate-600">{item.detail}</div>
@@ -42,16 +46,15 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			</div>
 		</section>
 
-		<section className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+		<section className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8">
 			<div className="mb-8 flex items-end justify-between gap-4">
 				<div>
 					<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Tiga subtema untuk mengembangkan solusi.</h2>
 				</div>
-				<Lightbulb className="hidden h-12 w-12 text-[#FF5C00] sm:block" />
 			</div>
 			<div className="grid gap-6 lg:grid-cols-3">
 				{challengeTracks.map((track) => (
-					<div key={track.title} className="border-3 border-[#0F172A] bg-white p-6 shadow-[6px_6px_0px_0px_#FF5C00]">
+					<div key={track.title} className="neo-corner neo-lift border-3 border-[#0F172A] bg-white p-6 shadow-[6px_6px_0px_0px_#FF5C00]">
 						<h3 className="text-2xl font-black">{track.title}</h3>
 						<p className="mt-3 text-sm leading-6 text-slate-600">{track.description}</p>
 						<ul className="mt-5 space-y-2">
@@ -64,12 +67,12 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			</div>
 		</section>
 
-		<section className="border-y-4 border-black bg-black px-5 py-16 text-white lg:px-8">
+		<section className="relative overflow-hidden border-y-4 border-black bg-black px-5 py-16 text-white lg:px-8">
 			<div className="mx-auto max-w-7xl">
 				<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Benefit yang kamu dapatkan di DECOMPE 5.0.</h2>
 				<div className="mt-8 grid gap-6 md:grid-cols-3">
 					{programHighlights.map((item) => (
-						<div key={item.title} className="border-3 border-white/30 bg-[#111111] p-6">
+						<div key={item.title} className="neo-lift border-3 border-white/30 bg-[#111111] p-6">
 							<h3 className="text-xl font-black">{item.title}</h3>
 							<p className="mt-3 text-sm leading-6 text-white/75">{item.description}</p>
 						</div>
@@ -78,7 +81,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			</div>
 		</section>
 
-		<section className="border-y-4 border-[#0F172A] bg-white px-5 py-16 lg:px-8">
+		<section className="relative border-y-4 border-[#0F172A] bg-white px-5 py-16 lg:px-8">
 			<div className="mx-auto max-w-7xl">
 				<h2 className="text-center text-4xl font-black tracking-tighter sm:text-5xl">Timeline</h2>
 

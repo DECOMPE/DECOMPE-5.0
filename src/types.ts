@@ -5,7 +5,7 @@ export interface EventInfo {
 export interface ContactPerson { name: string; phone: string; whatsapp: string; }
 export interface Category { id: string; name: string; label: string; price: number; features: string[]; }
 export interface Timeline { title: string; date: string; status: 'Active' | 'Upcoming' | 'Past'; }
-export interface RegistrationBatch { name: string; date: string; status: 'Open' | 'Upcoming' | 'Closed'; prices: { skillclassDecompe: number; }; }
+export interface RegistrationBatch { name: string; date: string; status: 'Open' | 'Upcoming' | 'Closed'; }
 export interface SkillClassSession { name: string; date: string; }
 export interface Speaker { name: string; category: 'Skill Class' | 'Webinar' | 'Juri'; specialty: string; }
 export interface FaqItem { question: string; answer: string; }

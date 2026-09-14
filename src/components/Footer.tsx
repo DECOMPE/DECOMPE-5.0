@@ -20,10 +20,9 @@ const footerLogos = [
 export default function Footer() {
 	return <footer className="border-t-4 border-[#0F172A] bg-white px-5 py-12 text-[#0F172A] lg:px-8">
 		<div className="mx-auto max-w-7xl">
-			<div className="mb-10 grid gap-6 border-2 border-[#0F172A] bg-[#FFF7F1] p-6 shadow-[6px_6px_0px_0px_#FF5C00] md:grid-cols-[1fr_auto] md:items-center md:p-8">
+			<div className="neo-corner mb-10 grid gap-6 border-2 border-[#0F172A] bg-[#FFF7F1] p-6 shadow-[6px_6px_0px_0px_#FF5C00] md:grid-cols-[1fr_auto] md:items-center md:p-8">
 				<div>
-					<p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#FF5C00]">Join the movement</p>
-					<h2 className="mt-2 max-w-2xl text-3xl font-black leading-tight tracking-tight sm:text-4xl">Bawa ide kamu untuk smart living dan sustainable future.</h2>
+					<h2 className="max-w-2xl text-3xl font-black leading-tight tracking-tight sm:text-4xl">Bawa ide kamu untuk smart living dan sustainable future.</h2>
 				</div>
 				<a href="#register" className="inline-flex items-center justify-center gap-2 border-2 border-[#0F172A] bg-[#FF5C00] px-5 py-3 text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0F172A] transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF5C00]">Daftar sekarang <ArrowUpRight size={17} aria-hidden="true" /></a>
 			</div>

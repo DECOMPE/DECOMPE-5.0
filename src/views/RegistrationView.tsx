@@ -10,24 +10,24 @@ export default function RegistrationView({ onRegister }: { onRegister: () => voi
 		</div>
 
 		<section className="mt-10 border-3 border-[#0F172A] bg-white p-5 shadow-[5px_5px_0px_0px_#FF5C00] sm:p-7">
-			<div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"><div><p className="font-mono text-xs font-bold uppercase text-[#FF5C00]">Rincian biaya pendaftaran</p><h2 className="mt-1 text-2xl font-black">Harga Skill Class + DECOMPE sesuai batch.</h2></div><p className="text-sm text-slate-600">Skill Class Only flat Rp50.000.</p></div>
+			<div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"><div><p className="font-mono text-xs font-bold uppercase text-[#FF5C00]">Periode pendaftaran</p><h2 className="mt-1 text-2xl font-black">Pendaftaran mengikuti batch yang aktif.</h2></div><p className="text-sm text-slate-600">Pilih paket pada kartu di bawah.</p></div>
 			<div className="mt-6 grid gap-4 md:grid-cols-3">
-				{registrationBatches.map((batch) => <article key={batch.name} className={`border-2 border-[#0F172A] p-4 ${batch.status === 'Open' ? 'bg-[#FF5C00]' : 'bg-white'}`}><div className="flex items-center justify-between gap-2"><h3 className="font-black">{batch.name}</h3><span className="font-mono text-[10px] font-bold uppercase">{batch.status === 'Open' ? 'Dibuka' : batch.status === 'Closed' ? 'Selesai' : 'Segera'}</span></div><p className="mt-2 text-xs text-slate-700">{batch.date}</p><div className="mt-4 flex justify-between gap-3 border-t border-[#0F172A]/20 pt-3 text-sm"><span>Skill Class + DECOMPE</span><strong>{formatRupiah(batch.prices.skillclassDecompe)}</strong></div></article>)}
+				{registrationBatches.map((batch) => <article key={batch.name} className={`border-2 border-[#0F172A] p-4 ${batch.status === 'Open' ? 'bg-[#FF5C00]' : 'bg-white'}`}><div className="flex items-center justify-between gap-2"><h3 className="font-black">{batch.name}</h3><span className="font-mono text-[10px] font-bold uppercase">{batch.status === 'Open' ? 'Dibuka' : batch.status === 'Closed' ? 'Selesai' : 'Segera'}</span></div><p className="mt-2 text-xs text-slate-700">{batch.date}</p></article>)}
 			</div>
 		</section>
 
 		<div className="mt-12 grid gap-6 lg:grid-cols-2">
-			{categories.map((category, index) => (
-				<article key={category.id} className={`border-3 border-[#0F172A] p-6 ${index === 0 ? 'bg-[#FF5C00]' : 'bg-white'} shadow-[6px_6px_0px_0px_#0F172A]`}>
+			{categories.map((category) => (
+				<article key={category.id} className="flex h-full flex-col border-3 border-[#0F172A] bg-white p-6 shadow-[6px_6px_0px_0px_#0F172A]">
 					<p className="font-mono text-xs font-bold uppercase">{category.name}</p>
 					<h2 className="mt-3 text-3xl font-black">{formatRupiah(category.price)}</h2>
 					{category.id !== 'skillclass-only' && <p className="mt-1 text-sm font-bold uppercase">Batch 1 · per tim</p>}
-					<ul className="my-8 space-y-3 border-y-2 border-[#0F172A] py-5">
+					<ul className="my-8 flex-1 space-y-3 border-y-2 border-[#0F172A] py-5">
 						{category.features.map((feature) => (
 							<li key={feature} className="flex gap-2 text-sm font-medium"><Check size={18} className="mt-0.5 shrink-0" />{feature}</li>
 						))}
 					</ul>
-					<button onClick={onRegister} className="flex w-full items-center justify-between border-3 border-[#0F172A] bg-white px-4 py-3 font-black">Pilih paket ini <ArrowRight size={18} /></button>
+					<button onClick={onRegister} className="mt-auto flex w-full items-center justify-between border-3 border-[#0F172A] bg-white px-4 py-3 font-black">Pilih paket ini <ArrowRight size={18} /></button>
 				</article>
 			))}
 		</div>

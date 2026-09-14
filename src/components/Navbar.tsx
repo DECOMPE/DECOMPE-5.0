@@ -6,7 +6,7 @@ export default function Navbar({ onRegister }: { onRegister: () => void }) {
 	const [open, setOpen] = useState(false);
 	const links = [['#home', 'Home'], ['#register', 'Kategori Lomba'], ['#merch', 'Merch'],];
 
-	return <header className="sticky top-0 z-40 border-b-3 border-[#0F172A] bg-white/90 backdrop-blur-sm">
+	return <header className="sticky top-0 z-40 border-b-3 border-[#0F172A] bg-white/95 backdrop-blur-sm">
 		<div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-5 sm:py-4 lg:px-8">
 			<a href="#home" aria-label="DECOMPE home"><MainLogo /></a>
 			<nav className="hidden items-center gap-4 md:flex lg:gap-6">
