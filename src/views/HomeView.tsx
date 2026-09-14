@@ -18,8 +18,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 						<img src={combinedLogo} alt="DECOMPE 5.0 Skill Class" className="h-auto w-full object-contain" />
 					</div>
 					<p className="mt-4 font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#FF5C00]">Tema utama</p>
-					<h2 className="mx-auto mt-2 max-w-2xl text-3xl font-black leading-tight tracking-tighter sm:text-5xl">{eventInfo.theme}</h2>
-					<p className="mx-auto mt-6 max-w-xl text-lg font-medium leading-7 text-slate-800">{eventInfo.tagline}</p>
+					<h2 className="mx-auto mt-2 max-w-3xl text-3xl font-black leading-tight tracking-tighter sm:text-5xl"><span className="block">{eventInfo.tagline}</span><span className="mt-2 block">{eventInfo.theme}</span></h2>
 					<p className="mx-auto mt-4 max-w-lg text-sm leading-6 text-slate-600">Pilih masalah nyata, kembangkan solusinya melalui tiga subtema SDG, lalu susun pitch deck yang meyakinkan.</p>
 					<div className="mx-auto mt-8 max-w-md border-4 border-[#0F172A] bg-[#FF5C00] p-5 text-left shadow-[7px_7px_0px_0px_#0F172A] sm:p-6">
 						<p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-[#0F172A]/75">Total hadiah</p>
@@ -28,7 +27,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 					</div>
 					<div className="mt-8 flex flex-wrap justify-center gap-4">
 						<button onClick={onRegister} className={`${btn} bg-[#FF5C00] text-[#0F172A] shadow-[4px_4px_0px_0px_#0F172A]`}>Daftar Batch 1 <ArrowRight size={18} /></button>
-						<a href="#event-info" className={`${btn} bg-white shadow-[4px_4px_0px_0px_#0F172A]`}>Lihat format lomba <Download size={18} /></a>
+						<a href="#register" className={`${btn} bg-white shadow-[4px_4px_0px_0px_#0F172A]`}>Lihat kategori lomba <Download size={18} /></a>
 					</div>
 					<div className="mx-auto mt-10 grid max-w-xl gap-4 text-left sm:grid-cols-3">
 						{metrics.map((item) => (
@@ -53,8 +52,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 			<div className="grid gap-6 lg:grid-cols-3">
 				{challengeTracks.map((track) => (
 					<div key={track.title} className="border-3 border-[#0F172A] bg-white p-6 shadow-[6px_6px_0px_0px_#FF5C00]">
-						<span className="inline-flex border-2 border-[#0F172A] bg-white px-2 py-1 font-mono text-[10px] font-bold uppercase">Subtema</span>
-						<h3 className="mt-5 text-2xl font-black">{track.title}</h3>
+						<h3 className="text-2xl font-black">{track.title}</h3>
 						<p className="mt-3 text-sm leading-6 text-slate-600">{track.description}</p>
 						<ul className="mt-5 space-y-2">
 							{track.outcomes.map((item) => (

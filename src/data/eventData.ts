@@ -8,7 +8,7 @@ import bfastLogo from '@/assets/LOGO BFAST (1).png';
 
 export const eventInfo: EventInfo = {
 	name: 'DECOMPE 5.0 Skill Class',
-	tagline: '5 Years Of Impact: Smart Living, Sustainable Future',
+	tagline: '5 Years Of Impact',
 	theme: 'Smart Living & Sustainable Future',
 	contactPerson: 'Aldino (0895-3868-91729) · Nayla (0877-7369-8839)',
 	address: 'Jl. TB Simatupang No. 6',
@@ -54,22 +54,24 @@ export const programHighlights = [
 		description: 'Pelajari cara menyusun pengalaman pengguna dan menyampaikan solusi dengan pendekatan UI/UX yang lebih terarah.',
 	},
 	{
-		title: 'Peluang Beasiswa Kuliah',
-		description: 'Peserta SMA/SMK sederajat berkesempatan mendapatkan beasiswa kuliah di Cyber University sesuai ketentuan yang berlaku.',
+		title: 'Akses Skill Class',
+		description: 'Dapatkan ruang belajar terarah untuk mengembangkan ide, menyusun solusi, dan mempersiapkan presentasi.',
 	},
 ];
 
 export const registrationSteps = [
-	{ step: '01', title: 'Pilih kategori dan batch', description: 'Tentukan kategori Umum atau SMA/SMK, lalu pastikan kamu mendaftar pada batch yang sedang dibuka.' },
-	{ step: '02', title: 'Isi form pendaftaran', description: 'Lengkapi data ketua tim dan anggota sebelum melanjutkan ke pembayaran.' },
-	{ step: '03', title: 'Lakukan pembayaran', description: 'Ikuti instruksi pembayaran dan simpan bukti transfer untuk konfirmasi panitia.' },
-	{ step: '04', title: 'Siapkan ide', description: 'Amati masalah, susun solusi, dan siapkan pitch deck sebelum technical meeting.' },
+	{ title: 'Pilih paket pendaftaran', description: 'Tentukan paket Skill Class Only atau Skill Class + DECOMPE yang paling sesuai dengan kebutuhanmu.' },
+	{ title: 'Isi form pendaftaran', description: 'Lengkapi data ketua tim dan anggota melalui Google Form sebelum melanjutkan ke pembayaran.' },
+	{ title: 'Lakukan pembayaran', description: 'Ikuti instruksi pembayaran dan simpan bukti transfer untuk konfirmasi panitia.' },
+	{ title: 'Siapkan ide', description: 'Setelah terdaftar, amati masalah, susun solusi, dan siapkan pitch deck sesuai arahan panitia.' },
 ];
 
 export const categories: Category[] = [
-	{ id: 'umum', name: 'Umum', label: 'Umum · Batch 1', price: 100000, features: ['Tim 1-3 Orang', 'Sertifikat Tingkat Nasional', 'Akses Bootcamp & Mentoring', 'Review Portofolio'] },
-	{ id: 'sma', name: 'SMA/SMK Sederajat', label: 'SMA/SMK Sederajat · Batch 1', price: 60000, features: ['Tim 1-3 Orang', 'Sertifikat Tingkat Nasional', 'Mentoring Eksklusif', 'Akses Webinar', 'Peluang beasiswa kuliah di Cyber University sesuai ketentuan'] },
+	{ id: 'skillclass-only', name: 'Skill Class Only', label: 'Skill Class Only · Semua batch', price: 50000, features: ['Akses Skill Class', 'Sertifikat Skill Class', 'Materi dan mentoring terarah'] },
+	{ id: 'skillclass-decompe', name: 'Skill Class + DECOMPE', label: 'Skill Class + DECOMPE · Batch 1', price: 100000, features: ['Akses Skill Class', 'Sertifikat Skill Class', 'Materi dan mentoring terarah', 'Akses kompetisi DECOMPE 5.0'] },
 ];
+
+export const registrationFormUrl = 'https://forms.gle/K6Xd3GrJ4mCryfZ19';
 
 export const totalPrize = 5000000;
 
@@ -117,9 +119,9 @@ export const getTimeline = (now = new Date()): Timeline[] => {
 };
 
 export const registrationBatches: RegistrationBatch[] = [
-	{ name: 'Batch 1', date: '20 Sept - 02 Okt', status: 'Open', prices: { umum: 100000, sma: 60000 } },
-	{ name: 'Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming', prices: { umum: 120000, sma: 75000 } },
-	{ name: 'Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming', prices: { umum: 150000, sma: 100000 } },
+	{ name: 'Batch 1', date: '20 Sept - 02 Okt', status: 'Open', prices: { skillclassDecompe: 100000 } },
+	{ name: 'Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming', prices: { skillclassDecompe: 120000 } },
+	{ name: 'Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming', prices: { skillclassDecompe: 150000 } },
 ];
 
 const registrationBatchWindows = [
@@ -164,8 +166,8 @@ export const partners: Partner[] = [
 ];
 
 export const faqs: FaqItem[] = [
-	{ question: 'Bagaimana cara mendaftarkan tim?', answer: 'Pilih kategori dan batch yang sedang dibuka, isi form pendaftaran dengan data ketua dan anggota tim, lalu ikuti prosedur pembayaran sesuai instruksi yang dikirim panitia.' },
-	{ question: 'Apa perbedaan kategori SMA/SMK dan Umum?', answer: 'Kategori SMA/SMK ditujukan bagi pelajar aktif sekolah menengah. Kategori Umum terbuka untuk mahasiswa, alumni, pelaku usaha, dan peserta umum yang memenuhi syarat lomba.' },
+	{ question: 'Bagaimana cara mendaftarkan tim?', answer: 'Pilih paket yang tersedia, isi form pendaftaran dengan data ketua dan anggota tim, lalu ikuti prosedur pembayaran sesuai instruksi yang dikirim panitia. Batch mengikuti periode pendaftaran yang sedang aktif.' },
+	{ question: 'Apa perbedaan Skill Class Only dan Skill Class + DECOMPE?', answer: 'Skill Class Only mencakup akses ke rangkaian Skill Class. Skill Class + DECOMPE mencakup akses Skill Class sekaligus kesempatan mengikuti kompetisi DECOMPE 5.0.' },
 	{ question: 'Apakah pembayaran bisa dilakukan oleh satu orang untuk satu tim?', answer: 'Bisa. Pembayaran dilaksanakan satu kali oleh ketua tim sesuai kategori yang dipilih, kemudian panitia akan mendata tim secara resmi.' },
 	{ question: 'Kapan periode setiap batch pendaftaran?', answer: 'Batch 1 berlangsung pada 20 September sampai 2 Oktober, Batch 2 pada 3 sampai 18 Oktober, dan Batch 3 pada 19 Oktober sampai 1 November 2026.' },
 	{ question: 'Apakah peserta menerima mentoring sebelum final?', answer: 'Ya. Selain jadwal utama, peserta akan mendapatkan arahan serta feedback dari mentor yang relevan dengan ide dan presentasi masing-masing tim.' },
