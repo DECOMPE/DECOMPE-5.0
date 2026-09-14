@@ -1,5 +1,5 @@
-import { ArrowRight, Check, ClipboardList, Wallet } from 'lucide-react';
-import { categories, contactPersons, formatRupiah, getRegistrationBatches, registrationSteps } from '@/data/eventData';
+import { ArrowRight, Check, ClipboardList } from 'lucide-react';
+import { categories, formatRupiah, getRegistrationBatches, registrationSteps } from '@/data/eventData';
 
 export default function RegistrationView({ onRegister }: { onRegister: () => void }) {
 	const registrationBatches = getRegistrationBatches();
@@ -21,7 +21,7 @@ export default function RegistrationView({ onRegister }: { onRegister: () => voi
 				<article key={category.id} className={`border-3 border-[#0F172A] p-6 ${index === 0 ? 'bg-[#FF5C00]' : 'bg-white'} shadow-[6px_6px_0px_0px_#0F172A]`}>
 					<p className="font-mono text-xs font-bold uppercase">{category.name}</p>
 					<h2 className="mt-3 text-3xl font-black">{formatRupiah(category.price)}</h2>
-					<p className="mt-1 text-sm font-bold uppercase">Batch 1 · per tim</p>
+					{category.id !== 'skillclass-only' && <p className="mt-1 text-sm font-bold uppercase">Batch 1 · per tim</p>}
 					<ul className="my-8 space-y-3 border-y-2 border-[#0F172A] py-5">
 						{category.features.map((feature) => (
 							<li key={feature} className="flex gap-2 text-sm font-medium"><Check size={18} className="mt-0.5 shrink-0" />{feature}</li>
@@ -44,18 +44,6 @@ export default function RegistrationView({ onRegister }: { onRegister: () => voi
 						<p className="mt-2 text-sm leading-6 text-slate-600">{step.description}</p>
 					</div>
 				))}
-			</div>
-		</section>
-
-		<section className="mt-16 border-3 border-[#0F172A] bg-[#0F172A] p-6 text-white md:p-8">
-			<div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-				<div>
-					<p className="font-mono text-xs font-bold uppercase text-[#FF5C00]">Need help?</p>
-					<h3 className="mt-2 text-2xl font-black">Ada yang perlu dikonfirmasi?</h3>
-				</div>
-				<div className="flex flex-wrap gap-3">
-					{contactPersons.map((contact) => <a key={contact.name} href={`https://wa.me/${contact.whatsapp}?text=${encodeURIComponent('Halo ' + contact.name + ', saya ingin bertanya tentang pendaftaran DECOMPE 5.0.')}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border-3 border-[#FF5C00] bg-[#FF5C00] px-4 py-3 text-sm font-black text-[#0F172A] shadow-[3px_3px_0px_0px_#FF5C00] transition-transform hover:-translate-y-1"><Wallet size={16} /> Chat {contact.name}</a>)}
-				</div>
 			</div>
 		</section>
 	</div>;
