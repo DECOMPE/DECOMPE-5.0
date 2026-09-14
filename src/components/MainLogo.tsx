@@ -1,4 +1,4 @@
-import decompeWordmark from '@/assets/Group 12.png';
+import decompeWordmark from '@/assets/logo/DECOMPE.png';
 
 export default function MainLogo() {
 	return <span className="flex h-14 w-32 shrink-0 items-center sm:h-16 sm:w-36" role="img" aria-label="DECOMPE 5.0">
