@@ -26,8 +26,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 					<p className="mx-auto mt-4 max-w-lg text-sm leading-6 text-slate-600">Pilih masalah nyata, kembangkan solusinya melalui tiga subtema SDG, lalu susun pitch deck yang meyakinkan.</p>
 					<div className="neo-corner neo-lift mx-auto mt-8 max-w-md border-4 border-[#0F172A] bg-[#FF5C00] p-5 text-left shadow-[7px_7px_0px_0px_#0F172A] sm:p-6">
 						<p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-[#0F172A]/75">Total hadiah</p>
-						<p className="mt-2 text-5xl font-black leading-none tracking-[-.07em] text-[#0F172A] sm:text-6xl">{formatRupiah(totalPrize)}</p>
-						<p className="mt-3 max-w-xs text-sm font-medium leading-5 text-[#0F172A]/75">Hadiah awal untuk ide yang paling kuat, relevan, dan siap dikembangkan.</p>
+						<p className="mt-2 text-5xl font-black leading-none tracking-[-.07em] text-[#0F172A] sm:text-6xl">{formatRupiah(totalPrize)}+</p>
 					</div>
 					<div className="mt-8 flex flex-wrap justify-center gap-4">
 						<button onClick={onRegister} className={`${btn} bg-[#FF5C00] text-[#0F172A] shadow-[4px_4px_0px_0px_#0F172A]`}>Daftar Batch 1 <ArrowRight size={18} /></button>
