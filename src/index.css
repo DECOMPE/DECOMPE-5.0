@@ -40,7 +40,9 @@ main { min-height: 100vh; min-width: 0; }
 .neo-poster-star-outline { clip-path: polygon(50% 0%, 58% 37%, 100% 50%, 61% 60%, 50% 100%, 39% 62%, 0% 50%, 37% 39%); background: #0F172A; padding: 4px; }
 .page-accent-shell { position: relative; isolation: isolate; overflow: hidden; background: #ffffff; }
 .page-accent-vector { pointer-events: none; position: absolute; z-index: 0; right: 0; top: 50%; width: 22%; height: 80%; object-fit: contain; object-position: right center; opacity: .32; mix-blend-mode: multiply; transform: translateY(-50%); }
-.page-accent-merch::before, .page-accent-merch::after, .page-accent-register::before, .page-accent-register::after { content: ''; pointer-events: none; position: absolute; z-index: 1; width: 6.5rem; height: 6.5rem; background: #FF5C00; clip-path: polygon(50% 0%, 58% 37%, 100% 50%, 61% 60%, 50% 100%, 39% 62%, 0% 50%, 37% 39%); filter: drop-shadow(11px 11px 0 #0F172A); }
+.page-accent-shell::before, .page-accent-shell::after { content: ''; pointer-events: none; position: absolute; z-index: 1; width: 6.5rem; height: 6.5rem; background: #FF5C00; clip-path: polygon(50% 0%, 58% 37%, 100% 50%, 61% 60%, 50% 100%, 39% 62%, 0% 50%, 37% 39%); filter: drop-shadow(11px 11px 0 #0F172A); }
+.page-accent-shell::before { left: -2rem; top: 18%; transform: rotate(-8deg); }
+.page-accent-shell::after { right: -2rem; bottom: 14%; transform: rotate(10deg) scale(1.08); }
 .page-accent-register::before { left: -2rem; top: 12%; transform: rotate(-12deg); }
 .page-accent-register::after { right: -2rem; bottom: 10%; transform: rotate(15deg) scale(1.2); }
 .page-accent-merch::before { left: 8%; top: 14%; transform: rotate(18deg) scale(.8); }

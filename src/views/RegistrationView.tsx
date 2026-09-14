@@ -1,4 +1,4 @@
-import { ArrowRight, Check, ClipboardList } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import { categories, formatRupiah, getRegistrationBatches, registrationSteps } from '@/data/eventData';
 
 export default function RegistrationView({ onRegister }: { onRegister: () => void }) {
@@ -35,7 +35,6 @@ export default function RegistrationView({ onRegister }: { onRegister: () => voi
 		<section className="mt-16">
 			<div className="mb-6 flex items-center justify-between gap-4">
 				<h2 className="text-3xl font-black tracking-tighter">Cara pendaftaran</h2>
-				<ClipboardList className="text-[#FF5C00]" />
 			</div>
 			<div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
 				{registrationSteps.map((step) => (
