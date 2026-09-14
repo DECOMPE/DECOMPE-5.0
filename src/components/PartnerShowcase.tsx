@@ -9,7 +9,7 @@ export default function PartnerShowcase() {
 			<h2 id="partner-title" className="text-3xl font-black leading-[.98] tracking-tighter sm:text-4xl">Our Media partner</h2>
 			<div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
 				{mediaPartners.map((partner) => <figure key={partner.name} className="neo-lift group grid min-h-24 place-items-center border-2 border-slate-200 bg-white p-4 text-center hover:border-[#FF5C00]">
-					{partner.logo ? <img src={partner.logo} alt={partner.alt} loading="lazy" decoding="async" className="max-h-16 w-full object-contain transition duration-300 group-hover:scale-105" /> : <span className="text-sm font-black tracking-tight text-[#0F172A]">{partner.name}</span>}
+					{partner.logo ? <img src={partner.logo} alt={partner.alt} loading="lazy" decoding="async" className={`w-full object-contain transition duration-300 group-hover:scale-105 ${partner.name === 'Generation Girl Bogor' || partner.name === 'BFAST' ? 'h-28' : 'max-h-16'}`} /> : <span className="text-sm font-black tracking-tight text-[#0F172A]">{partner.name}</span>}
 					<figcaption className="sr-only">{partner.name}</figcaption>
 				</figure>)}
 			</div>
