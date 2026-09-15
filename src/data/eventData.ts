@@ -21,41 +21,41 @@ export const contactPersons: ContactPerson[] = [
 ];
 
 export const metrics = [
-	{ value: '5+', label: 'Years running', detail: 'Lima tahun menghadirkan ruang untuk menguji dan menyampaikan ide.' },
+	{ value: '5+', label: 'Years in running', detail: 'Lima tahun menghadirkan wadah untuk menguji dan menyampaikan ide.' },
 	{ value: '300+', label: 'Participants', detail: 'Peserta dari sekolah, kampus, dan komunitas.' },
-	{ value: '3', label: 'SDG subthemes', detail: 'Tiga subtema SDG untuk mengarahkan ide dan solusi peserta.' },
+	{ value: '3', label: 'SDG subthemes', detail: 'Tiga subtema SDG hadir untuk memantik ide dan solusi kreatif para peserta.' },
 ];
 
 export const challengeTracks = [
 	{
 		title: 'SDG 7',
-	description: 'Energi bersih yang terjangkau, efisien, dan terbarukan. Kembangkan solusi yang membuat energi bersih Berkelanjutan, mudah di akses dan efisien.',
-		outcomes: ['Energi terbarukan', 'Efisiensi energi', 'Akses energi yang terjangkau'],
+	description: 'Wujudkan energi bersih yang terjangkau, efisien, dan terbarukan. Ciptakan solusi inovatif yang membuat energi berkelanjutan lebih mudah diakses oleh siapa saja.',
+		outcomes: ['Energi Terbarukan', 'Efisiensi Energi', 'Akses terjangkau'],
 	},
 	{
 		title: 'SDG 12',
-		description: 'Konsumsi dan Produksi yang Bertanggung Jawab. Rancang cara baru untuk menggunakan sumber daya dengan lebih bijak, yang juga mengurangi emisi dan limbah.',
-		outcomes: ['Ekonomi sirkular', 'Pengurangan emisi dan limbah', 'Produksi berkelanjutan'],
+		description: 'Wujudkan konsumsi dan produksi energi yang bertanggung jawab. Rancang inovasi berbasis ekonomi sirkular untuk memanfaatkan sumber daya secara lebih bijak, sekaligus menekan emisi dan meminimalisir limbah.',
+		outcomes: ['Ekonomi Sirkular', 'Efisiensi Sumber Daya', 'Bebas Emisi dan Limbah'],
 	},
 	{
 		title: 'SDG 8',
-		description: 'Pekerjaan Layak dan Pertumbuhan Ekonomi. Susun ide yang membuka peluang kerja, menyeterakan kesempatan kerja, dan mendorong pertumbuhan ekonomi yang inklusif.',
-		outcomes: ['Kesetaraan kesempatan kerja', 'Kualitas kerja layak', 'Pertumbuhan ekonomi inklusif'],
+		description: 'Wujudkan Pekerjaan Layak dan Pertumbuhan Ekonomi yang merata. Rancang solusi cerdas yang tidak hanya membuka peluang kerja yang luas, tetapi juga menyetarakan kesempatan dan menggerakkan roda ekonomi yang inklusif.',
+		outcomes: ['Ekonomi Inklusif', 'Kesetaraan Peluang', 'Penciptaan Lapangan Kerja'],
 	},
 ];
 
 export const programHighlights = [
 	{
 		title: 'E-Sertifikat',
-		description: 'Dapatkan e-sertifikat sebagai bukti partisipasi dan pengalaman mengikuti rangkaian DECOMPE 5.0.',
+		description: 'Abadikan pencapaianmu! Dapatkan E-sertifikat resmi DECOMPE 5.0 bukti nyata kontribusimu dan rekam jejak berharga dari luar biasanya perjalananmu di DECOMPE 5.0.',
 	},
 	{
 		title: 'Mentoring UI/UX',
-		description: 'Pelajari cara menyusun pengalaman pengguna dan menyampaikan solusi dengan pendekatan UI/UX yang lebih terarah.',
+		description: 'Tingkatkan keahlianmu lewat sesi Mentoring UI/UX! Pelajari rahasia merancang user experience yang menarik serta wujudkan solusi digital yang lebih sasaran.',
 	},
 	{
 		title: 'Akses Skill Class',
-		description: 'Dapatkan ruang belajar terarah untuk mengembangkan ide, menyusun solusi, dan mempersiapkan presentasi.',
+		description: 'Dapatkan akses Skillclass sebagai ruang belajar terarah untuk mengembangkan ide, menyusun solusi nyata, dan mempersiapkan presentasimu dengan maksimal.',
 	},
 ];
 
@@ -166,12 +166,12 @@ export const partners: Partner[] = [
 ];
 
 export const faqs: FaqItem[] = [
-	{ question: 'Bagaimana cara mendaftarkan tim?', answer: 'Pilih paket yang tersedia, isi form pendaftaran dengan data ketua dan anggota tim, lalu ikuti prosedur pembayaran sesuai instruksi yang dikirim panitia. Batch mengikuti periode pendaftaran yang sedang aktif.' },
-	{ question: 'Apa perbedaan Skill Class Only dan Skill Class + DECOMPE?', answer: 'Skill Class Only mencakup akses ke rangkaian Skill Class. Skill Class + DECOMPE mencakup akses Skill Class sekaligus kesempatan mengikuti kompetisi DECOMPE 5.0.' },
-	{ question: 'Apakah pembayaran bisa dilakukan oleh satu orang untuk satu tim?', answer: 'Bisa. Pembayaran dilaksanakan satu kali oleh ketua tim sesuai kategori yang dipilih, kemudian panitia akan mendata tim secara resmi.' },
-	{ question: 'Kapan periode setiap batch pendaftaran?', answer: 'Batch 1 berlangsung pada 20 September sampai 2 Oktober, Batch 2 pada 3 sampai 18 Oktober, dan Batch 3 pada 19 Oktober sampai 1 November 2026.' },
-	{ question: 'Apakah peserta menerima mentoring sebelum final?', answer: 'Ya. Selain jadwal utama, peserta akan mendapatkan arahan serta feedback dari mentor yang relevan dengan ide dan presentasi masing-masing tim.' },
-	{ question: 'Kapan merchandise DECOMPE tersedia?', answer: 'Merchandise resmi DECOMPE 5.0 sedang disiapkan. Detail produk, harga, dan cara pemesanan akan diumumkan melalui kanal resmi DECOMPE.' },
+    { question: 'Bagaimana cara mendaftarkan tim?', answer: 'Pilih paket pendaftaran, isi formulir dengan data ketua dan anggota, lalu selesaikan pembayaran sesuai instruksi panitia. Anda akan masuk ke batch pendaftaran yang sedang aktif.' },
+    { question: 'Apa perbedaan paket Skill Class Only dan Skill Class + DECOMPE?', answer: 'Skill Class Only hanya memberikan akses ke rangkaian sesi Skill Class. Sedangkan Skill Class + DECOMPE memberikan akses Skill Class sekaligus pendaftaran penuh ke kompetisi DECOMPE 5.0.'},
+    { question: 'Apakah pembayaran bisa diwakilkan oleh satu orang untuk satu tim?', answer: 'Bisa. Pembayaran cukup dilakukan satu kali oleh perwakilan atau ketua tim sesuai paket yang dipilih.' },
+    { question: 'Kapan periode pendaftaran untuk setiap batch berlangsung?', answer: 'Batch 1: 20 September – 2 Oktober 2026 | Batch 2: 3 – 18 Oktober 2026 | Batch 3: 19 Oktober – 1 November 2026.' },
+    { question: 'Apakah peserta akan mendapatkan sesi mentoring sebelum tahap final?', answer: 'Ya. Peserta akan mendapatkan sesi mentoring khusus untuk menerima arahan dan feedback demi mematangkan ide dan persiapan presentasi tim.' },
+    { question: 'Kapan merchandise resmi DECOMPE 5.0 bisa dibeli?', answer: 'Merchandise saat ini sedang disiapkan. Detail produk, harga, dan cara pemesanan akan segera diumumkan melalui kanal informasi resmi DECOMPE.' }
 ];
 
 export const formatRupiah = (amount: number) => `Rp ${amount.toLocaleString('id-ID')}`;

@@ -23,7 +23,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 						<img src={combinedLogo} alt="DECOMPE 5.0 Skill Class" className="h-auto w-full object-contain" />
 					</div>
 					<h2 className="mx-auto mt-2 max-w-3xl text-3xl font-black leading-tight tracking-tighter sm:text-5xl"><span className="block">{eventInfo.tagline}</span><span className="mt-2 block">{eventInfo.theme}</span></h2>
-					<p className="mx-auto mt-4 max-w-lg text-sm leading-6 text-slate-600">Pilih masalah nyata, kembangkan solusinya melalui tiga subtema SDG, lalu susun pitch deck yang meyakinkan.</p>
+					<p className="mx-auto mt-4 max-w-lg text-sm leading-6 text-slate-600">Berangkat dari masalah nyata, kembangkan solusi dari 3 subtema SDG, dan taklukkan juri dengan pitch deck yang memukau</p>
 					<div className="neo-corner neo-lift mx-auto mt-8 max-w-md border-4 border-[#0F172A] bg-[#FF5C00] p-5 text-left shadow-[7px_7px_0px_0px_#0F172A] sm:p-6">
 						<p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-[#0F172A]/75">Total hadiah</p>
 						<p className="mt-2 text-5xl font-black leading-none tracking-[-.07em] text-[#0F172A] sm:text-6xl">{formatRupiah(totalPrize)}+</p>
@@ -48,7 +48,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 		<section className="relative mx-auto max-w-7xl px-5 py-16 lg:px-8">
 			<div className="mb-8 flex items-end justify-between gap-4">
 				<div>
-					<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">Tiga subtema untuk mengembangkan solusi.</h2>
+					<h2 className="mt-2 text-3xl font-black tracking-tighter sm:text-4xl">3 Fokus Solusi SDG</h2>
 				</div>
 			</div>
 			<div className="grid gap-6 lg:grid-cols-3">
