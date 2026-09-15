@@ -76,9 +76,9 @@ export const registrationFormUrl = 'https://forms.gle/K6Xd3GrJ4mCryfZ19';
 export const totalPrize = 5000000;
 
 export const timeline: Timeline[] = [
-	{ title: 'Batch 1', date: '20 Sept - 02 Okt', status: 'Active' },
-	{ title: 'Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming' },
-	{ title: 'Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming' },
+	{ title: 'Pendaftaran Batch 1', date: '20 Sept - 02 Okt', status: 'Active' },
+	{ title: 'Pendaftaran Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming' },
+	{ title: 'Pendaftaran Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming' },
 	{ title: 'Penutupan Pendaftaran', date: '01 Nov', status: 'Upcoming' },
 	{ title: 'Bootcamp', date: '02 Nov - 15 Nov', status: 'Upcoming' },
 	{ title: 'Pengumpulan Karya', date: '02 Nov - 16 Nov', status: 'Upcoming' },
