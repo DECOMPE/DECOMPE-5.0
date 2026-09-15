@@ -29,18 +29,18 @@ export const metrics = [
 export const challengeTracks = [
 	{
 		title: 'SDG 7',
-	description: 'Energi Bersih dan Terjangkau. Kembangkan solusi yang membuat energi bersih lebih mudah diakses dan digunakan secara efisien.',
+	description: 'Energi bersih yang terjangkau, efisien, dan terbarukan. Kembangkan solusi yang membuat energi bersih Berkelanjutan, mudah di akses dan efisien.',
 		outcomes: ['Energi terbarukan', 'Efisiensi energi', 'Akses energi yang terjangkau'],
 	},
 	{
 		title: 'SDG 12',
-		description: 'Konsumsi dan Produksi yang Bertanggung Jawab. Rancang cara baru untuk menggunakan sumber daya dengan lebih bijak dan mengurangi limbah.',
-		outcomes: ['Ekonomi sirkular', 'Pengurangan limbah', 'Produksi berkelanjutan'],
+		description: 'Konsumsi dan Produksi yang Bertanggung Jawab. Rancang cara baru untuk menggunakan sumber daya dengan lebih bijak, yang juga mengurangi emisi dan limbah.',
+		outcomes: ['Ekonomi sirkular', 'Pengurangan emisi dan limbah', 'Produksi berkelanjutan'],
 	},
 	{
 		title: 'SDG 8',
-		description: 'Pekerjaan Layak dan Pertumbuhan Ekonomi. Susun ide yang membuka peluang kerja, mendukung usaha, dan mendorong pertumbuhan yang inklusif.',
-		outcomes: ['Kewirausahaan', 'Peluang kerja layak', 'Pertumbuhan ekonomi inklusif'],
+		description: 'Pekerjaan Layak dan Pertumbuhan Ekonomi. Susun ide yang membuka peluang kerja, menyeterakan kesempatan kerja, dan mendorong pertumbuhan ekonomi yang inklusif.',
+		outcomes: ['Kesetaraan kesempatan kerja', 'Kualitas kerja layak', 'Pertumbuhan ekonomi inklusif'],
 	},
 ];
 
