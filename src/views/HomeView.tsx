@@ -30,7 +30,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 					</div>
 					<div className="mt-8 flex flex-wrap justify-center gap-4">
 						<button onClick={onRegister} className={`${btn} bg-[#FF5C00] text-[#0F172A] shadow-[4px_4px_0px_0px_#0F172A]`}>Daftar Batch 1 <ArrowRight size={18} /></button>
-						<a href="#register" className={`${btn} bg-white shadow-[4px_4px_0px_0px_#0F172A]`}>Lihat kategori lomba <Download size={18} /></a>
+						<a href="#register" className={`${btn} bg-white shadow-[4px_4px_0px_0px_#0F172A]`}>Download Guidebook <Download size={18} /></a>
 					</div>
 					<div className="mx-auto mt-10 grid max-w-xl gap-4 text-left sm:grid-cols-3">
 						{metrics.map((item) => (
