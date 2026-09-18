@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://decompe.id/sitemap.xml
+Sitemap: https://decompe.ukmcoding.site/sitemap.xml

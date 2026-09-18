@@ -197,7 +197,7 @@ If the production domain is different from the current default value, update the
 Example base URL:
 
 ```text
-https://decompe.id/
+https://decompe.ukmcoding.site/
 ```
 
 ## 10. Design System Notes

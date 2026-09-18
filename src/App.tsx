@@ -29,7 +29,7 @@ export default function App() {
 		const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
 		if (description) description.content = current?.description ?? 'Halaman yang kamu cari tidak tersedia di DECOMPE 5.0 Skill Class.';
 		const robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
-		if (robots) robots.content = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+		if (robots) robots.content = current ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' : 'noindex, follow';
 		document.querySelectorAll<HTMLLinkElement>('link[rel="icon"], link[rel="apple-touch-icon"]').forEach((link) => { link.href = faviconLogo; });
 	}, [route]);
 	const isHome = route === '#home' || route === '';
