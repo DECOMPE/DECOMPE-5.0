@@ -3,6 +3,7 @@ import { ArrowRight, CalendarDays, ChevronDown, Download, HelpCircle } from 'luc
 import { challengeTracks, eventInfo, faqs, formatRupiah, getTimeline, metrics, programHighlights, totalPrize } from '@/data/eventData';
 import combinedLogo from '@/assets/logo/decompe x skill class transparent cropped.png';
 import vectorAccent from '@/assets/Vector.png';
+import guidebookPdf from '@/assets/GUIDEBOOK DECOMPE 5.0.pdf';
 import { useState } from 'react';
 
 const btn = 'inline-flex items-center justify-center gap-2 border-3 border-[#0F172A] px-5 py-3 font-bold transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] active:translate-x-0 active:translate-y-0';
@@ -30,7 +31,7 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 					</div>
 					<div className="mt-8 flex flex-wrap justify-center gap-4">
 						<button onClick={onRegister} className={`${btn} bg-[#FF5C00] text-[#0F172A] shadow-[4px_4px_0px_0px_#0F172A]`}>Daftar Batch 1 <ArrowRight size={18} /></button>
-						<a href="#register" className={`${btn} bg-white shadow-[4px_4px_0px_0px_#0F172A]`}>Download Guidebook <Download size={18} /></a>
+						<a href={guidebookPdf} download="Guidebook DECOMPE 5.0.pdf" className={`${btn} bg-white shadow-[4px_4px_0px_0px_#0F172A]`}>Download Guidebook <Download size={18} /></a>
 					</div>
 					<div className="mx-auto mt-10 grid max-w-xl gap-4 text-left sm:grid-cols-3">
 						{metrics.map((item) => (
