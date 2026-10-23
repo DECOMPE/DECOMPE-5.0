@@ -6,9 +6,9 @@ import ukmCodingLogo from '@/assets/Logo UKM Coding vers Hitam (5) 1.svg';
 import bemSmaLogo from '@/assets/BEM.png';
 
 const navLinks = [
-	['#home', 'Home'],
-	['#register', 'Kategori Lomba'],
-	['#merch', 'Merch'],
+	['/', 'Home'],
+	['/register', 'Kategori Lomba'],
+	['/merch', 'Merch'],
 ];
 
 const footerLogos = [
@@ -24,7 +24,7 @@ export default function Footer() {
 				<div>
 					<h2 className="max-w-2xl text-3xl font-black leading-tight tracking-tight sm:text-4xl">Bawa ide kamu untuk smart living dan sustainable future.</h2>
 				</div>
-				<a href="#register" className="inline-flex items-center justify-center gap-2 border-2 border-[#0F172A] bg-[#FF5C00] px-5 py-3 text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0F172A] transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF5C00]">Daftar sekarang <ArrowUpRight size={17} aria-hidden="true" /></a>
+				<a href="/register" className="inline-flex items-center justify-center gap-2 border-2 border-[#0F172A] bg-[#FF5C00] px-5 py-3 text-sm font-bold uppercase shadow-[4px_4px_0px_0px_#0F172A] transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF5C00]">Daftar sekarang <ArrowUpRight size={17} aria-hidden="true" /></a>
 			</div>
 
 			<div className="grid gap-10 md:grid-cols-[1.25fr_.75fr_.9fr]">

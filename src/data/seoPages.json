@@ -1,0 +1,25 @@
+{
+	"siteUrl": "https://decompe.ukmcoding.site",
+	"pages": [
+		{
+			"path": "/",
+			"title": "DECOMPE 5.0 | 5 Years Of Impact",
+			"description": "DECOMPE 5.0 mengajak peserta mengembangkan solusi untuk Smart Living dan Sustainable Future melalui tiga subtema SDG."
+		},
+		{
+			"path": "/register",
+			"title": "Pendaftaran Batch 1 | DECOMPE 5.0",
+			"description": "Pilih paket Skill Class Only atau Skill Class + DECOMPE untuk mendaftar pada Batch 1 DECOMPE 5.0."
+		},
+		{
+			"path": "/merch",
+			"title": "Merch DECOMPE 5.0 | Produk, Paket, dan Info Pre-order",
+			"description": "Kenali t-shirt, enamel pin, keychain, sticker, dan paket merchandise resmi DECOMPE 5.0. Harga serta jadwal pemesanan akan segera diumumkan."
+		},
+		{
+			"path": "/faq",
+			"title": "FAQ | DECOMPE 5.0 Skill Class",
+			"description": "Jawaban pendaftaran, kategori, pembayaran, mentoring, jadwal, dan merchandise DECOMPE 5.0."
+		}
+	]
+}
