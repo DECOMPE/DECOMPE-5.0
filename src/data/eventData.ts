@@ -67,8 +67,8 @@ export const registrationSteps = [
 ];
 
 export const categories: Category[] = [
-	{ id: 'skillclass-decompe', name: 'Skill Class + DECOMPE', label: 'Skill Class + DECOMPE', price: 100000, features: ['Akses Skill Class', 'Sertifikat Skill Class', 'Materi dan mentoring terarah', 'Akses kompetisi DECOMPE 5.0'] },
-	{ id: 'skillclass-only', name: 'Skill Class Only', label: 'Skill Class Only', price: 50000, features: ['Akses Skill Class', 'Sertifikat Skill Class', 'Materi dan mentoring terarah'] },
+	{ id: 'skillclass-decompe', name: 'Skill Class + DECOMPE', label: 'Skill Class + DECOMPE', features: ['Akses Skill Class', 'Sertifikat Skill Class', 'Materi dan mentoring terarah', 'Akses kompetisi DECOMPE 5.0'] },
+	{ id: 'skillclass-only', name: 'Skill Class Only', label: 'Skill Class Only', features: ['Akses Skill Class', 'Sertifikat Skill Class', 'Materi dan mentoring terarah'] },
 ];
 
 export const registrationFormUrl = 'https://forms.gle/K6Xd3GrJ4mCryfZ19';
@@ -119,9 +119,9 @@ export const getTimeline = (now = new Date()): Timeline[] => {
 };
 
 export const registrationBatches: RegistrationBatch[] = [
-	{ name: 'Batch 1', date: '20 Sept - 02 Okt', status: 'Open' },
-	{ name: 'Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming' },
-	{ name: 'Batch 3', date: '19 Okt - 10 Nov', status: 'Upcoming' },
+	{ name: 'Batch 1', date: '20 Sept - 02 Okt', prices: { 'skillclass-decompe': 100000, 'skillclass-only': 50000 }, status: 'Open' },
+	{ name: 'Batch 2', date: '03 Okt - 18 Okt', prices: { 'skillclass-decompe': 100000, 'skillclass-only': 50000 }, status: 'Upcoming' },
+	{ name: 'Batch 3', date: '19 Okt - 10 Nov', prices: { 'skillclass-decompe': 150000, 'skillclass-only': 50000 }, status: 'Upcoming' },
 ];
 
 const registrationBatchWindows = [

@@ -4,6 +4,7 @@ import { categories, formatRupiah, getRegistrationBatches, registrationSteps } f
 export default function RegistrationView({ onRegister }: { onRegister: () => void }) {
 	const registrationBatches = getRegistrationBatches();
 	const activeBatch = registrationBatches.find((batch) => batch.status === 'Open');
+	const pricingBatch = activeBatch ?? registrationBatches.find((batch) => batch.status === 'Upcoming');
 	return <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
 		<div className="max-w-3xl">
 			<h1 className="mt-3 text-4xl font-black leading-tight tracking-[-.06em] sm:text-5xl">Pilih kategori timmu.</h1>
@@ -21,8 +22,8 @@ export default function RegistrationView({ onRegister }: { onRegister: () => voi
 			{categories.map((category) => (
 				<article key={category.id} className="flex h-full flex-col border-3 border-[#0F172A] bg-white p-6 shadow-[6px_6px_0px_0px_#0F172A]">
 					<p className="font-mono text-xs font-bold uppercase">{category.name}</p>
-					<h2 className="mt-3 text-3xl font-black">{formatRupiah(category.price)}</h2>
-					{activeBatch && <p className="mt-1 text-sm font-bold uppercase">{activeBatch.name}{category.id === 'skillclass-decompe' ? ' · per tim' : ''}</p>}
+					<h2 className="mt-3 text-3xl font-black">{pricingBatch ? formatRupiah(pricingBatch.prices[category.id]) : 'Pendaftaran ditutup'}</h2>
+					{pricingBatch && <p className="mt-1 text-sm font-bold uppercase">{pricingBatch.name}{category.id === 'skillclass-decompe' ? ' · per tim' : ''}</p>}
 					<ul className="my-8 flex-1 space-y-3 border-y-2 border-[#0F172A] py-5">
 						{category.features.map((feature) => (
 							<li key={feature} className="flex gap-2 text-sm font-medium"><Check size={18} className="mt-0.5 shrink-0" />{feature}</li>
