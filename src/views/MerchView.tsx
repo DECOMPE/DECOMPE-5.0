@@ -79,8 +79,8 @@ export default function MerchView() {
 
 	return (
 		<div className="bg-[#fffaf5] text-[#0F172A]">
-			<section className="relative overflow-hidden border-b-[3px] border-[#0F172A] bg-[radial-gradient(circle_at_top_left,_rgba(255,92,0,0.12),_transparent_30%),linear-gradient(180deg,#fffaf5_0%,#fff3eb_100%)]">
-				<div className="pointer-events-none absolute -right-14 top-8 h-52 w-52 rounded-full border-[28px] border-[#FF5C00]/10 sm:h-72 sm:w-72" aria-hidden="true" />
+			<section className="relative overflow-hidden border-b-[3px] border-[#0F172A] bg-[radial-gradient(circle_at_top_left,rgba(255,92,0,0.12),transparent_30%),linear-gradient(180deg,#fffaf5_0%,#fff3eb_100%)]">
+				<div className="pointer-events-none absolute -right-14 top-8 h-52 w-52 rounded-full border-28 border-[#FF5C00]/10 sm:h-72 sm:w-72" aria-hidden="true" />
 				<div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-20">
 					<div className="max-w-2xl">
 						<p className="inline-flex items-center border-2 border-[#0F172A] bg-white px-3 py-2 font-mono text-[10px] font-black uppercase tracking-[0.18em] shadow-[3px_3px_0px_0px_#FF5C00]">
@@ -103,12 +103,12 @@ export default function MerchView() {
 					</div>
 
 					<div className="relative mx-auto w-full max-w-xl">
-						<div className="rounded-[2rem] border-[3px] border-[#0F172A] bg-[#111827] p-5 shadow-[12px_12px_0px_0px_#FF5C00] sm:p-6">
+						<div className="rounded-4xl border-[3px] border-[#0F172A] bg-[#111827] p-5 shadow-[12px_12px_0px_0px_#FF5C00] sm:p-6">
 							<div className="flex items-center justify-between border-b border-white/15 pb-4 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-white/70">
 								<span>DECOMPE 5.0</span>
 								<span>Merch collection</span>
 							</div>
-							<div className="mt-4 overflow-hidden rounded-[1.5rem] border-2 border-white/10 bg-[#1d2433] p-3">
+							<div className="mt-4 overflow-hidden rounded-3xl border-2 border-white/10 bg-[#1d2433] p-3">
 								<img src={allMerch} alt="Koleksi merchandise DECOMPE 5.0" className="h-full w-full object-contain" />
 							</div>
 							<div className="mt-4 grid grid-cols-2 gap-3">
@@ -136,7 +136,7 @@ export default function MerchView() {
 								<img src={product.image} alt={product.name} className="mx-auto h-52 w-full object-contain" />
 							</div>
 							<div className="p-5">
-								<h3 className="text-2xl font-black tracking-[-0.05em]">{product.name}</h3>
+								<h3 className="text-2xl font-black tracking-tighter">{product.name}</h3>
 								<p className="mt-3 text-sm leading-6 text-slate-600">{product.description}</p>
 							</div>
 						</article>
@@ -159,10 +159,10 @@ export default function MerchView() {
 									className={`overflow-hidden border-[3px] border-[#0F172A] ${isFeatured ? 'bg-[#FF5C00] text-[#0F172A] shadow-[5px_5px_0px_0px_#0F172A]' : 'bg-white text-[#0F172A] shadow-[5px_5px_0px_0px_#FF5C00]'}`}
 								>
 									<div className={`border-b-[3px] border-[#0F172A] ${isFeatured ? 'bg-[#ff8a3d]' : 'bg-[#fffaf5]'} p-2`}>
-										<img src={bundle.image} alt={bundle.name} className="h-[15rem] w-full object-contain" />
+										<img src={bundle.image} alt={bundle.name} className="h-60 w-full object-contain" />
 									</div>
 									<div className="p-5">
-										<h3 className="text-2xl font-black tracking-[-0.05em]">{bundle.name}</h3>
+										<h3 className="text-2xl font-black tracking-tighter">{bundle.name}</h3>
 										<ul className={`mt-3 space-y-2 text-sm ${isFeatured ? 'text-[#0F172A]' : 'text-slate-600'}`}>
 											{bundle.items.map((item) => (
 												<li key={item} className="flex items-center gap-2">
@@ -205,12 +205,12 @@ export default function MerchView() {
 						</article>
 					))}
 				</div>
-				<div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-[1.5rem] border-[3px] border-[#0F172A] bg-[#FF5C00] p-5 shadow-[5px_5px_0px_0px_#0F172A] sm:flex-row sm:items-center sm:p-6">
+				<div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-3xl border-[3px] border-[#0F172A] bg-[#FF5C00] p-5 shadow-[5px_5px_0px_0px_#0F172A] sm:flex-row sm:items-center sm:p-6">
 					<div>
-						<h3 className="text-2xl font-black tracking-[-0.05em]">Stay updated for the official release.</h3>
+						<h3 className="text-2xl font-black tracking-tighter">Stay updated for the official release.</h3>
 						<p className="mt-1 text-sm text-[#0F172A]/80">Follow DECOMPE on Instagram to get the latest details on pricing, bundle availability, and order windows.</p>
 					</div>
-					<a href="https://www.instagram.com/decompeofficial/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border-[2px] border-[#0F172A] bg-white px-4 py-3 font-black shadow-[3px_3px_0px_0px_#0F172A]">
+					<a href="https://www.instagram.com/decompeofficial/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border-2 border-[#0F172A] bg-white px-4 py-3 font-black shadow-[3px_3px_0px_0px_#0F172A]">
 						Instagram DECOMPE <ArrowUpRight size={17} aria-hidden="true" />
 					</a>
 				</div>
