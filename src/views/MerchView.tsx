@@ -1,183 +1,220 @@
 import { useRef } from 'react';
-import { ArrowDown, ArrowUpRight, Badge, KeyRound, Shirt, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import allMerch from '@/assets/merch/ALL.png';
+import tShirt from '@/assets/merch/T-SHIRT.png';
+import enamelPin from '@/assets/merch/ENAMEL.png';
+import keychain from '@/assets/merch/KEYCHAIN.png';
+import sticker from '@/assets/merch/STICKERS.png';
+import bundleA from '@/assets/merch/BUNDLE A.png';
+import bundleB from '@/assets/merch/BUNDLE B.png';
+import bundleC from '@/assets/merch/BUNDLE C.png';
+import bundleD from '@/assets/merch/BUNDLE D.png';
 
 const products = [
 	{
-		name: 'T-shirt',
-		status: 'Desain segera hadir',
-		description: 'Kenakan semangat DECOMPE 5.0 di mana pun ide membawamu.',
-		icon: Shirt,
-		accent: 'bg-[#FF5C00]',
+		name: 'T-Shirt',
+		description: 'Kaos resmi DECOMPE 5.0 dengan desain yang siap dipakai setiap hari dan saat acara.',
+		image: tShirt,
 	},
 	{
-		name: 'Enamel pin',
-		status: 'Coming soon',
-		description: 'Aksen kecil untuk tas, jaket, atau koleksi favoritmu.',
-		icon: Badge,
-		accent: 'bg-white',
+		name: 'Enamel Pin',
+		description: 'Aksesoris kecil yang cocok untuk tas, jacket, atau koleksi pribadi dengan karakter DECOMPE.',
+		image: enamelPin,
 	},
 	{
 		name: 'Keychain',
-		status: 'Info pre-order segera',
-		description: 'Bawa identitas DECOMPE bersama kunci dan barang harianmu.',
-		icon: KeyRound,
-		accent: 'bg-[#FFF7F1]',
+		description: 'Bawa identitas DECOMPE ke aktivitas harianmu dengan accessory yang ringan dan mudah dipakai.',
+		image: keychain,
 	},
 	{
 		name: 'Sticker',
-		status: 'Info pre-order segera',
-		description: 'Tambahkan sentuhan DECOMPE ke laptop, botol, dan banyak lagi.',
-		icon: Sparkles,
-		accent: 'bg-[#FF5C00]',
+		description: 'Tambahkan sentuhan visual DECOMPE pada laptop, buku, bottle, atau alat sehari-hari.',
+		image: sticker,
 	},
 ];
 
 const bundles = [
-	{ name: 'Paket A', items: 'T-shirt, enamel pin, keychain, dan sticker', label: 'Paket lengkap' },
-	{ name: 'Paket B', items: 'Enamel pin, keychain, dan sticker', label: 'Aksesori lengkap' },
-	{ name: 'Paket C', items: 'T-shirt dan enamel pin', label: 'T-shirt + pin' },
-	{ name: 'Paket D', items: 'Keychain dan sticker', label: 'Dua aksesori' },
+	{ name: 'Bundle A', image: bundleA, items: ['T-Shirt', 'Enamel Pin', 'Keychain', 'Sticker'], featured: true },
+	{ name: 'Bundle B', image: bundleB, items: ['Enamel Pin', 'Keychain', 'Sticker'] },
+	{ name: 'Bundle C', image: bundleC, items: ['T-Shirt', 'Enamel Pin'] },
+	{ name: 'Bundle D', image: bundleD, items: ['Keychain', 'Sticker'] },
+];
+
+const highlights = [
+	{
+		title: 'Desain yang konsisten',
+		description: 'Setiap item dibuat dengan identitas visual yang jelas dan mudah dikenali sebagai merchandise resmi DECOMPE 5.0.',
+	},
+	{
+		title: 'Cocok untuk personal use',
+		description: 'Didesain untuk dipakai sehari-hari, dibawa ke kegiatan kampus, komunitas, dan momen penting lainnya.',
+	},
+	{
+		title: 'Pilihan bundle yang lebih lengkap',
+		description: 'Kombinasi paket dibuat agar lebih fleksibel, lebih menyenangkan, dan lebih bernilai untuk koleksi.',
+	},
 ];
 
 const faqs = [
 	{
-		question: 'Kapan merchandise mulai bisa dipesan?',
-		answer: 'Tanggal pemesanan belum diumumkan. Ikuti Instagram resmi DECOMPE untuk pengumuman pembukaan order.',
+		question: 'Kapan merchandise resmi DECOMPE bisa dipesan?',
+		answer: 'Pengumuman pembukaan order akan dibagikan melalui kanal resmi DECOMPE. Pastikan kamu mengikuti akun Instagram resmi agar tidak ketinggalan update.',
 	},
 	{
-		question: 'Berapa harga setiap produk dan paket?',
-		answer: 'Harga sedang dikonfirmasi dan akan diumumkan bersama informasi pemesanan resmi. Kami belum menampilkan harga agar informasinya tetap akurat.',
+		question: 'Apakah semua item tersedia dalam bundle?',
+		answer: 'Ya. Setiap bundle menggabungkan kombinasi item yang berbeda untuk memberi fleksibilitas pilihan sesuai kebutuhan dan preferensi.',
 	},
 	{
-		question: 'Apakah t-shirt memiliki pilihan ukuran?',
-		answer: 'Informasi ukuran dan panduan ukur t-shirt akan disampaikan saat detail produk dirilis.',
+		question: 'Apakah detail ukuran dan harga akan diumumkan?',
+		answer: 'Detail ukuran, harga, dan tata cara pemesanan akan diinformasikan saat periode order resmi dibuka.',
 	},
 	{
 		question: 'Siapa yang bisa membeli merchandise ini?',
-		answer: 'Merchandise ditujukan untuk mahasiswa dan dosen. Detail ketentuan pemesanan akan diumumkan bersamaan dengan informasi order.',
+		answer: 'Merchandise ini ditujukan untuk peserta, komunitas, dan siapa pun yang ingin mendukung program DECOMPE 5.0.',
 	},
 ];
 
 export default function MerchView() {
-	const bundlesRef = useRef<HTMLElement>(null);
+	const bundlesRef = useRef<HTMLElement | null>(null);
 
-	return <div className="bg-white">
-		<section className="relative overflow-hidden border-b-4 border-[#0F172A]">
-			<div className="pointer-events-none absolute -right-28 -top-24 h-80 w-80 rounded-full border-[40px] border-[#FF5C00]/10 sm:h-[28rem] sm:w-[28rem]" aria-hidden="true" />
-			<div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:py-20 lg:grid-cols-[1.1fr_.9fr] lg:px-8 lg:py-24">
-				<div className="max-w-2xl">
-					<p className="inline-flex items-center gap-2 border-2 border-[#0F172A] bg-[#FFF7F1] px-3 py-2 font-mono text-xs font-bold uppercase tracking-[.14em] shadow-[3px_3px_0px_0px_#FF5C00]">
-						<span className="h-2.5 w-2.5 rounded-full bg-[#FF5C00]" aria-hidden="true" />
-						DECOMPE 5.0 merch drop
-					</p>
-					<h1 className="mt-7 text-5xl font-black leading-[.95] tracking-[-.07em] sm:text-7xl lg:text-8xl">
-						Bawa DECOMPE <span className="text-[#FF5C00]">ke luar layar.</span>
-					</h1>
-					<p className="mt-6 max-w-xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-						Merchandise resmi DECOMPE 5.0 sedang disiapkan: t-shirt, enamel pin, keychain, dan sticker. Detail produk dan pemesanan akan segera diumumkan.
-					</p>
-					<div className="mt-8 flex flex-col gap-3 sm:flex-row">
-						<a href="https://www.instagram.com/decompeofficial/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 border-3 border-[#0F172A] bg-[#FF5C00] px-5 py-3 font-bold text-[#0F172A] shadow-[4px_4px_0px_0px_#0F172A] transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF5C00]">
-							Ikuti pengumumannya <ArrowUpRight size={18} aria-hidden="true" />
-						</a>
-						<button onClick={() => bundlesRef.current?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center justify-center gap-2 border-3 border-[#0F172A] bg-white px-5 py-3 font-bold shadow-[4px_4px_0px_0px_#0F172A] transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF5C00]">
-							Lihat paket <ArrowDown size={18} aria-hidden="true" />
-						</button>
-					</div>
-					<p className="mt-5 text-xs font-medium leading-5 text-slate-500">Harga, ukuran, dan jadwal order akan dibagikan melalui kanal resmi DECOMPE.</p>
-				</div>
-
-				<div className="relative mx-auto w-full max-w-lg">
-					<div className="absolute -right-3 -top-3 z-10 rotate-6 border-3 border-[#0F172A] bg-[#FF5C00] px-4 py-2 font-mono text-sm font-black uppercase shadow-[4px_4px_0px_0px_#0F172A] sm:-right-5">
-						Coming soon
-					</div>
-					<div className="border-4 border-[#0F172A] bg-[#171717] p-5 shadow-[10px_10px_0px_0px_#FF5C00] sm:p-8">
-						<div className="flex items-center justify-between border-b border-white/20 pb-4 font-mono text-[10px] font-bold uppercase tracking-[.18em] text-white/60">
-							<span>DECOMPE 5.0</span>							<span>Merchandise resmi</span>
+	return (
+		<div className="bg-[#fffaf5] text-[#0F172A]">
+			<section className="relative overflow-hidden border-b-[3px] border-[#0F172A] bg-[radial-gradient(circle_at_top_left,_rgba(255,92,0,0.12),_transparent_30%),linear-gradient(180deg,#fffaf5_0%,#fff3eb_100%)]">
+				<div className="pointer-events-none absolute -right-14 top-8 h-52 w-52 rounded-full border-[28px] border-[#FF5C00]/10 sm:h-72 sm:w-72" aria-hidden="true" />
+				<div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-20">
+					<div className="max-w-2xl">
+						<p className="inline-flex items-center border-2 border-[#0F172A] bg-white px-3 py-2 font-mono text-[10px] font-black uppercase tracking-[0.18em] shadow-[3px_3px_0px_0px_#FF5C00]">
+							Official merch DECOMPE 5.0
+						</p>
+						<h1 className="mt-6 text-5xl font-black leading-[0.92] tracking-[-0.08em] sm:text-6xl xl:text-7xl">
+							Bring the energy <span className="text-[#FF5C00]">home.</span>
+						</h1>
+						<p className="mt-5 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
+							Merchandise resmi DECOMPE 5.0 hadir untuk kamu yang ingin membawa semangat komunitas, kreativitas, dan ide-ide besar ke dalam aktivitas sehari-hari.
+						</p>
+						<div className="mt-8 flex flex-col gap-3 sm:flex-row">
+							<a href="https://www.instagram.com/decompeofficial/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 border-[3px] border-[#0F172A] bg-[#FF5C00] px-5 py-3 font-bold text-[#0F172A] shadow-[4px_4px_0px_0px_#0F172A] transition-transform hover:-translate-y-0.5">
+								Follow latest update <ArrowUpRight size={18} aria-hidden="true" />
+							</a>
+							<button type="button" onClick={() => bundlesRef.current?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center justify-center gap-2 border-[3px] border-[#0F172A] bg-white px-5 py-3 font-bold shadow-[4px_4px_0px_0px_#0F172A] transition-transform hover:-translate-y-0.5">
+								See bundles <ArrowDown size={18} aria-hidden="true" />
+							</button>
 						</div>
-						<div className="grid min-h-72 place-items-center py-8 sm:min-h-80">
-							<div className="relative grid h-56 w-64 place-items-center bg-[#202020] sm:h-64 sm:w-72" aria-label="Pratinjau grafis merchandise DECOMPE 5.0">
-								<div className="absolute inset-0 opacity-25 neo-dots-light" aria-hidden="true" />
-								<div className="relative rotate-[-4deg] text-center">
-									<p className="font-mono text-xs font-bold uppercase tracking-[.35em] text-[#FF5C00]">Ideas in motion</p>
-									<p className="mt-2 text-5xl font-black leading-none tracking-[-.08em] text-white sm:text-6xl">DECOMPE</p>
-									<p className="mt-2 inline-block bg-[#FF5C00] px-2 py-1 font-mono text-xs font-black text-[#0F172A]">5.0</p>
+					</div>
+
+					<div className="relative mx-auto w-full max-w-xl">
+						<div className="rounded-[2rem] border-[3px] border-[#0F172A] bg-[#111827] p-5 shadow-[12px_12px_0px_0px_#FF5C00] sm:p-6">
+							<div className="flex items-center justify-between border-b border-white/15 pb-4 font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-white/70">
+								<span>DECOMPE 5.0</span>
+								<span>Merch collection</span>
+							</div>
+							<div className="mt-4 overflow-hidden rounded-[1.5rem] border-2 border-white/10 bg-[#1d2433] p-3">
+								<img src={allMerch} alt="Koleksi merchandise DECOMPE 5.0" className="h-full w-full object-contain" />
+							</div>
+							<div className="mt-4 grid grid-cols-2 gap-3">
+								<div className="overflow-hidden rounded-[1.2rem] border-2 border-white/10 bg-[#1d2433] p-2">
+									<img src={tShirt} alt="T-Shirt DECOMPE" className="h-28 w-full object-contain" />
 								</div>
-								<span className="absolute left-5 top-5 text-2xl text-[#FF5C00]" aria-hidden="true">✳</span>
-								<span className="absolute bottom-5 right-5 text-2xl text-[#FF5C00]" aria-hidden="true">✳</span>
+								<div className="overflow-hidden rounded-[1.2rem] border-2 border-white/10 bg-[#1d2433] p-2">
+									<img src={enamelPin} alt="Enamel Pin DECOMPE" className="h-28 w-full object-contain" />
+								</div>
 							</div>
 						</div>
-						<div className="flex items-center justify-between gap-3 border-t border-white/20 pt-4">
-							<p className="text-xs font-bold uppercase tracking-[.12em] text-white">Made for ideas that matter.</p>
-							<span className="border border-[#FF5C00] px-2 py-1 font-mono text-[10px] font-bold uppercase text-[#FF5C00]">Sedang disiapkan</span>
-						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20" aria-labelledby="merch-lineup">
-			<div className="max-w-2xl">
-				<p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-[#FF5C00]">Koleksi</p>
-				<h2 id="merch-lineup" className="mt-3 text-3xl font-black tracking-[-.05em] sm:text-5xl">Empat cara menunjukkan dukunganmu.</h2>
-				<p className="mt-4 leading-7 text-slate-600">Dirancang untuk mahasiswa dan dosen. Simpan dulu yang paling kamu suka—detail finalnya segera menyusul.</p>
-			</div>
-			<div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-				{products.map((product, index) => {
-					const Icon = product.icon;
-					return <article key={product.name} className="neo-lift flex min-h-64 flex-col border-3 border-[#0F172A] bg-white p-5 shadow-[5px_5px_0px_0px_#0F172A]">
-						<div className={`grid h-14 w-14 place-items-center border-2 border-[#0F172A] ${product.accent}`}>
-							<Icon size={28} strokeWidth={2.3} aria-hidden="true" />
-						</div>
-						<p className="mt-5 font-mono text-[10px] font-bold uppercase tracking-[.16em] text-slate-500">0{index + 1} / 04 · {product.status}</p>
-						<h3 className="mt-2 text-2xl font-black tracking-tight">{product.name}</h3>
-						<p className="mt-2 text-sm leading-6 text-slate-600">{product.description}</p>
-					</article>;
-				})}
-			</div>
-		</section>
+			<section className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+				<div className="max-w-2xl">
+					<p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#FF5C00]">Merch lineup</p>
+					<h2 className="mt-3 text-3xl font-black tracking-[-0.06em] sm:text-5xl">Everything you need to represent DECOMPE.</h2>
+				</div>
+				<div className="mt-9 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+					{products.map((product) => (
+						<article key={product.name} className="overflow-hidden border-[3px] border-[#0F172A] bg-white shadow-[5px_5px_0px_0px_#0F172A] transition-transform hover:-translate-y-1">
+							<div className="border-b-[3px] border-[#0F172A] bg-[#FFF7F1] p-4">
+								<img src={product.image} alt={product.name} className="mx-auto h-52 w-full object-contain" />
+							</div>
+							<div className="p-5">
+								<h3 className="text-2xl font-black tracking-[-0.05em]">{product.name}</h3>
+								<p className="mt-3 text-sm leading-6 text-slate-600">{product.description}</p>
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
 
-		<section ref={bundlesRef} className="border-y-4 border-[#0F172A] bg-[#FFF7F1] px-5 py-16 lg:px-8 lg:py-20" aria-labelledby="merch-bundles">
-			<div className="mx-auto max-w-7xl">
-				<div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+			<section ref={bundlesRef} className="border-y-[3px] border-[#0F172A] bg-[#FFF7F1] px-5 py-16 lg:px-8 lg:py-20">
+				<div className="mx-auto max-w-7xl">
 					<div className="max-w-2xl">
-						<p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-[#FF5C00]">Pilih paket</p>
-						<h2 id="merch-bundles" className="mt-3 text-3xl font-black tracking-[-.05em] sm:text-5xl">Empat paket. Satu identitas.</h2>
+						<p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#FF5C00]">Bundle options</p>
+						<h2 className="mt-3 text-3xl font-black tracking-[-0.06em] sm:text-5xl">Curated packages for every kind of supporter.</h2>
 					</div>
-					<p className="max-w-sm text-sm leading-6 text-slate-600">Komposisi paket sudah disiapkan. Harga final dan detail tiap paket akan diumumkan setelah dikonfirmasi.</p>
+					<div className="mt-9 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+						{bundles.map((bundle) => {
+							const isFeatured = bundle.featured;
+							return (
+								<article
+									key={bundle.name}
+									className={`overflow-hidden border-[3px] border-[#0F172A] ${isFeatured ? 'bg-[#FF5C00] text-[#0F172A] shadow-[5px_5px_0px_0px_#0F172A]' : 'bg-white text-[#0F172A] shadow-[5px_5px_0px_0px_#FF5C00]'}`}
+								>
+									<div className={`border-b-[3px] border-[#0F172A] ${isFeatured ? 'bg-[#ff8a3d]' : 'bg-[#fffaf5]'} p-2`}>
+										<img src={bundle.image} alt={bundle.name} className={`${isFeatured ? 'h-[14rem]' : 'h-[15rem]'} w-full object-contain`} />
+									</div>
+									<div className="p-5">
+										<h3 className="text-2xl font-black tracking-[-0.05em]">{bundle.name}</h3>
+										<ul className={`mt-3 space-y-2 text-sm ${isFeatured ? 'text-[#0F172A]' : 'text-slate-600'}`}>
+											{bundle.items.map((item) => (
+												<li key={item} className="flex items-center gap-2">
+													<span className="inline-block h-1.5 w-1.5 rounded-full bg-current" aria-hidden="true" />
+													{item}
+												</li>
+											))}
+										</ul>
+									</div>
+								</article>
+							);
+						})}
+					</div>
 				</div>
-				<div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-					{bundles.map((bundle, index) => <article key={bundle.name} className="border-3 border-[#0F172A] bg-white p-5 shadow-[5px_5px_0px_0px_#FF5C00]">
-						<div className="flex items-center justify-between gap-3">
-							<span className="font-mono text-xs font-bold uppercase tracking-[.12em] text-slate-500">0{index + 1}</span>
-							<span className="border border-[#0F172A] px-2 py-1 font-mono text-[9px] font-bold uppercase">{bundle.label}</span>
-						</div>
-						<h3 className="mt-5 text-2xl font-black">{bundle.name}</h3>
-						<p className="mt-2 min-h-12 text-sm leading-6 text-slate-600">{bundle.items}</p>
-						<p className="mt-5 border-t-2 border-dashed border-slate-300 pt-4 font-mono text-[10px] font-bold uppercase tracking-[.12em] text-[#FF5C00]">Harga segera diumumkan</p>
-					</article>)}
-				</div>
-			</div>
-		</section>
+			</section>
 
-		<section className="mx-auto max-w-4xl px-5 py-16 lg:px-8 lg:py-20" aria-labelledby="merch-faq">
-			<p className="font-mono text-xs font-bold uppercase tracking-[.18em] text-[#FF5C00]">Info penting</p>
-			<h2 id="merch-faq" className="mt-3 text-3xl font-black tracking-[-.05em] sm:text-4xl">Sebelum drop-nya tiba.</h2>
-			<div className="mt-7 divide-y-2 divide-[#0F172A] border-y-2 border-[#0F172A]">
-				{faqs.map((faq) => <article key={faq.question} className="py-5">
-					<h3 className="font-bold">{faq.question}</h3>
-					<p className="mt-2 text-sm leading-6 text-slate-600">{faq.answer}</p>
-				</article>)}
-			</div>
-			<div className="mt-8 flex flex-col items-start justify-between gap-4 border-3 border-[#0F172A] bg-[#FF5C00] p-5 shadow-[5px_5px_0px_0px_#0F172A] sm:flex-row sm:items-center sm:p-6">
-				<div>
-					<h3 className="text-xl font-black">Jangan sampai ketinggalan drop-nya.</h3>
-					<p className="mt-1 text-sm text-[#0F172A]/75">Pantau kanal resmi untuk harga dan jadwal order yang sudah dikonfirmasi.</p>
+			<section className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+				<div className="max-w-2xl">
+					<p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#FF5C00]">Why it matters</p>
+					<h2 className="mt-3 text-3xl font-black tracking-[-0.06em] sm:text-5xl">Designed to feel premium without being noisy.</h2>
 				</div>
-				<a href="https://www.instagram.com/decompeofficial/" target="_blank" rel="noreferrer" className="inline-flex shrink-0 items-center gap-2 border-2 border-[#0F172A] bg-white px-4 py-3 text-sm font-bold shadow-[3px_3px_0px_0px_#0F172A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-					Instagram DECOMPE <ArrowUpRight size={17} aria-hidden="true" />
-				</a>
-			</div>
-		</section>
-	</div>;
+				<div className="mt-9 grid gap-5 md:grid-cols-3">
+					{highlights.map((item) => (
+						<article key={item.title} className="border-[3px] border-[#0F172A] bg-white p-6 shadow-[5px_5px_0px_0px_#FF5C00]">
+							<h3 className="text-xl font-black tracking-[-0.04em]">{item.title}</h3>
+							<p className="mt-3 text-sm leading-6 text-slate-600">{item.description}</p>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section className="mx-auto max-w-4xl px-5 pb-16 lg:px-8 lg:pb-20" aria-labelledby="merch-faq">
+				<p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#FF5C00]">FAQ</p>
+				<h2 id="merch-faq" className="mt-3 text-3xl font-black tracking-[-0.06em] sm:text-4xl">A few things before the drop opens.</h2>
+				<div className="mt-7 space-y-4">
+					{faqs.map((faq) => (
+						<article key={faq.question} className="border-[3px] border-[#0F172A] bg-white p-5 shadow-[4px_4px_0px_0px_#FF5C00]">
+							<h3 className="text-lg font-black">{faq.question}</h3>
+							<p className="mt-2 text-sm leading-6 text-slate-600">{faq.answer}</p>
+						</article>
+					))}
+				</div>
+				<div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-[1.5rem] border-[3px] border-[#0F172A] bg-[#FF5C00] p-5 shadow-[5px_5px_0px_0px_#0F172A] sm:flex-row sm:items-center sm:p-6">
+					<div>
+						<h3 className="text-2xl font-black tracking-[-0.05em]">Stay updated for the official release.</h3>
+						<p className="mt-1 text-sm text-[#0F172A]/80">Follow DECOMPE on Instagram to get the latest details on pricing, bundle availability, and order windows.</p>
+					</div>
+					<a href="https://www.instagram.com/decompeofficial/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border-[2px] border-[#0F172A] bg-white px-4 py-3 font-black shadow-[3px_3px_0px_0px_#0F172A]">
+						Instagram DECOMPE <ArrowUpRight size={17} aria-hidden="true" />
+					</a>
+				</div>
+			</section>
+		</div>
+	);
 }
