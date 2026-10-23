@@ -158,8 +158,8 @@ export default function MerchView() {
 									key={bundle.name}
 									className={`overflow-hidden border-[3px] border-[#0F172A] ${isFeatured ? 'bg-[#FF5C00] text-[#0F172A] shadow-[5px_5px_0px_0px_#0F172A]' : 'bg-white text-[#0F172A] shadow-[5px_5px_0px_0px_#FF5C00]'}`}
 								>
-									<div className={`border-b-[3px] border-[#0F172A] ${isFeatured ? 'bg-[#ff8a3d]' : 'bg-[#fffaf5]'} p-2`}>
-										<img src={bundle.image} alt={bundle.name} className="h-60 w-full object-contain" />
+									<div className={`flex h-64 items-center justify-center border-b-[3px] border-[#0F172A] px-4 py-3 ${isFeatured ? 'bg-[#ff8a3d]' : 'bg-[#fffaf5]'}`}>
+										<img src={bundle.image} alt={bundle.name} className="block h-full w-full object-contain object-center" />
 									</div>
 									<div className="p-5">
 										<h3 className="text-2xl font-black tracking-tighter">{bundle.name}</h3>
