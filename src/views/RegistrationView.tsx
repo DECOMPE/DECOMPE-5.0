@@ -3,10 +3,11 @@ import { categories, formatRupiah, getRegistrationBatches, registrationSteps } f
 
 export default function RegistrationView({ onRegister }: { onRegister: () => void }) {
 	const registrationBatches = getRegistrationBatches();
+	const activeBatch = registrationBatches.find((batch) => batch.status === 'Open');
 	return <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
 		<div className="max-w-3xl">
 			<h1 className="mt-3 text-4xl font-black leading-tight tracking-[-.06em] sm:text-5xl">Pilih kategori timmu.</h1>
-			<p className="mt-5 leading-7 text-slate-600">Batch 1 tersedia untuk paket Skill Class Only dan Skill Class + DECOMPE. Pilih paket untuk melihat fasilitas dan biaya pendaftaran.</p>
+			<p className="mt-5 leading-7 text-slate-600">Pilih paket Skill Class Only atau Skill Class + DECOMPE. Periode pendaftaran mengikuti batch yang sedang dibuka.</p>
 		</div>
 
 		<section className="mt-10 border-3 border-[#0F172A] bg-white p-5 shadow-[5px_5px_0px_0px_#FF5C00] sm:p-7">
@@ -21,7 +22,7 @@ export default function RegistrationView({ onRegister }: { onRegister: () => voi
 				<article key={category.id} className="flex h-full flex-col border-3 border-[#0F172A] bg-white p-6 shadow-[6px_6px_0px_0px_#0F172A]">
 					<p className="font-mono text-xs font-bold uppercase">{category.name}</p>
 					<h2 className="mt-3 text-3xl font-black">{formatRupiah(category.price)}</h2>
-					{category.id !== 'skillclass-only' && <p className="mt-1 text-sm font-bold uppercase">Batch 1 · per tim</p>}
+					{activeBatch && <p className="mt-1 text-sm font-bold uppercase">{activeBatch.name}{category.id === 'skillclass-decompe' ? ' · per tim' : ''}</p>}
 					<ul className="my-8 flex-1 space-y-3 border-y-2 border-[#0F172A] py-5">
 						{category.features.map((feature) => (
 							<li key={feature} className="flex gap-2 text-sm font-medium"><Check size={18} className="mt-0.5 shrink-0" />{feature}</li>

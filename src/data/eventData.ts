@@ -67,7 +67,7 @@ export const registrationSteps = [
 ];
 
 export const categories: Category[] = [
-	{ id: 'skillclass-decompe', name: 'Skill Class + DECOMPE', label: 'Skill Class + DECOMPE · Batch 1', price: 100000, features: ['Akses Skill Class', 'Sertifikat Skill Class', 'Materi dan mentoring terarah', 'Akses kompetisi DECOMPE 5.0'] },
+	{ id: 'skillclass-decompe', name: 'Skill Class + DECOMPE', label: 'Skill Class + DECOMPE', price: 100000, features: ['Akses Skill Class', 'Sertifikat Skill Class', 'Materi dan mentoring terarah', 'Akses kompetisi DECOMPE 5.0'] },
 	{ id: 'skillclass-only', name: 'Skill Class Only', label: 'Skill Class Only', price: 50000, features: ['Akses Skill Class', 'Sertifikat Skill Class', 'Materi dan mentoring terarah'] },
 ];
 
