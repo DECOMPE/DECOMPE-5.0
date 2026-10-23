@@ -78,8 +78,8 @@ export const totalPrize = 5000000;
 export const timeline: Timeline[] = [
 	{ title: 'Pendaftaran Batch 1', date: '20 Sept - 02 Okt', status: 'Active' },
 	{ title: 'Pendaftaran Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming' },
-	{ title: 'Pendaftaran Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming' },
-	{ title: 'Penutupan Pendaftaran', date: '01 Nov', status: 'Upcoming' },
+	{ title: 'Pendaftaran Batch 3', date: '19 Okt - 10 Nov', status: 'Upcoming' },
+	{ title: 'Penutupan Pendaftaran', date: '10 Nov', status: 'Upcoming' },
 	{ title: 'Bootcamp', date: '02 Nov - 15 Nov', status: 'Upcoming' },
 	{ title: 'Pengumpulan Karya', date: '02 Nov - 16 Nov', status: 'Upcoming' },
 	{ title: 'Batas Pengumpulan Karya', date: '16 Nov', status: 'Upcoming' },
@@ -94,8 +94,8 @@ export const timeline: Timeline[] = [
 const timelineWindows = [
 	['2026-09-20', '2026-10-02'],
 	['2026-10-03', '2026-10-18'],
-	['2026-10-19', '2026-11-01'],
-	['2026-11-01', '2026-11-01'],
+	['2026-10-19', '2026-11-10'],
+	['2026-11-10', '2026-11-10'],
 	['2026-11-02', '2026-11-15'],
 	['2026-11-02', '2026-11-16'],
 	['2026-11-16', '2026-11-16'],
@@ -121,13 +121,13 @@ export const getTimeline = (now = new Date()): Timeline[] => {
 export const registrationBatches: RegistrationBatch[] = [
 	{ name: 'Batch 1', date: '20 Sept - 02 Okt', status: 'Open' },
 	{ name: 'Batch 2', date: '03 Okt - 18 Okt', status: 'Upcoming' },
-	{ name: 'Batch 3', date: '19 Okt - 01 Nov', status: 'Upcoming' },
+	{ name: 'Batch 3', date: '19 Okt - 10 Nov', status: 'Upcoming' },
 ];
 
 const registrationBatchWindows = [
 	['2026-09-20', '2026-10-02'],
 	['2026-10-03', '2026-10-18'],
-	['2026-10-19', '2026-11-01'],
+	['2026-10-19', '2026-11-10'],
 ] as const;
 
 export const getRegistrationBatches = (now = new Date()): RegistrationBatch[] => {
@@ -169,7 +169,7 @@ export const faqs: FaqItem[] = [
 	{ question: 'Bagaimana cara mendaftarkan tim?', answer: 'Pilih paket yang tersedia, isi form pendaftaran dengan data ketua dan anggota tim, lalu ikuti prosedur pembayaran sesuai instruksi yang dikirim panitia. Batch mengikuti periode pendaftaran yang sedang aktif.' },
 	{ question: 'Apa perbedaan Skill Class Only dan Skill Class + DECOMPE?', answer: 'Skill Class Only mencakup akses ke rangkaian Skill Class. Skill Class + DECOMPE mencakup akses Skill Class sekaligus kesempatan mengikuti kompetisi DECOMPE 5.0.' },
 	{ question: 'Apakah pembayaran bisa dilakukan oleh satu orang untuk satu tim?', answer: 'Bisa. Pembayaran dilaksanakan satu kali oleh ketua tim sesuai kategori yang dipilih, kemudian panitia akan mendata tim secara resmi.' },
-	{ question: 'Kapan periode setiap batch pendaftaran?', answer: 'Batch 1 berlangsung pada 20 September sampai 2 Oktober, Batch 2 pada 3 sampai 18 Oktober, dan Batch 3 pada 19 Oktober sampai 1 November 2026.' },
+	{ question: 'Kapan periode setiap batch pendaftaran?', answer: 'Batch 1 berlangsung pada 20 September sampai 2 Oktober, Batch 2 pada 3 sampai 18 Oktober, dan Batch 3 pada 19 Oktober sampai 10 November 2026.' },
 	{ question: 'Apakah peserta menerima mentoring sebelum final?', answer: 'Ya. Selain jadwal utama, peserta akan mendapatkan arahan serta feedback dari mentor yang relevan dengan ide dan presentasi masing-masing tim.' },
 	{ question: 'Kapan merchandise DECOMPE tersedia?', answer: 'Merchandise resmi DECOMPE 5.0 sedang disiapkan. Detail produk, harga, dan cara pemesanan akan diumumkan melalui kanal resmi DECOMPE.' },
 ];
