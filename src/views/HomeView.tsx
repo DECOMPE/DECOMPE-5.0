@@ -80,7 +80,6 @@ export default function HomeView({ onRegister }: { onRegister: () => void }) {
 				</div>
 			</div>
 		</section>
-
 		<section className="relative border-y-4 border-[#0F172A] bg-white px-5 py-16 lg:px-8">
 			<div className="mx-auto max-w-7xl">
 				<h2 className="text-center text-4xl font-black tracking-tighter sm:text-5xl">Timeline</h2>
